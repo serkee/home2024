@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<link>
+	<depth1 name="낚시왕가이드" myID="01">
+		<depth2 name="낚시왕이야기" 		myID="0101"/>
+		<depth2 name="게임가이드" 			myID="0102">
+			<depth3 name="게임설치방법" 		myID="010201"/>
+			<depth3 name="인터페이스/조작법" 	myID="010202"/>
+			<depth3 name="다운로드" 			myID="010203"/>
+		</depth2>
+		<depth2 name="낚시왕정보" 			myID="0103">
+			<depth3 name="어종정보" 			myID="010301"/>
+			<depth3 name="보트정보" 			myID="010302"/>
+			<depth3 name="낚시대정보" 			myID="010303"/>
+			<depth3 name="낚시터정보" 			myID="010304"/>
+		</depth2>
+	</depth1>
+	<depth1 name="커뮤니티" myID="02">
+		<depth2 name="공지사항" 			myID="0201"/>
+		<depth2 name="자유게시판" 			myID="0202"/>
+		<depth2 name="버그게시판" 			myID="0203"/>
+		<depth2 name="G.O.통신" 			myID="0204"/>
+	</depth1>
+	<depth1 name="명예의 전당" myID="03"/>
+</link>

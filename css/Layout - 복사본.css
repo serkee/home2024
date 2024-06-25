@@ -1,0 +1,68 @@
+@charset "utf-8";
+body { background: #f0f0f0; overflow-y:scroll
+}
+
+#wrap{width:100%;  position:relative}
+
+#header{background:#FFF; height:91px; border-bottom:1px solid #e7e7e7}
+.area{ width:1280px; margin:0 auto}
+#header .logo{margin-top:5px; float:left}
+#header .logo img{width:100px}
+#header .nav{float:right; margin-top:36px}
+#header .nav li{display:block;float:left;}
+#header .nav li a{display:block; margin-left:80px; font-size:17px; color:#3d3d3d}
+
+#main{clear:both; padding:20px 0 10px}
+#main #thumb_area{}
+#main #thumb_area li{margin:0 0 30px 0;}
+#main #thumb_area a{display:block; width:246px; background:#FFF; border:1px solid #e7e7e7; padding-bottom:15px;}
+#main #thumb_area .design a:hover{border:1px solid #0076a3}
+#main #thumb_area .coding a:hover{border:1px solid #007236}
+#main #thumb_area .flash a:hover{border:1px solid #d21119}
+#main #thumb_area .app a:hover{border:1px solid #aba000}
+#main #thumb_area li img{width:100%}
+#main #thumb_area span{margin:0 5px}
+#main #thumb_area .icon{height:11px; width:40px; margin-top:15px}
+#main #thumb_area .design .icon{background:url(../img/icon_design.gif) no-repeat}
+#main #thumb_area .coding .icon{background:url(../img/icon_coding.gif) no-repeat}
+#main #thumb_area .flash .icon{background:url(../img/icon_flash.gif) no-repeat}
+#main #thumb_area .app .icon{background:url(../img/icon_app.gif) no-repeat}
+#main #thumb_area strong{font-size:16px; display:block;margin-bottom:5px; color:#000000}
+#main #thumb_area em{font-size:11px; color:#696969 }
+
+#footer{height:50px; background:#f7625c; color:#FFF; line-height:50px;}
+
+/* responsive web design area */
+
+@media screen and (max-width:1280px){
+	.area{width:1024px}
+}
+
+@media screen and (max-width:1024px){
+	.area{width:768px}
+	#header .nav li a{margin-left:40px;}
+}
+@media screen and (max-width:768px){
+	.area{width:600px}
+	#main #thumb_area a{width:293px;}
+	#header .nav li a{margin-left:20px;}
+}
+@media screen and (max-width:600px){
+	.area{width:480px}
+	#main #thumb_area a{width:233px;}
+
+}
+@media screen and (max-width:480px){
+	.area{width:100%}
+	#main #thumb_area li{width:100%;}
+	#main #thumb_area a{width:100%; margin-left:0px}
+	#main .area{width:95%}
+	#header{height:auto}
+	#header .logo{ float:none; margin:0 auto 0px; text-align:center; padding:10px 0}
+	#header .nav{ float:none; margin-top:0px;}
+	#header .nav li{width:25%}
+	#header .nav li a{width:100%display:block; text-align:center; line-height:30px; height:30px; margin:0; background:#FFF; border-top:1px solid #e7e7e7; border-bottom:1px solid #e7e7e7; border-right:1px solid #e7e7e7;margin-left:0px;}
+}
+@media screen and (max-width:320px){
+	
+}

@@ -1,0 +1,199 @@
+<script type="text/javascript">
+$(function(){
+	$('#tab_menu ul li').click(function(){
+		selectArg = $('#tab_menu ul li').index(this);
+		
+		popOpen()
+		
+		subPage()
+	})
+})
+function popOpen(){
+	$('#layPop').css('display','block')	
+	$('#container').css('display','none')
+}
+function subPage(){
+	//Introduction
+	if(selectArg == 0) $pageData = "about/about.html";
+	//Ci Story
+	else if(selectArg == 1) $pageData = "about/cistory.html";
+	//History
+	else if(selectArg == 2) $pageData = "about/history.html";
+	//Location
+	else if(selectArg == 3) $pageData = "about/location.html";
+	
+	
+	$("#layPop").load($pageData);
+}
+</script>
+<div id="intro" class="layBody">
+			<div id="tab_wr">
+				<div id="tab_menu" class="tab_menu">
+					<ul>
+						<li><a href="#">Introduction</a><span>/</span></li>
+						<li class="on"><a href="#">Ci Story</a><span>/</span></li>
+						<li><a href="#">History</a><span>/</span></li>
+						<li><a href="#">Location</a></li>												
+					</ul>
+				</div>
+				<div class="content">
+					<div class="content_tit">
+						<h2>CI STORY</h2>
+						<p><span><a href="/">Home</a></span> &gt; About &gt; <strong>Ci Story</strong></p>			
+					</div>
+					<div class="figure">
+						<div class="type_01">
+							<div class="tit">
+								<p>로고타입</p>
+							</div>
+							<div>
+								<div class="layout_left">
+									<dl>
+										<dt>영문</dt>
+										<dd><img src="img/sub/cistory/1_dd_01.gif" alt="영문" /></dd>
+									</dl>
+								</div>								
+							</div>
+							<div class="layout_left">
+								<dl>
+									<dt>국문</dt>
+									<dd><img src="img/sub/cistory/1_dd_02.gif" alt="국문" /></dd>
+								</dl>								
+							</div>
+							<div class="layout_right">
+								<dl>
+									<dt>국문 2열</dt>
+									<dd><img src="img/sub/cistory/1_dd_03.gif" alt="국문" /></dd>
+								</dl>
+							</div>
+						</div>
+						<div class="type_01">
+							<div class="tit">
+								<p>시그니처</p>
+							</div>
+							<div>
+								<div class="layout_left">
+									<dl>
+										<dt>워드마크 타입</dt>
+										<dd><img src="img/sub/cistory/2_dd_01.gif" alt="영문" /></dd>
+									</dl>
+								</div>
+								<div class="layout_right">
+								<dl>
+									<dt>태그라인</dt>
+									<dd><img src="img/sub/cistory/2_dd_02.gif" alt="국문" /></dd>
+								</dl>								
+							</div>
+							</div>
+							
+							<div class="layout_left">
+								<dl>
+									<dt>심볼마크 타입</dt>
+									<dd><img src="img/sub/cistory/2_dd_03.gif" alt="국문" /></dd>
+								</dl>
+							</div>
+						</div>
+						<div class="type_01 color">
+							<div class="tit">
+								<p>색상규정</p>
+							</div>
+							<div>
+								<dl>
+									<dt>주요색상</dt>
+									<dd  class="color_tit">
+										<div>
+											<ul>
+												<li class="pantone">
+													<dl>
+														<dt>PRINT</dt>
+														<dd>Pantone Matching System</dd>
+													</dl>
+												</li>
+												<li   class="cmyk">
+													<dl>
+														<dt>PRINT</dt>
+														<dd>Four-Color Process</dd>
+													</dl>
+												</li>
+												<li class="hex">
+													<dl>
+														<dt>PRINT</dt>
+														<dd>Web / Video Usage </dd>
+													</dl>
+												</li>
+											</ul>
+										</div>
+									</dd>
+									<dd>
+										<div class="color_con">
+											<ul>
+												<li>
+													<img src="/img/sub/cistory/color_1.gif" alt="" />
+												</li>
+												<li class="pantone">
+													<p><span>PANTONE</span>7466c</p>
+												</li>
+												<li class="cmyk">
+													<p><span>C</span>70<span>M</span>0<span>Y</span>30<span>K</span>0</p>
+												</li>
+												<li class="hex">
+													<p><span>Hex</span>#26B5BA</p>
+												</li>												
+											</ul>
+										</div>
+									</dd>
+									<dd>
+										<div class="color_con">
+											<ul>
+												<li>
+													<img src="/img/sub/cistory/color_2.gif" alt="" />
+												</li>
+												<li class="pantone">
+													<p><span>PANTONE</span>120c</p>
+												</li>
+												<li class="cmyk">
+													<p><span>C</span>0<span>M</span>15<span>Y</span>60<span>K</span>0</p>
+												</li>
+												<li class="hex">
+													<p><span>Hex</span>#FDDC7A</p>
+												</li>												
+											</ul>
+										</div>
+									</dd>
+									<dd>
+										<div class="color_con">
+											<ul>
+												<li>
+													<img src="/img/sub/cistory/color_3.gif" alt="" />
+												</li>
+												<li class="pantone">
+													<p><span>PANTONE</span>7544c</p>
+												</li>
+												<li class="cmyk">
+													<p><span>C</span>27<span>M</span>13<span>Y</span>0<span>K</span>46</p>
+												</li>
+												<li class="hex">
+													<p><span>Hex</span>#7F8A9B</p>
+												</li>												
+											</ul>
+										</div>
+									</dd>
+								</dl>
+							</div>
+						</div>
+					</div>							
+				</div>					
+			</div>
+            <p class="close" data-action="/"><button type="button" class="mobile">닫기</button></p>
+            <div class="sns">
+                <ul>
+                    <li><a href="#"><img src="/img/common/icon_f.gif" alt="페이스북" /></a></li>
+                    <li><a href="#"><img src="/img/common/icon_t.gif" alt="트위터" /></a></li>
+                    <li><a href="#"><img src="/img/common/icon_p.gif" alt="프린트 하기" /></a></li>
+                    <li><a href="#"><img src="/img/common/icon_u.gif" alt="URL 복사" /></a></li>
+                </ul>
+            </div>
+</div>
+<script>
+	$('#layPop').setUI();
+</script>

@@ -1,0 +1,100 @@
+<script type="text/javascript">
+$(function(){
+	$('#tab_menu ul li').click(function(){
+		selectArg = $('#tab_menu ul li').index(this);
+		
+		popOpen()
+		
+		duoPage()
+	})
+})
+function popOpen(){
+	$('#layPop').css('display','block')	
+	$('#container').css('display','none')
+}
+function duoPage(){
+	//워킹화 특장점
+	if(selectArg == 0) $pageData = "duo/duo_01.html";
+	//아웃라스트-인솔
+	else if(selectArg == 1) $pageData = "duo/duo_02.html";
+	//연구-학술자료
+	else if(selectArg == 2) $pageData = "duo/duo_03.html";
+	//인증서
+	else if(selectArg == 3) $pageData = "duo/duo_04.html";
+	//워킹화 관리법
+	else if(selectArg == 4) $pageData = "duo/duo_05.html";	
+	
+	$("#layPop").load($pageData);
+}
+</script>
+<div id="intro" class="layBody">
+			<div id="tab_wr">
+				<div id="tab_menu" class="tab_menu">
+					<ul>
+						<li><a href="#">나르지오 워킹화 특장점</a><span>/</span></li>
+						<li><a href="#">아웃라스트·인솔</a><span>/</span></li>
+						<li><a href="#">연구·학술자료</a><span>/</span></li>
+						<li><a href="#">인증서</a><span>/</span></li>
+						<li  class="on"><a href="#">워킹화 관리법</a></li>														
+					</ul>
+				</div>
+				<div class="content">
+					<div class="content_tit">
+						<h2>워킹화 관리법</h2>
+						<p><span><a href="/">Home</a></span> &gt; Duo Tech &gt; <strong>워킹화 관리법</strong></p>			
+					</div>
+					<!--div class="figure">						
+					</div-->	
+					
+					<div class="layCont">							
+						<div class="duo_Cont">
+							<h3>나르지오 워킹화, 이렇게 관리하세요.</h3>
+							<p>나르지오 워킹화는 100% 천연 가죽을 사용하여 철저한 품질 관리를 거쳐 생산한 최고 품질의 수제화입니다. <br />아래 사항을 지켜 주시면 본 제품을 더 오래도록 신을 수가 있습니다.</p>
+							<div class="duo_keep">
+								<p>이렇게 관리!</p>
+								<dl>
+									<dt><img src="/img/sub/duo/movie_sample.gif" alt="" /></dt>
+									<dd>융으로 먼지를 닦고, 가죽전용크림을 사용하여 정기적으로 손질하여 주시면 제품을 오래 사용하실 수 있습니다.</dd>
+									<dd>가죽전용크림으로 사용 전 얇은 피막을 입힌 후에 사용하면 오염방지에 효과가 있습니다. </dd>
+									<dd>제품 보관시에도 신문지나 보형지를 내부에 채워 통풍이 잘되는 곳에 보관하고, 뉘거나 겹쳐 보관하지 말아 주십시오.</dd>
+								</dl>
+							</div>
+							<div class="duo_keep">
+								<p>이렇게 손질!</p>
+								<dl>
+									<dt><img src="/img/sub/duo/movie_sample.gif" alt="" /></dt>
+									<dd>오염되었을 경우에는 융이나 구두솔을 사용하여 오염물질을 제거한 후 가죽전용크리너로 닦아주십시오. 흰색 신발은 스펀지에 세제를 약간 묻혀 가볍게 물로 세척한 후 그늘에서 말려주세요.</dd>
+									<dd>신발을 장시간 물에 담궈 두시거나 표백제, 화공약품을 사용하시면 제품이 변형될 수 있으니 삼가해 주세요.</dd>
+									<dd>물에 젖었을 경우 마른 수건으로 물기를 제거한 후 신문지나 보형지를 채워 형태를 유지하여 통풍이 잘되는 그늘에서 건조하여 주십시오. 직사광선이나 드라이어기 등으로 강제 건조시킬 경우 형태가 변형될 수 있으니 주의하여 주십시오.</dd>
+									<dd>깔창은 월 1회 정도 미지근한 물에 헹구는 정도로 가볍게 세척하여 그늘에서 말린 후에 신으십시오. 수세미로 문지르거나 세탁기에 넣을 경우 깔창의 천이 분리될 수 있으니 주의해 주세요.</dd>
+								</dl>
+							</div>
+							<div class="duo_keep">
+								<p>오, 주의!</p>
+								<dl>
+									<dt><img src="/img/sub/duo/movie_sample.gif" alt="" /></dt>
+									<dd>본 제품은 천연가죽을 사용한 제품으로, 통기성을 좋게하기 위해 별도의 방수가공을 하지 않았습니다. (기본생활 방수는 가능합니다.) 따라서 장시간 비를 맞거나(특히 장마철) 소금물과 접촉시에는 제품의 변형이 일어날 수 있으니 주의해 주세요.</dd>
+									<dd>염화칼슘과 같이 특성화학약품에 주의해 주십시오.</dd>
+									<dd>본 제품의 아웃솔(밑창)은 미끄럼을 방지하는 특수한 설계로 되어있으나 젖은 노면, 빙판, 맨홀, 타일바닥 등에서 미끄러질 위험이 있으니 주의해 주십시오.</dd>
+									<dd>보존 시 적당한 온도와 습도에서 보관하여 주십시오. 여름철 장기간 자동차 트렁크 안이나 지하와 같이 습기가 많은 곳의 보관은 피해주시고, 건조 시 통풍이 잘되는 그늘에서 건조시켜 주십시오.</dd>
+								</dl>
+							</div>
+						</div>
+					</div>							
+				</div>					
+			</div>
+            <p class="close" data-action="/"><button type="button" class="mobile">닫기</button></p>
+            <div class="sns">
+                <ul>
+                    <li><a href="#"><img src="/img/common/icon_f.gif" alt="페이스북" /></a></li>
+                    <li><a href="#"><img src="/img/common/icon_t.gif" alt="트위터" /></a></li>
+                    <li><a href="#"><img src="/img/common/icon_p.gif" alt="프린트 하기" /></a></li>
+                    <li><a href="#"><img src="/img/common/icon_u.gif" alt="URL 복사" /></a></li>
+                </ul>
+            </div>
+</div>
+<script>
+	$('.close > button').click(function(){
+		$("#layPop").load('duo/duo.html');
+	})
+</script>

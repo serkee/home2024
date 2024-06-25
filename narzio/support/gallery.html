@@ -1,0 +1,283 @@
+<script type="text/javascript">
+$(function(){
+	$('#tab_menu ul li').click(function(){
+		selectArg = $('#tab_menu ul li').index(this);
+		
+		popOpen()
+		
+		duoPage()
+	})
+})
+function popOpen(){
+	$('#layPop').css('display','block')	
+	$('#container').css('display','none')
+}
+function duoPage(){
+	//공지사항
+	if(selectArg == 0) $pageData = "support/notice.html";
+	//FaQ
+	else if(selectArg == 1) $pageData = "support/faq.html";
+	//QnA
+	else if(selectArg == 2) $pageData = "support/qna.html";
+	//갤러리
+	else if(selectArg == 3) $pageData = "support/gallery.html";
+	//이벤트게시판
+	else if(selectArg == 4) $pageData = "support/event.html";
+	//매장찾기
+	else if(selectArg == 5) $pageData = "support/store.html";
+	
+	$("#layPop").load($pageData);
+}
+$(function(){
+	$('#layPop .layBody .layCont .board_view').hide();	
+	$('#layPop .layBody .layCont .board_write').hide();
+	$('#layPop .layBody .layCont .board_list .subject a').bind('focusin click', function(){		
+		$('#layPop .layBody .layCont .board_list').hide();		
+		$('#layPop .layBody .layCont .board_view').show();
+	return false;
+	});
+});
+
+$(function(){
+	$('#layPop .layBody .layCont .list').bind('focusin click', function(){	
+		$('#layPop .layBody .layCont .board_view').hide();	
+		$('#layPop .layBody .layCont .board_write').hide();
+		$('#layPop .layBody .layCont .board_list').show();
+	return false;
+	});
+});
+$(function(){
+	$('#layPop .layBody .layCont .write').bind('focusin click', function(){	
+		$('#layPop .layBody .layCont .board_list').hide();
+		$('#layPop .layBody .layCont .board_view').hide();	
+		$('#layPop .layBody .layCont .board_write').show();
+	return false;
+	});
+});	
+
+</script>
+<div id="intro" class="layBody">
+			<div id="tab_wr">
+				<div id="tab_menu" class="tab_menu">
+					<ul>
+						<li><a href="#">Notice</a><span>/</span></li>
+						<li><a href="#">FAQ</a><span>/</span></li>
+						<li><a href="#">Q&A</a><span>/</span></li>
+						<li  class="on"><a href="#">Gallery</a><span>/</span></li>
+						<li><a href="#">Event</a><span>/</span></li>	
+						<li><a href="#">Find Store</a></li>														
+					</ul>
+				</div>
+				<!-- start - Gallery -->
+				<div class="content">
+					<div class="content_tit">
+						<h2>GALLERY</h2>
+						<p><span><a href="/">Home</a></span> &gt; Support &gt; <strong>Gallery</strong></p>			
+					</div>
+					<!--div class="figure">						
+					</div-->
+					<div class="layCont">
+						<div class="search">
+							<select name="" id="">
+								<option value="">제목</option>
+								<option value="">작성자</option>
+							</select>
+							<input type="text" />
+							<button><img src="/img/common/btn_search.gif" alt="검색" /></button>
+						</div>
+						
+						<!-- start 게시판 리스트페이지 -->					
+						<div class="board_list" style="width:100%;overflow:hidden;">
+							<div class="board list">
+								<ul>
+									<li class="gallery_layout subject">
+										<a href="#">
+											<p><img src="/img/sub/gallery/gallery.gif" alt="" /></p>
+											<dl>
+												<dt>일본오픈</dt>
+												<dd><b>작성자 : </b>관리자</dd>
+												<dd><b>작성일 : </b>2013년 06월 24일</dd>
+											</dl>
+										</a>									
+									</li>
+									<li class="gallery_layout subject">
+										<a href="#">
+											<p><img src="/img/sub/gallery/gallery.gif" alt="" /></p>
+											<dl>
+												<dt>일본오픈</dt>
+												<dd><b>작성자 : </b>관리자</dd>
+												<dd><b>작성일 : </b>2013년 06월 24일</dd>
+											</dl>
+										</a>									
+									</li>
+									<li class="gallery_layout subject">
+										<a href="#">
+											<p><img src="/img/sub/gallery/gallery.gif" alt="" /></p>
+											<dl>
+												<dt>일본오픈</dt>
+												<dd><b>작성자 : </b>관리자</dd>
+												<dd><b>작성일 : </b>2013년 06월 24일</dd>
+											</dl>
+										</a>									
+									</li>
+									<li class="gallery_layout subject">
+										<a href="#">
+											<p><img src="/img/sub/gallery/gallery.gif" alt="" /></p>
+											<dl>
+												<dt>일본오픈</dt>
+												<dd><b>작성자 : </b>관리자</dd>
+												<dd><b>작성일 : </b>2013년 06월 24일</dd>
+											</dl>
+										</a>									
+									</li>
+									
+									
+								</ul>
+								
+								
+								
+							</div>
+							<div class="paging">
+								<ul>
+									<li><a href="#"> < </a></li>
+									<li class="select"><a href="#"> 1 </a></li>
+									<li><a href="#"> 2 </a></li>
+									<li><a href="#"> 3 </a></li>
+									<li><a href="#"> > </a></li>
+								</ul>								
+							</div>
+							<div class="admin_btn">
+								<ul>
+									<li><a href="#" class="edit">수정</a></li>
+									<li><a href="#" class="del">삭제</a></li>
+								</ul>
+							</div>
+							<div class="board_btn">
+								<ul>									
+									<li style="background:none;border:0;"><a class="write" href="#" style="padding:0;"><img src="/img/common/btn_write.gif" alt="글쓰기" /></a></li>
+									<!--li><a class="list" href="#">목록</a></li>
+									<li><a href="#">답변</a></li-->
+								</ul>
+							</div>
+							
+						</div>
+						
+						<!-- //end 게시판 리스트페이지 -->						
+						<!-- start 게시판 뷰페이지 -->
+						<div class="board_view">
+							<table class="board view">							
+								<thead>
+									<tr>
+										<th>제목</th>
+										<td colspan="5">블로그 서포터즈 이벤트</td>									
+									</tr>									
+									<tr>
+										<th class="board_pc">작성자</th>										
+										<td class="board_pc">관리자</td>										
+										<th class="board_pc">작성일</th>
+										<td class="board_pc">2014/03/04</td>	
+										<th class="board_pc">조회수</th>
+										<td class="board_pc">178</td>	
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="board_content" colspan="6">
+											블로그 서포터즈 모집 이벤트 진행중입니다. <br />
+											&nbsp<br />
+											&nbsp<br />
+											고객님들의 많은 관심 부탁 드립니다. <br />
+											&nbsp<br />
+											&nbsp<br />
+											감사합니다. <br />
+										</td>
+									</tr>
+									<tr>
+										<td class="comment" colspan="6">
+											<table>
+												<tr>
+													<th style="border:0;">관리자</th>
+													<td>2013-07-08 15:56</td>
+												</tr>
+												<tr>
+													<td colspan="2">이벤트에 응모해 주신 여러분께 진심으로 감사 드립니다. <br />12일 홈페이지를 통해 당첨자를 공지하겠습니다.</td>
+												</tr>
+											</table>
+										</td>
+									</tr>
+								</tbody>							
+							</table>
+							<div class="admin_btn">
+								<ul>
+									<li><a href="#" class="edit">수정</a></li>
+									<li><a href="#" class="del">삭제</a></li>
+								</ul>
+							</div>
+							<div class="board_btn">
+								<ul>
+									<li><a class="list" href="#">목록</a></li>
+									<li><a href="#">답변</a></li>
+								</ul>
+							</div>
+						</div>
+						<!-- //end 게시판 뷰페이지 -->
+						<!-- start 게시판 쓰기페이지 -->
+						
+						<div class="board_write">
+							<table class="board write">
+								<colgroup>
+									<col style="width:9%;" >
+									<col style="width:*" >									
+								</colgroup>
+								<thead>
+									<tr>
+										<th>제목</th>
+										<td><input type="text" style="width:90%;"/></td>
+									</tr>
+								</thead>									
+								<tbody>
+									<tr>
+										<th>내용</th>
+										<td><textarea name="" id="" cols="90" rows="10" style="width:90%;"></textarea></td>
+									</tr>
+									<tr>
+										<th>첨부1</th>
+										<td><input type="file" /></td>
+									</tr>
+									<tr>
+										<th>첨부2</th>
+										<td><input type="file" /></td>
+									</tr>
+									<tr>
+										<th>첨부3</th>
+										<td><input type="file" /></td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="board_btn">
+								<ul>
+									<li style="background:none;border:0;"><a class="write" href="#" style="padding:0;"><img src="/img/common/btn_write.gif" alt="글쓰기" /></a></li>
+									<li><a class="list" href="#">목록</a></li>
+								</ul>
+							</div>	
+						</div>
+						<!-- //end 게시판 쓰기페이지 -->
+					</div>								
+				</div>
+				<!-- //end - Gallery -->					
+			</div>
+            <p class="close" data-action="/"><button type="button" class="mobile">닫기</button></p>
+            <div class="sns">
+                <ul>
+                    <li><a href="#"><img src="/img/common/icon_f.gif" alt="페이스북" /></a></li>
+                    <li><a href="#"><img src="/img/common/icon_t.gif" alt="트위터" /></a></li>
+                    <li><a href="#"><img src="/img/common/icon_p.gif" alt="프린트 하기" /></a></li>
+                    <li><a href="#"><img src="/img/common/icon_u.gif" alt="URL 복사" /></a></li>
+                </ul>
+            </div>
+</div>
+<script>
+	$('.close > button').click(function(){
+		$("#layPop").load('support/support.html');
+	})
+</script>

@@ -1,0 +1,218 @@
+<script type="text/javascript">
+$(function(){
+	$('#tab_menu ul li').click(function(){
+		selectArg = $('#tab_menu ul li').index(this);
+		
+		popOpen()
+		
+		duoPage()
+	})
+})
+function popOpen(){
+	$('#layPop').css('display','block')	
+	$('#container').css('display','none')
+}
+function duoPage(){
+	//워킹화 특장점
+	if(selectArg == 0) $pageData = "duo/duo_01.html";
+	//아웃라스트-인솔
+	else if(selectArg == 1) $pageData = "duo/duo_02.html";
+	//연구-학술자료
+	else if(selectArg == 2) $pageData = "duo/duo_03.html";
+	//인증서
+	else if(selectArg == 3) $pageData = "duo/duo_04.html";
+	//워킹화 관리법
+	else if(selectArg == 4) $pageData = "duo/duo_05.html";	
+	
+	$("#layPop").load($pageData);
+}
+$(function(){
+	$('#sub_tab_wr .sub_tab_cont').hide();
+	$('#sub_tab_wr .sub_tab_cont:first').show();	
+	$('#sub_tab_wr .sub_tab_menu a').bind('focusin click', function(){
+		$('#sub_tab_wr .sub_tab_menu li').removeClass('on');
+		$(this).parent().addClass('on');
+		$('#sub_tab_wr .sub_tab_cont').hide();
+		$('#sub_tab_wr .sub_tab_cont').eq($(this).parent().index()).show();
+
+	return false;
+	});
+});
+</script>
+<div id="intro" class="layBody">
+			<div id="tab_wr">
+				<div id="tab_menu" class="tab_menu">
+					<ul>
+						<li><a href="#">나르지오 워킹화 특장점</a><span>/</span></li>
+						<li class="on"><a href="#">아웃라스트·인솔</a><span>/</span></li>
+						<li><a href="#">연구·학술자료</a><span>/</span></li>
+						<li><a href="#">인증서</a><span>/</span></li>
+						<li><a href="#">워킹화 관리법</a></li>														
+					</ul>
+				</div>
+				<div class="content">
+					<div class="content_tit">
+						<h2>아웃라스트·인솔</h2>
+						<p><span><a href="/">Home</a></span> &gt; Duo Tech &gt; <strong>아웃라스트·인솔</strong></p>			
+					</div>
+					<!--div class="figure">						
+					</div-->	
+					
+					<div class="layCont">						
+						<div class="duo_Cont">
+							<div id="sub_tab_wr">
+								<div class="sub_tab_menu">
+									<ul>
+										<li class="on"><a href="#">아웃라스트</a></li>
+										<li><a href="#">인솔</a></li>
+									</ul>
+								</div>
+								<div class="sub_tab_cont outlast">
+									<h3>항상 쾌적한 온도를 유지하여 <span>당신의 발과 건강을 책임집니다.</span></h3>
+									<dl>
+										<dt>아웃라스트(OUTLAST)</dt>
+										<dd>아웃라스트 mPCM 기술은 원래 NASA 우주인을 위해서 1980년대 중반에 TRDC에 의해 개발된 것으로 쾌적한 온도를 유지하기 위해 열을 흡수, 저장, 방출하는 상변환물질 (PCM : Phase Change Material)을 사용합니다.
+										의류 직물용 온도조절기술의 원조로써 PCM은 내구성이 아주 강하고 장기간 파괴되지 않는 플라스틱 표피에 싸여 있습니다. PCM은 극미세단위로 캡슐화 되어있는 상변환물질들(mPCM)의 독점 혼합물입니다. 여기서 mPCM의 크기는 극미세 단위란 볼펜 끝의 볼안에 1,000개가 들어갈 수 있는 크기를 말합니다.</dd>
+										<dd>아웃라스트에서는1991년 그 기술에 대한 독점권을 획득, mPCM 기술을 이용하여 200가지 이상의 원단, 마감재, 파이버, 원사, 편물, 직물, 원료를 제공하며 야외 스포츠, 평상복, 신발, 용품, 침구류 분야의 2백여 곳에 이르는 파트너 회사를 두고 있습니다. 아웃라스트 상표는 60개국 이상의 국가에 상표 등록이 되어 있고 70개의 미국 특허와 179개 세계 특허를 갖고 있습니다.</dd>
+									</dl>
+									<p><img src="/img/sub/duo/duo_02_1.gif" alt="" /></p>
+									<dl>
+										<dt><span>아웃라스트 적용 유무에 따른 온도 변화</span></dt>
+										<dd><img src="/img/sub/duo/duo_02_2.gif" alt="" /></dd>
+									</dl>
+								</div>
+							
+								<div class="sub_tab_cont">
+									<h3>나르지오만의 특수한 인솔 <span>당신의 발과 건강을 책임집니다.</span></h3>
+									<div class="insole_tit" >
+										<p ><img src="/img/sub/duo/duo_2_1.gif" alt="" /></p>
+										<dl>
+											<dt>오소라이트</dt>
+											<dd>미국에서 개발된 세계적인 소재인 오소라이트(OrthoLite)는 보행 시 지면으로부터 발바닥으로 전달되는 충격을 흡수 완화시켜 발목과 무릎관절, 척추, 뇌를 보호하는 기능이 있습니다. 뿐만 아니라, 방취기능과 완충력, 복원력이 반 영구적인 특수 소재 입니다.</dd>
+										</dl>
+									</div>
+									<div class="sub_tab_cont_list">
+										<div class="insole_img">
+											<dl>
+												<dt>Type A</dt>
+												<dd><img src="/img/sub/duo/duo_2_2.gif" alt="" /></dd>
+												<dd>특허등록번호. 실용신안 제 20-0452926호</dd>
+											</dl>
+										</div>
+										<ul>
+											<li>
+												<dl>
+													<dt><img src="/img/common/no_1.gif" alt="" />오소라이트(Ortholite)</dt>
+													<dd>뛰어난 방취효과로 발냄새를 억제시켜주며, 습도조절력 및 완충력과 복원력으로 편안한 착화감을 제공</dd>			
+												</dl>
+											</li>
+											<li>
+												<dl>
+													<dt><img src="/img/common/no_2.gif" alt="" />특수소재 EPDM</dt>
+													<dd>발의 균형을 잡고 하중을 분산, 용천혈을 지압</dd>			
+												</dl>
+											</li>
+											<li>
+												<dl>
+													<dt><img src="/img/common/no_3.gif" alt="" />PU 쿠션</dt>
+													<dd>충격흡수, 탈취, 향균 효과</dd>			
+												</dl>
+											</li>
+											<li>
+												<dl>
+													<dt><img src="/img/common/no_4.gif" alt="" />은사 메시 원단</dt>
+													<dd>일본 특허 제품, 향균력 99.9%</dd>			
+												</dl>
+											</li>
+											<li>
+												<dl>
+													<dt><img src="/img/common/no_5.gif" alt="" />과학적 설계</dt>
+													<dd>보행시 다리가 모아지도록 부위에 따라 두께와 각도를 달리한 첨단 인체공학 제품</dd>			
+												</dl>
+											</li>
+											<li>
+												<dl>
+													<dt><img src="/img/common/no_6.gif" alt="" />마사지, 지압 요철</dt>
+													<dd>발바닥의 경혈의 위치에 맞게 설계된 요철이 지압 효과를 높임</dd>			
+												</dl>
+											</li>
+											<li>
+												<dl>
+													<dt><img src="/img/common/no_7.gif" alt="" />송진+항토배합 EVA</dt>
+													<dd>친환경 EVA 소재, 원적외선 및 피톤치드향 발산</dd>			
+												</dl>
+											</li>
+										</ul>
+									
+									</div>
+									<div class="sub_tab_cont_list">
+										<div class="insole_img">
+											<dl>
+												<dt>Type B</dt>
+												<dd><img src="/img/sub/duo/duo_2_3.gif" alt="" /></dd>
+												<dd>특허등록번호. 실용신안 제 20-0452926호</dd>
+											</dl>
+										</div>
+										<ul>
+											<li>
+												<dl>
+													<dt><img src="/img/common/no_1.gif" alt="" />오소라이트(Ortholite)</dt>
+													<dd>뛰어난 방취효과로 발냄새를 억제시켜주며, 습도조절력 및 완충력과 복원력으로 편안한 착화감을 제공</dd>			
+												</dl>
+											</li>
+											<li>
+												<dl>
+													<dt><img src="/img/common/no_2.gif" alt="" />과학적 설계</dt>
+													<dd>보행시 다리가 모아지도록 부위에 따라 두께와 각도를 달리한 첨단 인체공학 제품</dd>			
+												</dl>
+											</li>
+											<li>
+												<dl>
+													<dt><img src="/img/common/no_3.gif" alt="" />Ulla* (Ultra Elastic Foam)</dt>
+													<dd>넓은 통기구조가 열 발생을 줄이고, 반영구적인 복원력으로 관절을 보호하며, 보행시 발을 밀어주어 움직임을 도와주는 고탄성 소재</dd>	
+													<dd><img src="/img/sub/duo/duo_2_4.gif" alt="Ulla의 기능" /></dd>
+													<dd>
+													<span>복원력</span>복원력은 보행시 발의 통증을 줄이고 관절을 보호<br />
+													<span>통기성</span>넓은 통기구조가 열과 땀을 빠르게 배출하여 쾌적함을 유지<br />
+													<span>고탄성</span>보행시 발을 밀어주는 역할일 하며 운동량을 극대화 시킴<br />
+													</dd>
+												</dl>
+											</li>
+											<li>
+												<dl>
+													<dt><img src="/img/common/no_4.gif" alt="" />은사 메시 원단</dt>
+													<dd>일본 특허 제품, 향균력 99.9%</dd>			
+												</dl>
+											</li>
+											<li>
+												<dl>
+													<dt><img src="/img/common/no_5.gif" alt="" />마사지, 지압 요철</dt>
+													<dd>발바닥의 경혈의 위치에 맞게 설계된 요철이 지압 효과를 높임</dd>			
+												</dl>
+											</li>
+										</ul>
+									
+									</div>
+
+
+								</div>
+							</div>
+						</div>
+					</div>							
+				</div>					
+			</div>
+            <p class="close" data-action="/"><button type="button" class="mobile">닫기</button></p>
+            <div class="sns">
+                <ul>
+                    <li><a href="#"><img src="/img/common/icon_f.gif" alt="페이스북" /></a></li>
+                    <li><a href="#"><img src="/img/common/icon_t.gif" alt="트위터" /></a></li>
+                    <li><a href="#"><img src="/img/common/icon_p.gif" alt="프린트 하기" /></a></li>
+                    <li><a href="#"><img src="/img/common/icon_u.gif" alt="URL 복사" /></a></li>
+                </ul>
+            </div>
+</div>
+<script>
+	$('.close > button').click(function(){
+		$("#layPop").load('duo/duo.html');
+	})
+</script>

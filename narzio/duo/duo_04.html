@@ -1,0 +1,146 @@
+<script type="text/javascript">
+$(function(){
+	$('#tab_menu ul li').click(function(){
+		selectArg = $('#tab_menu ul li').index(this);
+		
+		popOpen()
+		
+		duoPage()
+	})
+})
+function popOpen(){
+	$('#layPop').css('display','block')	
+	$('#container').css('display','none')
+}
+function duoPage(){
+	//워킹화 특장점
+	if(selectArg == 0) $pageData = "duo/duo_01.html";
+	//아웃라스트-인솔
+	else if(selectArg == 1) $pageData = "duo/duo_02.html";
+	//연구-학술자료
+	else if(selectArg == 2) $pageData = "duo/duo_03.html";
+	//인증서
+	else if(selectArg == 3) $pageData = "duo/duo_04.html";
+	//워킹화 관리법
+	else if(selectArg == 4) $pageData = "duo/duo_05.html";	
+	
+	$("#layPop").load($pageData);
+}
+</script>
+<div id="intro" class="layBody">
+			<div id="tab_wr">
+				<div id="tab_menu" class="tab_menu">
+					<ul>
+						<li><a href="#">나르지오 워킹화 특장점</a><span>/</span></li>
+						<li><a href="#">아웃라스트·인솔</a><span>/</span></li>
+						<li><a href="#">연구·학술자료</a><span>/</span></li>
+						<li  class="on"><a href="#">인증서</a><span>/</span></li>
+						<li><a href="#">워킹화 관리법</a></li>														
+					</ul>
+				</div>
+				<div class="content">
+					<div class="content_tit">
+						<h2>인증서</h2>
+						<p><span><a href="/">Home</a></span> &gt; Duo Tech &gt; <strong>인증서</strong></p>			
+					</div>
+					<!--div class="figure">						
+					</div-->	
+					
+					<div class="layCont">						
+						<div class="duo_Cont">
+							<h3>세계최초 분리형 바닥 신발!<br /><span>나르지오의 기술을 전세계가 주목하고 있습니다.</span></h3>
+							<ul class="license_list">
+								<li>
+									<dl>
+										<dt><img src="/img/sub/duo/license/license_01.gif" alt="" /></dt>
+										<dd>[국내특허]<br />전후방 분리형 신발</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt><img src="/img/sub/duo/license/license_02.gif" alt="" /></dt>
+										<dd>[특허-실용신안등록]<br />자세교정용 기능성인솔</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt><img src="/img/sub/duo/license/license_03.gif" alt="" /></dt>
+										<dd>[상표등록]<br />나르지오</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt><img src="/img/sub/duo/license/license_04.gif" alt="" /></dt>
+										<dd>[디자인등록]<br />나르지오</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt><img src="/img/sub/duo/license/license_05.gif" alt="" /></dt>
+										<dd>국제특허출원증</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt><img src="/img/sub/duo/license/license_06.gif" alt="" /></dt>
+										<dd>[미국 FDA 등록]<br />의료용 교정 신발</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt><img src="/img/sub/duo/license/license_07.gif" alt="" /></dt>
+										<dd>[미국]<br />디자인등록</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt><img src="/img/sub/duo/license/license_08.gif" alt="" /></dt>
+										<dd>[일본]<br />디자인등록</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt><img src="/img/sub/duo/license/license_09.gif" alt="" /></dt>
+										<dd>[일본]<br />상표등록</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt><img src="/img/sub/duo/license/license_10.gif" alt="" /></dt>
+										<dd>[중국]<br />디자인등록1</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt><img src="/img/sub/duo/license/license_11.gif" alt="" /></dt>
+										<dd>[중국]<br />디자인등록2</dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt><img src="/img/sub/duo/license/license_12.gif" alt="" /></dt>
+										<dd>[중국]<br />상표등록</dd>
+									</dl>
+								</li>
+							</ul>
+
+
+						</div>
+					</div>							
+				</div>					
+			</div>
+            <p class="close" data-action="/"><button type="button" class="mobile">닫기</button></p>
+            <div class="sns">
+                <ul>
+                    <li><a href="#"><img src="/img/common/icon_f.gif" alt="페이스북" /></a></li>
+                    <li><a href="#"><img src="/img/common/icon_t.gif" alt="트위터" /></a></li>
+                    <li><a href="#"><img src="/img/common/icon_p.gif" alt="프린트 하기" /></a></li>
+                    <li><a href="#"><img src="/img/common/icon_u.gif" alt="URL 복사" /></a></li>
+                </ul>
+            </div>
+</div>
+<script>
+	$('.close > button').click(function(){
+		$("#layPop").load('duo/duo.html');
+	})
+</script>

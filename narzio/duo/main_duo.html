@@ -1,0 +1,59 @@
+
+<div id="intro" class="layBody">
+	<div id="content">
+		<div class="area area_visual">
+			<a href="#"><img src="/img/sub/duo/duo_1.gif" alt="" /></a>
+		</div>
+		<div class="area_content">
+			<div class="area_l">
+				<div class="area dual">
+					<a href="#"><img src="/img/sub/duo/duo_2.gif" alt="" /></a>
+				</div>
+				<div class="area single">
+					<a href="#"><img src="/img/sub/duo/duo_3.gif" alt="" /></a>
+				</div>
+				<div class="area single">
+					<a href="#"><img src="/img/sub/duo/duo_4.gif" alt="" /></a>
+				</div>
+				<div class="area dual">
+					<a href="#"><img src="/img/sub/duo/duo_5.gif" alt="" /></a>
+				</div>
+			</div>
+			<div class="area_r">
+				<div class="area square">
+					<a href="#"><img src="/img/sub/duo/duo_6.jpg" alt="" /></a>
+				</div>
+				<div class="area dual">
+					<a href="#"><img src="/img/sub/duo/duo_7.gif" alt="" /></a>
+				</div>
+			</div>
+		</div>
+	</div>
+<script>
+	$('#layPop').setUI();
+	
+	$('#content a').click(function(){
+		
+		duoPopOpen($('#content a').index(this));
+	})
+	
+	function duoPopOpen(arg){
+		//동영상
+		if(arg == 0) $pageData = "duo/duo_01.html";
+		//특장점
+		else if(arg == 1) $pageData = "duo/duo_01.html";
+		//기술인증서
+		else if(arg == 2) $pageData = "duo/duo_04.html";
+		//인솔
+		else if(arg == 3) $pageData = "duo/duo_02.html";
+		//연구/학술자료
+		else if(arg == 4) $pageData = "duo/duo_01.html";
+		//아웃라스트
+		else if(arg == 5) $pageData = "duo/duo_02.html";
+		//워킹화 관리법
+		else if(arg == 6) $pageData = "duo/duo_05.html";
+		
+		$("#layPop").load($pageData);
+		//popOpen()
+	}
+</script>

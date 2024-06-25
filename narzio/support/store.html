@@ -1,0 +1,254 @@
+<script type="text/javascript">
+$(function(){
+	$('#tab_menu ul li').click(function(){
+		selectArg = $('#tab_menu ul li').index(this);
+		
+		popOpen()
+		
+		duoPage()
+	})
+})
+function popOpen(){
+	$('#layPop').css('display','block')	
+	$('#container').css('display','none')
+}
+function duoPage(){
+	//공지사항
+	if(selectArg == 0) $pageData = "support/notice.html";
+	//FaQ
+	else if(selectArg == 1) $pageData = "support/faq.html";
+	//QnA
+	else if(selectArg == 2) $pageData = "support/qna.html";
+	//갤러리
+	else if(selectArg == 3) $pageData = "support/gallery.html";
+	//이벤트게시판
+	else if(selectArg == 4) $pageData = "support/event.html";
+	//매장찾기
+	else if(selectArg == 5) $pageData = "support/store.html";
+	
+	$("#layPop").load($pageData);
+}
+$(function(){
+	$('#layPop .layBody .layCont .board_view').hide();	
+	$('#layPop .layBody .layCont .board_write').hide();
+	$('#layPop .layBody .layCont .board_list .subject a').bind('focusin click', function(){		
+		$('#layPop .layBody .layCont .board_list').hide();		
+		$('#layPop .layBody .layCont .board_view').show();
+	return false;
+	});
+});
+
+$(function(){
+	$('#layPop .layBody .layCont .list').bind('focusin click', function(){	
+		$('#layPop .layBody .layCont .board_view').hide();	
+		$('#layPop .layBody .layCont .board_write').hide();
+		$('#layPop .layBody .layCont .board_list').show();
+	return false;
+	});
+});
+$(function(){
+	$('#layPop .layBody .layCont .write').bind('focusin click', function(){	
+		$('#layPop .layBody .layCont .board_list').hide();
+		$('#layPop .layBody .layCont .board_view').hide();	
+		$('#layPop .layBody .layCont .board_write').show();
+	return false;
+	});
+});	
+
+</script>
+<div id="intro" class="layBody">
+			<div id="tab_wr">
+				<div id="tab_menu" class="tab_menu">
+					<ul>
+						<li><a href="#">Notice</a><span>/</span></li>
+						<li><a href="#">FAQ</a><span>/</span></li>
+						<li><a href="#">Q&A</a><span>/</span></li>
+						<li><a href="#">Gallery</a><span>/</span></li>
+						<li><a href="#">Event</a><span>/</span></li>	
+						<li class="on"><a href="#">Find Store</a></li>														
+					</ul>
+				</div>
+				<!-- start - store -->
+				<div class="content">
+					<div class="content_tit">
+						<h2>FIND STORE</h2>
+						<p><span><a href="/">Home</a></span> &gt; Support &gt; <strong>Find Store</strong></p>			
+					</div>
+					<!--div class="figure">						
+					</div-->
+					<div class="layCont">
+					<h3>나르지오 대리점 안내</h3>
+					<h4>대리점 관련하여 문의 사항이 있으시면 아래 전화번호로 문의 하시기 바랍니다. <br />
+					신속하고 친절한 상담 약속드리겠습니다.</h4>
+						<div class="store_map">
+							<div class="store_map_l">
+								<img src="/img/sub/store/map.gif" alt="" />
+							</div>
+							<div class="store_map_r">
+								<p>
+									<span>전국 대리점 찾기</span><br />
+									지역을 검색하거나 해당 지역을 클릭하시면 가까운 대리점을 찾으실 수 있습니다.
+								</p>
+								<dl style="border-top:0;">
+									<dt>지역별 검색</dt>
+									<dd>
+										<select name="" id="">
+											<option value="경기도">경기도</option>
+											<option value="서울특별시">서울특별시</option>
+											<option value="인천광역시">인천광역시</option>
+											<option value="강원도">강원도</option>
+											<option value="충청남도">충청남도</option>
+											<option value="충청북도">충청북도</option>
+											<option value="대전광역시">대전광역시</option>
+											<option value="경상북도">경상북도</option>
+											<option value="경상남도">경상남도</option>
+											<option value="대구광역시">대구광역시</option>
+											<option value="울산광역시">울산광역시</option>
+											<option value="전라북도">전라북도</option>
+											<option value="전라남도">전라남도</option>
+											<option value="광주광역시">광주광역시</option>
+											<option value="제주도">제주도</option>
+										</select>
+										<select name="" id="">
+											<option value="">구/군 선택</option>
+										</select>
+									</dd>
+									<dd>
+										<input type="text" /><button><img src="/img/common/btn_search.gif" alt="검색"></button>
+									</dd>
+								</dl>
+								<dl>
+									<dt>대리점 검색</dt>
+									<dd>
+										<input type="text" /><button><img src="/img/common/btn_search.gif" alt="검색"></button>
+									</dd>
+								</dl>
+							</div>
+						</div>	
+					
+						<!-- start 게시판 리스트페이지 -->		
+						<div class="store_board">
+							<table class="board" style="width:100%;overflow:hidden;">
+								<colgroup>
+									<col width="9.3%"/>
+									<col width="18%"/>
+									<col width="*"/>
+									<col width="16%"/>
+								</colgroup>
+								<thead>
+									<tr>
+										<th>지역</th>
+										<th>대리점명</th>
+										<th>주소</th>
+										<th>전화번호</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>경기</td>
+										<td>나르지오 의정부점</td>
+										<td>경기 의정부시 의정부동 123-45</td>
+										<td>031-123-4578</td>
+									</tr>
+									<tr>
+										<td>경기</td>
+										<td>나르지오 의정부점</td>
+										<td>경기 의정부시 의정부동 123-45</td>
+										<td>031-123-4578</td>
+									</tr>
+									<tr>
+										<td>경기</td>
+										<td>나르지오 의정부점</td>
+										<td>경기 의정부시 의정부동 123-45</td>
+										<td>031-123-4578</td>
+									</tr>
+									<tr>
+										<td>경기</td>
+										<td>나르지오 의정부점</td>
+										<td>경기 의정부시 의정부동 123-45</td>
+										<td>031-123-4578</td>
+									</tr>
+									<tr>
+										<td>경기</td>
+										<td>나르지오 의정부점</td>
+										<td>경기 의정부시 의정부동 123-45</td>
+										<td>031-123-4578</td>
+									</tr>
+									<tr>
+										<td>경기</td>
+										<td>나르지오 의정부점</td>
+										<td>경기 의정부시 의정부동 123-45</td>
+										<td>031-123-4578</td>
+									</tr>
+									<tr>
+										<td>경기</td>
+										<td>나르지오 의정부점</td>
+										<td>경기 의정부시 의정부동 123-45</td>
+										<td>031-123-4578</td>
+									</tr>
+									<tr>
+										<td>경기</td>
+										<td>나르지오 의정부점</td>
+										<td>경기 의정부시 의정부동 123-45</td>
+										<td>031-123-4578</td>
+									</tr>
+									<tr>
+										<td>경기</td>
+										<td>나르지오 의정부점</td>
+										<td>경기 의정부시 의정부동 123-45</td>
+										<td>031-123-4578</td>
+									</tr>
+									<tr>
+										<td>경기</td>
+										<td>나르지오 의정부점</td>
+										<td>경기 의정부시 의정부동 123-45</td>
+										<td>031-123-4578</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="paging">
+								<ul>
+									<li><a href="#"> < </a></li>
+									<li class="select"><a href="#"> 1 </a></li>
+									<li><a href="#"> 2 </a></li>
+									<li><a href="#"> 3 </a></li>
+									<li><a href="#"> > </a></li>
+								</ul>								
+							</div>
+							<div class="admin_btn">
+								<ul>
+									<li><a href="#" class="edit">수정</a></li>
+									<li><a href="#" class="del">삭제</a></li>
+								</ul>
+							</div>
+							<div class="board_btn">
+								<ul>									
+									<li style="background:none;border:0;"><a class="write" href="#" style="padding:0;"><img src="/img/common/btn_write.gif" alt="글쓰기" /></a></li>
+									<!--li><a class="list" href="#">목록</a></li>
+									<li><a href="#">답변</a></li-->
+								</ul>
+							</div>
+							
+						</div>
+						
+						<!-- //end 게시판 리스트페이지 -->						
+						
+					</div>									
+				</div>
+				<!-- //end - store -->						
+			</div>
+            <p class="close" data-action="/"><button type="button" class="mobile">닫기</button></p>
+            <div class="sns">
+                <ul>
+                    <li><a href="#"><img src="/img/common/icon_f.gif" alt="페이스북" /></a></li>
+                    <li><a href="#"><img src="/img/common/icon_t.gif" alt="트위터" /></a></li>
+                    <li><a href="#"><img src="/img/common/icon_p.gif" alt="프린트 하기" /></a></li>
+                    <li><a href="#"><img src="/img/common/icon_u.gif" alt="URL 복사" /></a></li>
+                </ul>
+            </div>
+</div>
+<script>
+	$('.close > button').click(function(){
+		$("#layPop").load('support/support.html');
+	})
+</script>

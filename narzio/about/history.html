@@ -1,0 +1,248 @@
+<script type="text/javascript">
+$(function(){
+	$('#tab_menu ul li').click(function(){
+		selectArg = $('#tab_menu ul li').index(this);
+		
+		popOpen()
+		
+		subPage()
+	})
+})
+function popOpen(){
+	$('#layPop').css('display','block')	
+	$('#container').css('display','none')
+}
+function subPage(){
+	//Introduction
+	if(selectArg == 0) $pageData = "about/about.html";
+	//Ci Story
+	else if(selectArg == 1) $pageData = "about/cistory.html";
+	//History
+	else if(selectArg == 2) $pageData = "about/history.html";
+	//Location
+	else if(selectArg == 3) $pageData = "about/location.html";
+	
+	
+	$("#layPop").load($pageData);
+}
+$(function(){
+	$('#tab_wr_history .content_history').hide();
+	$('#tab_wr_history .content_history:first').show();	
+	$('#tab_wr_history .tab_history a').bind('focusin click', function(){
+		$('#tab_wr_history .tab_history li').removeClass('on');
+		$(this).parent().addClass('on');
+		$('#tab_wr_history .content_history').hide();
+		$('#tab_wr_history .content_history').eq($(this).parent().index()).show();
+
+	return false;
+	});
+});
+</script>
+<div id="intro" class="layBody">
+			<div id="tab_wr">
+				<div id="tab_menu" class="tab_menu">
+					<ul>
+						<li><a href="#">Introduction</a><span>/</span></li>
+						<li><a href="#">Ci Story</a><span>/</span></li>
+						<li class="on"><a href="#">History</a><span>/</span></li>
+						<li><a href="#">Location</a></li>												
+					</ul>
+				</div>
+				<div class="content">
+					<div class="content_tit">
+						<h2>HISTORY</h2>
+						<p><span><a href="/">Home</a></span> &gt; About &gt; <strong>History</strong></p>			
+					</div>
+					<!--div class="figure">						
+					</div-->	
+					
+					<div class="layCont people">
+						<h3>처음부터 편안한 신발만을 고집했습니다. <br /> 
+							최고의 신발을 만드는 그날까지 나르지오의 노력은 멈추지 않습니다.</h3>
+							<div id="tab_wr_history">
+								<div class="tab_history">
+									<ul>
+										<li class="on"><a href="#">현재~2013</a></li>
+										<li><a href="#">2010~2005</a></li>
+									</ul>
+								</div>
+								<div class="content_history">
+									<h4>2013</h4>
+									<div class="content_history_txt">
+										<dl>
+											<dt>04</dt>
+											<dd>
+												<span>나르지오-Dr.출시</span><br />
+												남성들을 위한 고급 실내화<br />
+												나르지오 뮬 업그레이드 버전으로 개발										
+											</dd>									
+										</dl>
+										<dl>
+											<dt>02</dt>
+											<dd>
+												<span>나르지오-M 출시</span><br />
+												남성들을 위한 고급 비지니스화 출시<br />
+												가볍고 편안한 착용감을 강조함										
+											</dd>									
+										</dl>
+									</div>
+									<h4>2012</h4>
+									<div class="content_history_txt">
+										<dl>
+											<dt>08</dt>
+											<dd>
+												<span>나르지오-hi 와인색 출시</span><br />
+												나르지오-hi 의 편안함에 와인색의 고급스러움을 더한 제품<br />
+												다양한 연출이 가능하도록 제작됨										
+											</dd>									
+										</dl>										
+									</div>
+									<h4>2011</h4>
+									<div class="content_history_txt">
+										<dl>
+											<dt>11</dt>
+											<dd>
+												<span>나르지오-top 출시</span><br />
+												기존 나르자 제품보다 한 단계 더 업그레이드<br />
+												발모양에 더 가깝고 발목부분을 슬림하게 디자인하여 착용감이 우수하고 편하도록	 제작<br />
+												천연접착제 사용 & 내구성강화
+											</dd>									
+										</dl>
+										<dl>
+											<dt>05</dt>
+											<dd>
+												<span>나르지오-S 출시</span><br />
+												천연고급 염소가죽사용, 세련되고 고급스러운 디자인<br />
+												스커트나 정장에도 잘 어울리는 여성 전용제품										
+											</dd>									
+										</dl>
+										<dl>
+											<dt>04</dt>
+											<dd>
+												<span>나르지오-hi 출시</span><br />
+												기존 나르지오 제품보다 한 단계 더 업그레이드 전방 아웃솔 분리로 착화감이 더욱 좋아짐<br />
+												친환경 아웃솔 개발 적용. 컴퓨터제작기법 도입							
+											</dd>									
+										</dl>
+									</div>
+
+
+								</div>
+								<div class="content_history">
+									<h4>2010</h4>
+									<div class="content_history_txt">
+										<dl>
+											<dt>03</dt>
+											<dd>
+												<span>나르자Ⅱ 출시</span><br />
+												발목을 낮추고, 끈고리 사용으로 기존 나르자보다 착용감이 더욱 좋아짐<br />
+												송진과 황토가 배합된 친환경 고기능성인솔사용. 자세교정용 인솔적용		
+											</dd>									
+										</dl>
+										<dl>
+											<dt>&nbsp</dt>
+											<dd>
+												<span>나르자Ⅱ 출시</span><br />
+												나르지오 디자인을 업그레이드, 편안하고  사용이 편리한 고무밴드끈 사용	
+											</dd>									
+										</dl>
+									</div>
+									<h4>2009</h4>
+									<div class="content_history_txt">
+										<dl>
+											<dt>08</dt>
+											<dd>
+												<span>나르지오 뮬 출시</span><br />
+												실내에서 편하게 신을 수 있는 슬리펴 형태로서 나르지오의 기능성을 강조한 신발		
+											</dd>									
+										</dl>
+										<dl>
+											<dt>02</dt>
+											<dd>
+												<span>나르지오 출시</span><br />
+												신끈이 없는 형태로 평상시 편하게 신을 수 있도록 개발<br />
+												황토가 배합된 친환경 소재의 고 기능성 인솔사용
+											</dd>									
+										</dl>
+									</div>
+									<h4>2008</h4>
+									<div class="content_history_txt">
+										<dl>
+											<dt>12</dt>
+											<dd>
+												<span>나르지오(Narzio) 브랜드 정립</span><br />						
+											</dd>									
+										</dl>
+										<dl>
+											<dt>07</dt>
+											<dd>
+												<span>뉴 나르자 출시</span><br />
+												업그레이드 된 ATB 100 원단의 기능성 인솔 사용
+											</dd>									
+										</dl>
+									</div>
+									<h4>2007</h4>
+									<div class="content_history_txt">
+										<dl>
+											<dt>12</dt>
+											<dd>
+												<span>단화출시</span><br />	
+												지퍼의 부착으로 사용시 편리성을 강화, 고무밴드 끈 사용
+											</dd>									
+										</dl>
+										<dl>
+											<dt>05</dt>
+											<dd>
+												<span>나르자 출시</span><br />
+												바닥 분리형, 초 경량 신발, 발목보호, 안정된 워킹
+											</dd>									
+										</dl>
+										<dl>
+											<dt>03</dt>
+											<dd>
+												<span>나르자(Narza) 브랜드 정립</span><br />							
+											</dd>									
+										</dl>
+									</div>
+									<h4>2006</h4>
+									<div class="content_history_txt">
+										<dl>
+											<dt>10</dt>
+											<dd>
+												<span>분리형 바닥 기능성 신발시장 개척 및 제품양산</span><br />										
+											</dd>									
+										</dl>										
+									</div>
+									<h4>2005</h4>
+									<div class="content_history_txt">
+										<dl>
+											<dt>08</dt>
+											<dd>
+												<span>나르지오 창립</span><br />	
+												<span>기능성 신발 연구 개발</span><br />	
+												<span>신제품 출시</span>
+											</dd>									
+										</dl>										
+									</div>
+
+
+
+								</div>
+							</div>
+						
+					</div>						
+				</div>					
+			</div>
+            <p class="close" data-action="/"><button type="button" class="mobile">닫기</button></p>
+            <div class="sns">
+                <ul>
+                    <li><a href="#"><img src="/img/common/icon_f.gif" alt="페이스북" /></a></li>
+                    <li><a href="#"><img src="/img/common/icon_t.gif" alt="트위터" /></a></li>
+                    <li><a href="#"><img src="/img/common/icon_p.gif" alt="프린트 하기" /></a></li>
+                    <li><a href="#"><img src="/img/common/icon_u.gif" alt="URL 복사" /></a></li>
+                </ul>
+            </div>
+</div>
+<script>
+	$('#layPop').setUI();
+</script>

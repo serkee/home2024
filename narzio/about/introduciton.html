@@ -1,0 +1,98 @@
+<script type="text/javascript">
+$(function(){
+	$('#tab_menu ul li').click(function(){
+		selectArg = $('#tab_menu ul li').index(this);
+		
+		popOpen()
+		
+		subPage()
+	})
+})
+function popOpen(){
+	$('#layPop').css('display','block')	
+	$('#container').css('display','none')
+}
+function subPage(){
+	//Introduction
+	if(selectArg == 0) $pageData = "about/about.html";
+	//Ci Story
+	else if(selectArg == 1) $pageData = "about/cistory.html";
+	//History
+	else if(selectArg == 2) $pageData = "about/history.html";
+	//Location
+	else if(selectArg == 3) $pageData = "about/location.html";
+	
+	
+	$("#layPop").load($pageData);
+}
+</script>
+<div id="intro" class="layBody">
+			<div id="tab_wr">
+				<div id="tab_menu" class="tab_menu">
+					<ul>
+						<li class="on"><a href="#">Introduction</a><span>/</span></li>
+						<li><a href="#">Ci Story</a><span>/</span></li>
+						<li><a href="#">History</a><span>/</span></li>
+						<li><a href="#">Location</a></li>												
+					</ul>
+				</div>
+				<div class="content">
+					<div class="content_tit">
+						<h2>INTRODUCTION</h2>
+						<p><span><a href="/">Home</a></span> &gt; About &gt; <strong>Introduction</strong></p>			
+					</div>
+					<!--div class="figure">						
+					</div-->	
+					
+					<div class="layCont people">
+			
+						<h3>사랑합니다 고객님! 나르지오는 언제나 고객만족을 최우선으로 생각합니다. </h3>
+						<h4>세상에서 가장 편한 신발 나르지오 워킹화를 찾아주셔서 진심으로 감사드립니다. </h4>
+						<p class="block">가볍고 편안한 신발을 신고 건강한 삶을 유지하고 싶은 것은 우리 모두의 바램입니다. 일찍이 의학의 아버지 히포크라데스는 걷는 것이 최고의 보약이다라고 했습니다. 하지만 사람들은 의외로 신발의 중요성을 대수롭지 않게 여깁니다. 멋과 아름다움에 관심을 갖기 시작하면서 신발은 보호와 기능보다는 패션의 기능이 더 중요해 졌습니다. 가볍고 편안한 신발을 선택하고 신는 것은 건강에 매우 중요한 포인트가 될 수 있습니다. 왜냐하면 발은 체중의 80%를 지탱하고 있으며, 항상 딱딱한 지면에 매일 약 10,000번 이상씩을 부딪히고 있기 때문입니다.
+						또한 발은 약 26개의 뼈와 수많은 관절과 인대, 신경, 혈관 등이 복잡하게 연결되어 조화를 이룬 정교한 인체 기관이라 만약 이 중 하나라도 기능에 이상이 발생할 경우 발에 통증이 생기는 것은 물론 몸의 다른 부분에도 좋지 않은 영향을 주게 됩니다. </p>
+						<h4>나르지오 워킹화는 세계최초로 초경량의 분리형 바닥을 개발하여 세상에서 가장 편한 신발을 생산하고 있습니다.</h4>
+						<p class="block">분리형 바닥은 자연스러운 발의 아치형태를 형성하여 충격흡수에 탁월하며, 걸음걸이에 따라 신발이 접히도록 설계되어 착화감을 극대화 하였습니다. 또한 첨단 기술을 집대성한 기능성 인솔은 땀을 빨리 흡수하고, 발냄새를 억제하는 향균처리가 되어있어 항상 쾌적한 발을 유지지켜 줍니다.
+						나르지오 워킹화는 고객님들의 만족과 건강을 최우선으로 생각하고 있습니다. 앞으로도 최고의 제품과 서비스로 여러분들을 만날 것을 약속드립니다. <br />감사합니다.</p>
+
+						<h3>나르지오가 지향하는 핵심가치는 나눔, 정직 그리고 건강 입니다. </h3>
+						<ul>
+							<li>
+								<img src="/img/detail/about/introduction_01.gif" alt="" />
+								<h4>나눔</h4>
+								<p class="subtxt">나르지오는 정보를 나눔으로 수익을 창출하며,<br /> 수익을 나눔으로 사회에 공헌합니다. </p>
+								<p class="subBlock">기존 전통적인 비즈니스 모델을 근간으로 사업을 수행중인 오프라인 기업을 온라인 영역으로 범위의 경제를 확대해 추가적인 수익을 꾀하거나 연계 서비스를 강화해 기존 고객의 만족도를 높이는 유지 및 확산 전략을 수행하는 등 기존 오프라인 비즈니스의 온라인 변모 및 확대를 위한 제반 플랫폼 구축 사업 수행</p>
+							</li>
+							<li>
+								<img src="/img/detail/about/introduction_02.gif" alt="" />
+								<h4>정직</h4>
+								<p class="subtxt">나르지오는 정직한 노동의 대가,<br />
+								그리고 정직한 수익과정을 추구합니다. </p>
+								<p class="subBlock">온라인만의 차별적 고객 욕구 및 특성을 고려해 고객 세분화, 타겟팅, 포지셔닝 등의 전략을 구상하고 이를 실행하기 위한 프로모션으로 온라인 광고, PR, 세일즈 프로모션 등을 기획 및 실행하는 사업을 수행</p>
+							</li>
+							<li>
+								<img src="/img/detail/about/introduction_03.gif" alt="" />
+								<h4>건강</h4>
+								<p class="subtxt">나르지오는 고객의 건강,<br /> 
+								더 나아가 국민 모두의 건강한 삶을 추구합니다. </p>
+								<p class="subBlock">다양한 고객과의 상호교감적 경험의 축적을 통한 기업의 시장 수익을 확대키 위해 상설 및 비 상설 세일즈 프로모션(전시)용 멀티미디어 컨텐트(멀티터치, 다차원 증강현실, 미디어 아트, 모바일 어플리케이션, 온라인 매거진 등) 개발</p>
+							</li>
+						</ul>
+						
+						
+						
+					</div>							
+				</div>					
+			</div>
+            <p class="close" data-action="/"><button type="button" class="mobile">닫기</button></p>
+            <div class="sns">
+                <ul>
+                    <li><a href="#"><img src="/img/common/icon_f.gif" alt="페이스북" /></a></li>
+                    <li><a href="#"><img src="/img/common/icon_t.gif" alt="트위터" /></a></li>
+                    <li><a href="#"><img src="/img/common/icon_p.gif" alt="프린트 하기" /></a></li>
+                    <li><a href="#"><img src="/img/common/icon_u.gif" alt="URL 복사" /></a></li>
+                </ul>
+            </div>
+</div>
+<script>
+	$('#layPop').setUI();
+</script>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<link>
+	<banner>
+		<img>img/img_banner01.jpg</img>
+		<link>01</link>
+	</banner>
+	<banner>
+		<img>img/img_banner02.jpg</img>
+		<link>02</link>
+	</banner>
+	<banner>
+		<img>img/img_banner03.jpg</img>
+		<link>03</link>
+	</banner>
+	<banner>
+		<img>img/img_banner04.jpg</img>
+		<link>04</link>
+	</banner>
+</link>

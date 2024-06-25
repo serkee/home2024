@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<quiz>
+	<unit name="1차시">
+		<question name="문제1">
+			<text><![CDATA[]]></text>
+			<answer num=""><![CDATA[]]></answer>
+			<explain><![CDATA[]]></explain>
+			<choice>
+				<num></num>
+				<num></num>
+				<num></num>
+				<num></num>
+			</choice>
+		</question>
+		<question name="문제2">
+			<text><![CDATA[]]></text>
+			<answer num=""><![CDATA[]]></answer>
+			<explain><![CDATA[]]></explain>
+			<choice>
+				<num></num>
+				<num></num>
+				<num></num>
+				<num></num>
+			</choice>
+		</question>
+	</unit>
+	
+	<unit name="2차시">
+		
+	</unit>
+	
+	<unit name="3차시">
+		
+	</unit>
+	
+	<unit name="4차시">
+	
+		<question name="문제1">
+			<text><![CDATA[아이를 살리는 치유를 위한 3가지 중요 접근 방법이 아닌 것은?]]></text>
+			<answer num="3"><![CDATA[③ 자동차]]></answer>
+			<explain><![CDATA[아이를 살리는 치유를 위해 고려해야 할 항목으로 자동차는 관련이 없다.]]></explain>
+			<choice>
+				<num>몸</num>
+				<num>마음</num>
+				<num>자동차</num>
+				<num>관계</num>
+			</choice>
+		</question>
+		
+		<question name="문제2">
+			<text><![CDATA[견인불발(堅忍不拔)의 뜻으로 적절한 것은?]]></text>
+			<answer num="4"><![CDATA[④ 아무리 어려운 상황을 맞아도 참고 견디어 마음이 흔들리지 않는다.]]></answer>
+			<explain><![CDATA[견인불발(堅忍不拔)은 아무리 어려운 상황을 맞아도 참고 견디어 마음이 흔들리지 않는다는 뜻이다.]]></explain>
+			<choice>
+				<num>불법 정차된 자동차를 견인하였다.</num>
+				<num>앞에서는 끌고 뒤에서는 잡아당겨야한다.</num>
+				<num>어려우면 일단 뒤로 물러난다.</num>
+				<num>아무리 어려운 상황을 맞아도 참고 견디어 마음이 흔들리지 않는다.</num>
+			</choice>
+		</question>
+		
+	</unit>
+</quiz>

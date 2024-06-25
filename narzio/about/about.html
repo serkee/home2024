@@ -1,0 +1,371 @@
+<script type="text/javascript">
+
+$(function(){
+	$('#tab_wr .content').hide();
+	$('#tab_wr .content:first').show();	
+	$('#tab_wr .tab_menu a').bind('focusin click', function(){
+		$('#tab_wr .tab_menu li').removeClass('on');
+		$(this).parent().addClass('on');
+		$('#tab_wr .content').hide();
+		$('#tab_wr .content').eq($(this).parent().index()).show();
+
+	return false;
+	});
+});
+
+$(function(){
+	$('#tab_wr_history .content_history').hide();
+	$('#tab_wr_history .content_history:first').show();	
+	$('#tab_wr_history .tab_history a').bind('focusin click', function(){
+		$('#tab_wr_history .tab_history li').removeClass('on');
+		$(this).parent().addClass('on');
+		$('#tab_wr_history .content_history').hide();
+		$('#tab_wr_history .content_history').eq($(this).parent().index()).show();
+
+	return false;
+	});
+});
+
+</script>
+<div id="intro" class="layBody">
+			<div id="tab_wr">
+				<div class="tab_menu">
+					<ul>
+						<li class="on"><a href="#">Introduction</a><span>/</span></li>
+						<li><a href="#">Ci story</a><span>/</span></li>
+						<li><a href="#">History</a><span>/</span></li>
+						<li><a href="#">Location</a></li>															
+					</ul>
+				</div>
+				<div class="content">
+					<div class="content_tit">
+						<h2>INTRODUCTION</h2>
+						<p><span><a href="/">Home</a></span> &gt; About &gt; <strong>Introduction</strong></p>			
+					</div>
+					<!--div class="figure">
+					</div-->
+					<div class="layCont people">
+			
+				<h3>사랑합니다 고객님! 나르지오는 언제나 고객만족을 최우선으로 생각합니다. </h3>
+				<h4>세상에서 가장 편한 신발 나르지오 워킹화를 찾아주셔서 진심으로 감사드립니다. </h4>
+				<p class="block">가볍고 편안한 신발을 신고 건강한 삶을 유지하고 싶은 것은 우리 모두의 바램입니다. 일찍이 의학의 아버지 히포크라데스는 걷는 것이 최고의 보약이다라고 했습니다. 하지만 사람들은 의외로 신발의 중요성을 대수롭지 않게 여깁니다. 멋과 아름다움에 관심을 갖기 시작하면서 신발은 보호와 기능보다는 패션의 기능이 더 중요해 졌습니다. 가볍고 편안한 신발을 선택하고 신는 것은 건강에 매우 중요한 포인트가 될 수 있습니다. 왜냐하면 발은 체중의 80%를 지탱하고 있으며, 항상 딱딱한 지면에 매일 약 10,000번 이상씩을 부딪히고 있기 때문입니다.
+				또한 발은 약 26개의 뼈와 수많은 관절과 인대, 신경, 혈관 등이 복잡하게 연결되어 조화를 이룬 정교한 인체 기관이라 만약 이 중 하나라도 기능에 이상이 발생할 경우 발에 통증이 생기는 것은 물론 몸의 다른 부분에도 좋지 않은 영향을 주게 됩니다. </p>
+				<h4>나르지오 워킹화는 세계최초로 초경량의 분리형 바닥을 개발하여 세상에서 가장 편한 신발을 생산하고 있습니다.</h4>
+				<p class="block">분리형 바닥은 자연스러운 발의 아치형태를 형성하여 충격흡수에 탁월하며, 걸음걸이에 따라 신발이 접히도록 설계되어 착화감을 극대화 하였습니다. 또한 첨단 기술을 집대성한 기능성 인솔은 땀을 빨리 흡수하고, 발냄새를 억제하는 향균처리가 되어있어 항상 쾌적한 발을 유지지켜 줍니다.
+				나르지오 워킹화는 고객님들의 만족과 건강을 최우선으로 생각하고 있습니다. 앞으로도 최고의 제품과 서비스로 여러분들을 만날 것을 약속드립니다. <br />감사합니다.</p>
+
+				<h3>나르지오가 지향하는 핵심가치는 나눔, 정직 그리고 건강 입니다. </h3>
+				<ul>
+					<li>
+						<img src="/img/detail/about/introduction_01.gif" alt="" />
+						<h4>나눔</h4>
+						<p class="subtxt">나르지오는 정보를 나눔으로 수익을 창출하며,<br /> 수익을 나눔으로 사회에 공헌합니다. </p>
+						<p class="subBlock">기존 전통적인 비즈니스 모델을 근간으로 사업을 수행중인 오프라인 기업을 온라인 영역으로 범위의 경제를 확대해 추가적인 수익을 꾀하거나 연계 서비스를 강화해 기존 고객의 만족도를 높이는 유지 및 확산 전략을 수행하는 등 기존 오프라인 비즈니스의 온라인 변모 및 확대를 위한 제반 플랫폼 구축 사업 수행</p>
+					</li>
+					<li>
+						<img src="/img/detail/about/introduction_02.gif" alt="" />
+						<h4>정직</h4>
+						<p class="subtxt">나르지오는 정직한 노동의 대가,<br />
+						그리고 정직한 수익과정을 추구합니다. </p>
+						<p class="subBlock">온라인만의 차별적 고객 욕구 및 특성을 고려해 고객 세분화, 타겟팅, 포지셔닝 등의 전략을 구상하고 이를 실행하기 위한 프로모션으로 온라인 광고, PR, 세일즈 프로모션 등을 기획 및 실행하는 사업을 수행</p>
+					</li>
+					<li>
+						<img src="/img/detail/about/introduction_03.gif" alt="" />
+						<h4>건강</h4>
+						<p class="subtxt">나르지오는 고객의 건강,<br /> 
+						더 나아가 국민 모두의 건강한 삶을 추구합니다. </p>
+						<p class="subBlock">다양한 고객과의 상호교감적 경험의 축적을 통한 기업의 시장 수익을 확대키 위해 상설 및 비 상설 세일즈 프로모션(전시)용 멀티미디어 컨텐트(멀티터치, 다차원 증강현실, 미디어 아트, 모바일 어플리케이션, 온라인 매거진 등) 개발</p>
+					</li>
+				</ul>
+				
+				
+				
+			</div>
+							
+				</div>	
+				<div class="content">
+					<div class="content_tit">
+						<h2>CI STORY</h2>
+						<p><span><a href="/">Home</a></span> &gt; About &gt; <strong>Ci story</strong></p>				
+					</div>
+					<div class="figure">
+						<div class="type_01">
+							<div class="tit">
+								<img src="img/sub/cistory/tit_01.gif" alt="로고타입" />
+							</div>
+							<div>
+								<div class="layout_left">
+									<dl>
+										<dt><img src="img/sub/cistory/1_dt_01.gif" alt="영문" /></dt>
+										<dd><img src="img/sub/cistory/1_dd_01.gif" alt="영문" /></dd>
+									</dl>
+								</div>								
+							</div>
+							<div class="layout_left">
+								<dl>
+									<dt><img src="img/sub/cistory/1_dt_02.gif" alt="국문" /></dt>
+									<dd><img src="img/sub/cistory/1_dd_02.gif" alt="국문" /></dd>
+								</dl>								
+							</div>
+							<div class="layout_right">
+								<dl>
+									<dt><img src="img/sub/cistory/1_dt_03.gif" alt="국문" /></dt>
+									<dd><img src="img/sub/cistory/1_dd_03.gif" alt="국문" /></dd>
+								</dl>
+							</div>
+						</div>
+						<div class="type_01">
+							<div class="tit">
+								<img src="img/sub/cistory/tit_02.gif" alt="로고타입" />
+							</div>
+							<div>
+								<div class="layout_left">
+									<dl>
+										<dt><img src="img/sub/cistory/2_dt_01.gif" alt="영문" /></dt>
+										<dd><img src="img/sub/cistory/2_dd_01.gif" alt="영문" /></dd>
+									</dl>
+								</div>
+								<div class="layout_right">
+								<dl>
+									<dt><img src="img/sub/cistory/2_dt_02.gif" alt="국문" /></dt>
+									<dd><img src="img/sub/cistory/2_dd_02.gif" alt="국문" /></dd>
+								</dl>								
+							</div>
+							</div>
+							
+							<div class="layout_left">
+								<dl>
+									<dt><img src="img/sub/cistory/2_dt_03.gif" alt="국문" /></dt>
+									<dd><img src="img/sub/cistory/2_dd_03.gif" alt="국문" /></dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+				<div class="content">
+					<div class="content_tit">
+						<h2>HISTORY</h2>
+						<p><span><a href="/">Home</a></span> &gt; About &gt; <strong>History</strong></p>			
+					</div>	
+					<div class="layCont people">
+						<h3>처음부터 편안한 신발만을 고집했습니다. <br /> 
+							최고의 신발을 만드는 그날까지 나르지오의 노력은 멈추지 않습니다.</h3>
+							<div id="tab_wr_history">
+								<div class="tab_history">
+									<ul>
+										<li class="on"><a href="#">현재~2013</a></li>
+										<li><a href="#">2010~2005</a></li>
+									</ul>
+								</div>
+								<div class="content_history">
+									<h4>2013</h4>
+									<div class="content_history_txt">
+										<dl>
+											<dt>04</dt>
+											<dd>
+												<span>나르지오-Dr.출시</span><br />
+												남성들을 위한 고급 실내화<br />
+												나르지오 뮬 업그레이드 버전으로 개발										
+											</dd>									
+										</dl>
+										<dl>
+											<dt>02</dt>
+											<dd>
+												<span>나르지오-M 출시</span><br />
+												남성들을 위한 고급 비지니스화 출시<br />
+												가볍고 편안한 착용감을 강조함										
+											</dd>									
+										</dl>
+									</div>
+									<h4>2012</h4>
+									<div class="content_history_txt">
+										<dl>
+											<dt>08</dt>
+											<dd>
+												<span>나르지오-hi 와인색 출시</span><br />
+												나르지오-hi 의 편안함에 와인색의 고급스러움을 더한 제품<br />
+												다양한 연출이 가능하도록 제작됨										
+											</dd>									
+										</dl>										
+									</div>
+									<h4>2011</h4>
+									<div class="content_history_txt">
+										<dl>
+											<dt>11</dt>
+											<dd>
+												<span>나르지오-top 출시</span><br />
+												기존 나르자 제품보다 한 단계 더 업그레이드<br />
+												발모양에 더 가깝고 발목부분을 슬림하게 디자인하여 착용감이 우수하고 편하도록	 제작<br />
+												천연접착제 사용 & 내구성강화
+											</dd>									
+										</dl>
+										<dl>
+											<dt>05</dt>
+											<dd>
+												<span>나르지오-S 출시</span><br />
+												천연고급 염소가죽사용, 세련되고 고급스러운 디자인<br />
+												스커트나 정장에도 잘 어울리는 여성 전용제품										
+											</dd>									
+										</dl>
+										<dl>
+											<dt>04</dt>
+											<dd>
+												<span>나르지오-hi 출시</span><br />
+												기존 나르지오 제품보다 한 단계 더 업그레이드 전방 아웃솔 분리로 착화감이 더욱 좋아짐<br />
+												친환경 아웃솔 개발 적용. 컴퓨터제작기법 도입							
+											</dd>									
+										</dl>
+									</div>
+
+
+								</div>
+								<div class="content_history">
+									<h4>2010</h4>
+									<div class="content_history_txt">
+										<dl>
+											<dt>03</dt>
+											<dd>
+												<span>나르자Ⅱ 출시</span><br />
+												발목을 낮추고, 끈고리 사용으로 기존 나르자보다 착용감이 더욱 좋아짐<br />
+												송진과 황토가 배합된 친환경 고기능성인솔사용. 자세교정용 인솔적용		
+											</dd>									
+										</dl>
+										<dl>
+											<dt>&nbsp</dt>
+											<dd>
+												<span>나르자Ⅱ 출시</span><br />
+												나르지오 디자인을 업그레이드, 편안하고  사용이 편리한 고무밴드끈 사용	
+											</dd>									
+										</dl>
+									</div>
+									<h4>2009</h4>
+									<div class="content_history_txt">
+										<dl>
+											<dt>08</dt>
+											<dd>
+												<span>나르지오 뮬 출시</span><br />
+												실내에서 편하게 신을 수 있는 슬리펴 형태로서 나르지오의 기능성을 강조한 신발		
+											</dd>									
+										</dl>
+										<dl>
+											<dt>02</dt>
+											<dd>
+												<span>나르지오 출시</span><br />
+												신끈이 없는 형태로 평상시 편하게 신을 수 있도록 개발<br />
+												황토가 배합된 친환경 소재의 고 기능성 인솔사용
+											</dd>									
+										</dl>
+									</div>
+									<h4>2008</h4>
+									<div class="content_history_txt">
+										<dl>
+											<dt>12</dt>
+											<dd>
+												<span>나르지오(Narzio) 브랜드 정립</span><br />						
+											</dd>									
+										</dl>
+										<dl>
+											<dt>07</dt>
+											<dd>
+												<span>뉴 나르자 출시</span><br />
+												업그레이드 된 ATB 100 원단의 기능성 인솔 사용
+											</dd>									
+										</dl>
+									</div>
+									<h4>2007</h4>
+									<div class="content_history_txt">
+										<dl>
+											<dt>12</dt>
+											<dd>
+												<span>단화출시</span><br />	
+												지퍼의 부착으로 사용시 편리성을 강화, 고무밴드 끈 사용
+											</dd>									
+										</dl>
+										<dl>
+											<dt>05</dt>
+											<dd>
+												<span>나르자 출시</span><br />
+												바닥 분리형, 초 경량 신발, 발목보호, 안정된 워킹
+											</dd>									
+										</dl>
+										<dl>
+											<dt>03</dt>
+											<dd>
+												<span>나르자(Narza) 브랜드 정립</span><br />							
+											</dd>									
+										</dl>
+									</div>
+									<h4>2006</h4>
+									<div class="content_history_txt">
+										<dl>
+											<dt>10</dt>
+											<dd>
+												<span>분리형 바닥 기능성 신발시장 개척 및 제품양산</span><br />										
+											</dd>									
+										</dl>										
+									</div>
+									<h4>2005</h4>
+									<div class="content_history_txt">
+										<dl>
+											<dt>08</dt>
+											<dd>
+												<span>나르지오 창립</span><br />	
+												<span>기능성 신발 연구 개발</span><br />	
+												<span>신제품 출시</span>
+											</dd>									
+										</dl>										
+									</div>
+
+
+
+								</div>
+							</div>
+						
+					</div>
+				</div>
+				<div class="content">
+					<div class="content_tit">
+						<h2>LOCATION</h2>
+						<p><span><a href="/">Home</a></span> &gt; About &gt; <strong>Location</strong></p>			
+					</div>	
+					
+					<div class="figure">	
+						
+						<div class="map">
+							<iframe src="http://narzio1.maddesign.co.kr/map/map.html" frameborder="0" width="100%" height="100%"></iframe>
+						</div>
+											
+					</div>
+					<div class="layCont map">
+						<h3>나르지오 본사</h3>
+						<dl>
+							<dt>주소</dt>
+							<dd>서울특별시 강동구 천호동 315-28 나르지오빌딩 4층</dd>
+						</dl>
+						<dl>
+							<dt>전화</dt>
+							<dd>02-482-0655</dd>
+						</dl>
+						<dl>
+							<dt>찾아오시는길</dt>
+							<dd><span>대중교통 이용시</span><br />암사역 2번출구에서 약 287m 이동 > 횡단보도를 지나면 나르지오가 있습니다.</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			
+
+            <p class="close" data-action="/"><button type="button" class="mobile">닫기</button></p>
+            <div class="sns">
+                <ul>
+                    <li><a href="#"><img src="/img/common/icon_f.gif" alt="페이스북" /></a></li>
+                    <li><a href="#"><img src="/img/common/icon_t.gif" alt="트위터" /></a></li>
+                    <li><a href="#"><img src="/img/common/icon_p.gif" alt="프린트 하기" /></a></li>
+                    <li><a href="#"><img src="/img/common/icon_u.gif" alt="URL 복사" /></a></li>
+                </ul>
+            </div>
+</div>
+<script>
+	$('#layPop').setUI();
+</script>

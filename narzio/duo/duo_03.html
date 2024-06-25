@@ -1,0 +1,116 @@
+<script type="text/javascript">
+$(function(){
+	$('#tab_menu ul li').click(function(){
+		selectArg = $('#tab_menu ul li').index(this);
+		
+		popOpen()
+		
+		duoPage()
+	})
+})
+function popOpen(){
+	$('#layPop').css('display','block')	
+	$('#container').css('display','none')
+}
+function duoPage(){
+	//워킹화 특장점
+	if(selectArg == 0) $pageData = "duo/duo_01.html";
+	//아웃라스트-인솔
+	else if(selectArg == 1) $pageData = "duo/duo_02.html";
+	//연구-학술자료
+	else if(selectArg == 2) $pageData = "duo/duo_03.html";
+	//인증서
+	else if(selectArg == 3) $pageData = "duo/duo_04.html";
+	//워킹화 관리법
+	else if(selectArg == 4) $pageData = "duo/duo_05.html";	
+	
+	$("#layPop").load($pageData);
+}
+</script>
+<div id="intro" class="layBody">
+			<div id="tab_wr">
+				<div id="tab_menu" class="tab_menu">
+					<ul>
+						<li><a href="#">나르지오 워킹화 특장점</a><span>/</span></li>
+						<li><a href="#">아웃라스트·인솔</a><span>/</span></li>
+						<li  class="on"><a href="#">연구·학술자료</a><span>/</span></li>
+						<li><a href="#">인증서</a><span>/</span></li>
+						<li><a href="#">워킹화 관리법</a></li>														
+					</ul>
+				</div>
+				<div class="content">
+					<div class="content_tit">
+						<h2>연구·학술자료</h2>
+						<p><span><a href="/">Home</a></span> &gt; Duo Tech &gt; <strong>연구·학술자료</strong></p>			
+					</div>
+					<!--div class="figure">						
+					</div-->	
+					
+					<div class="layCont duo01">
+						<div class="duo_visual">
+							<img src="/img/sub/duo/duo_01_1.gif" alt="" />
+						</div>
+						<div class="duo_Cont">
+							<p><span>가볍다! 발따라 움직인다!</span><br />나르지오 워킹화만의 특징을 만나보세요</p>
+							<ul class="duo_li_l">
+								<li>
+									<dl>
+										<dt><img src="/img/common/no_1.gif" alt="" />아웃라스트</dt>
+										<dd>'아웃라스트'는 미국항공우주국(NASA)에서 우주 탐사시 예측할 수 없는 외부 온도의 변화로부터 우주인을 보호하기 위해 개발된 온도조절용 첨단 소재로써 신발 내부 온도를 일정하게 유지시키고 쾌적함을 지속시킵니다.(신발 내부 발등을 덮는 부분에 사용됨)</dd>
+										<dd><img src="/img/sub/duo/duo_01_2.gif" alt="Outlast" /></dd>
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt><img src="/img/common/no_2.gif" alt="" />미끄럼 방지</dt>
+										<dd>미끄럼 방지에 탁월한 고무소재를 바닥 전면에 배치하였으며, 독창적인 바닥문양 설계를 적용하여 미끄러움을 방지하고 안전한 보행을 유도합니다.</dd>			
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt><img src="/img/common/no_3.gif" alt="" /><img src="/img/common/no_4.gif" alt="" />분리형 바닥 <span>특허 제 10-1008344호</span></dt>
+										<dd>앞뒤로 분리된 바닥은 발의 움직임에 따라 신발이 함께 구부러지는 능력이 탁월하여 운동량은 높이고 피로도는 낮추어 줍니다. 또한, 발 바닥의 근육을 끊임없이 자극하여 혈액순환에 도움을 줍니다.</dd>			
+									</dl>
+								</li>								
+							</ul>
+							<ul class="duo_li_r">
+								<li>
+									<dl>
+										<dt><img src="/img/common/no_5.gif" alt="" />천연가죽</dt>
+										<dd>최고품질의 엄선된 천연가죽만을 사용합니다. 가죽 그대로의 편안함과 숨쉬는 기능을 유지하기 위해 별도의 코팅이나 가공처리를 최소화 하였습니다.</dd>			
+									</dl>
+								</li>
+								<li>
+									<dl>
+										<dt><img src="/img/common/no_6.gif" alt="" />미국 FDA 등록</dt>
+										<dd>미국 FDA에 의료용 교정 신발로 등록되어 있습니다.</dd>	
+										<dd><img style="float:left;" src="/img/sub/duo/duo_01_3.gif" alt="" />
+											<div style="padding-left:10px; color:#1f286f; overflow:hidden;">
+												CLFN.NAME<br />
+												ORTHOSIS, CORRECTIVE SHOE<br />
+												DEV. CLASS:1<br /> 
+												Re.NO:3007126794
+											</div>
+										</dd>
+									</dl>
+								</li>
+							</ul>
+						</div>
+					</div>							
+				</div>					
+			</div>
+            <p class="close" data-action="/"><button type="button" class="mobile">닫기</button></p>
+            <div class="sns">
+                <ul>
+                    <li><a href="#"><img src="/img/common/icon_f.gif" alt="페이스북" /></a></li>
+                    <li><a href="#"><img src="/img/common/icon_t.gif" alt="트위터" /></a></li>
+                    <li><a href="#"><img src="/img/common/icon_p.gif" alt="프린트 하기" /></a></li>
+                    <li><a href="#"><img src="/img/common/icon_u.gif" alt="URL 복사" /></a></li>
+                </ul>
+            </div>
+</div>
+<script>
+	$('.close > button').click(function(){
+		$("#layPop").load('duo/duo.html');
+	})
+</script>

@@ -1,0 +1,91 @@
+<script type="text/javascript">
+$(function(){
+	$('#tab_menu ul li').click(function(){
+		selectArg = $('#tab_menu ul li').index(this);
+		
+		popOpen()
+		
+		subPage()
+	})
+})
+function popOpen(){
+	$('#layPop').css('display','block')	
+	$('#container').css('display','none')
+}
+function subPage(){
+	//Introduction
+	if(selectArg == 0) $pageData = "about/about.html";
+	//Ci Story
+	else if(selectArg == 1) $pageData = "about/cistory.html";
+	//History
+	else if(selectArg == 2) $pageData = "about/history.html";
+	//Location
+	else if(selectArg == 3) $pageData = "about/location.html";
+	
+	
+	$("#layPop").load($pageData);
+}
+</script>
+<div id="intro" class="layBody">
+			<div id="tab_wr">
+				<div id="tab_menu" class="tab_menu">
+					<ul>
+						<li><a href="#">Introduction</a><span>/</span></li>
+						<li><a href="#">Ci Story</a><span>/</span></li>
+						<li><a href="#">History</a><span>/</span></li>
+						<li class="on"><a href="#">Location</a></li>											
+					</ul>
+				</div>
+				<div class="content">
+					<div class="content_tit">
+						<h2>LOCATION</h2>
+						<p><span><a href="/">Home</a></span> &gt; About &gt; <strong>Location</strong></p>			
+					</div>
+					<div class="figure">	
+						
+						<div class="map">
+							<iframe src="http://narzio1.maddesign.co.kr/map/map.html" frameborder="0" width="100%" height="100%"></iframe>
+						</div>
+						<div class="map_btn">
+							<ul>
+								<li><a class="naver" href="http://map.naver.com/index.nhn?menu=location&mapMode=0&lat=37.5475403&lng=127.1268488&dlevel=11&__fromRestorer=true&__pinOnly=false&query=&searchCoord=&mpx=37.5475357%2C127.1268375%3AZ11%3A0.0344230%2C0.0152864&tab=1&pinId=21445626&pinType=site&pinTitle=64KY66W07KeA7JikIOybjO2Cue2ZlA%3D%3D&rpanel=n-f&enc=b64" target="_blank">네이버 지도보기</a></li>
+								<li><a class="daum" href="http://map.daum.net/?map_type=TYPE_MAP&q=%EB%82%98%EB%A5%B4%EC%A7%80%EC%98%A4+%EC%9B%8C%ED%82%B9%ED%99%94&urlX=528023&urlY=1124525&urlLevel=3&itemId=16417983" target="_blank">다음 지도보기</a></li>
+								<li class="findstore"><a href="#">대리점찾기</a></li>
+							</ul>
+						</div>
+											
+					</div>
+					<div class="layCont map">
+						<h3>나르지오 본사</h3>
+						<dl>
+							<dt>주소</dt>
+							<dd>서울특별시 강동구 천호동 315-28 나르지오빌딩 4층</dd>
+						</dl>
+						<dl>
+							<dt>전화</dt>
+							<dd>02-482-0655</dd>
+						</dl>
+						<dl>
+							<dt>A/S 문의</dt>
+							<dd>홈페이지 내 Q&A게시판, 또는 대표전화로 문의 바랍니다.</dd>
+						</dl>
+						<dl>
+							<dt>찾아오시는길</dt>
+							<dd><span>대중교통 이용시</span><br />암사역 2번출구에서 약 287m 이동 > 횡단보도를 지나면 나르지오가 있습니다.</dd>
+						</dl>
+					</div>							
+				</div>					
+			</div>
+            <p class="close" data-action="/"><button type="button" class="mobile">닫기</button></p>
+            <div class="sns">
+                <ul>
+                    <li><a href="#"><img src="/img/common/icon_f.gif" alt="페이스북" /></a></li>
+                    <li><a href="#"><img src="/img/common/icon_t.gif" alt="트위터" /></a></li>
+                    <li><a href="#"><img src="/img/common/icon_p.gif" alt="프린트 하기" /></a></li>
+                    <li><a href="#"><img src="/img/common/icon_u.gif" alt="URL 복사" /></a></li>
+                </ul>
+            </div>
+</div>
+<script>
+	$('#layPop').setUI();
+</script>

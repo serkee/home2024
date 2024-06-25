@@ -1,0 +1,236 @@
+<script type="text/javascript">
+$(function(){
+	$('#tab_menu ul li').click(function(){
+		selectArg = $('#tab_menu ul li').index(this);
+		
+		popOpen()
+		
+		duoPage()
+	})
+})
+function popOpen(){
+	$('#layPop').css('display','block')	
+	$('#container').css('display','none')
+}
+function duoPage(){
+	//공지사항
+	if(selectArg == 0) $pageData = "support/notice.html";
+	//FaQ
+	else if(selectArg == 1) $pageData = "support/faq.html";
+	//QnA
+	else if(selectArg == 2) $pageData = "support/qna.html";
+	//갤러리
+	else if(selectArg == 3) $pageData = "support/gallery.html";
+	//이벤트게시판
+	else if(selectArg == 4) $pageData = "support/event.html";
+	//매장찾기
+	else if(selectArg == 5) $pageData = "support/store.html";
+	
+	$("#layPop").load($pageData);
+}
+
+
+
+</script>
+<div id="intro" class="layBody">
+			<div id="tab_wr">
+				<div id="tab_menu" class="tab_menu">
+					<ul>
+						<li><a href="#">Notice</a><span>/</span></li>
+						<li class="on"><a href="#">FAQ</a><span>/</span></li>
+						<li><a href="#">Q&A</a><span>/</span></li>
+						<li><a href="#">Gallery</a><span>/</span></li>
+						<li><a href="#">Event</a><span>/</span></li>	
+						<li><a href="#">Find Store</a></li>														
+					</ul>
+				</div>
+				<!-- start - FAQ -->
+				<div class="content">
+					<div class="content_tit">
+						<h2>FAQ</h2>
+						<p><span><a href="/">Home</a></span> &gt; Support &gt; <strong>FAQ</strong></p>			
+					</div>
+					<!--div class="figure">						
+					</div-->
+<script type="text/javascript">
+$( function(){
+	
+	var faq_m = true;
+	$( "#layPop .layBody .layCont .board.faq ul li .question" ).click(function(){
+		if (faq_m){
+			faq_m = false;
+			$(".answer").removeClass("selected");
+			$(this).parent().children().next().addClass("selected");
+		}else{
+			faq_m = true;
+			$(this).parent().children().next().removeClass("selected");
+		}
+		return false;
+	});
+});
+</script>
+
+
+					<div class="layCont">
+						<div class="search">
+							<select name="" id="">
+								<option value="">제목</option>
+								<option value="">작성자</option>
+							</select>
+							<input type="text" />
+							<button><img src="/img/common/btn_search.gif" alt="검색" /></button>
+						</div>
+						<div class="board faq">
+							<ul>
+								<li>								
+									<div class="question">
+										<img src="/img/common/question.gif" alt="" /><a href="#">나르지오 워킹화만의 특징은 무엇인가요?</a>
+										
+											<a class="btn_open" href="#"><img src="/img/common/btn_open.gif" alt="열기" /></a>
+											<a class="btn_close" href="#"><img src="/img/common/btn_close.gif" alt="닫기" /></a>
+										
+									</div>							
+									<div class="answer">
+										<img src="/img/common/answer.gif" alt="" />
+										답변출력	1									
+									</div>								
+								</li>
+								<li>								
+									<div class="question">
+										<img src="/img/common/question.gif" alt="" /><a href="#">나르지오 워킹화만의 특징은 무엇인가요? 2</a>
+										
+											<a class="btn_open" href="#"><img src="/img/common/btn_open.gif" alt="열기" /></a>
+											<a class="btn_close" href="#"><img src="/img/common/btn_close.gif" alt="닫기" /></a>
+										
+									</div>							
+									<div class="answer">
+										<img src="/img/common/answer.gif" alt="" />
+										답변출력	2									
+									</div>								
+								</li>
+								<li>								
+									<div class="question">
+										<img src="/img/common/question.gif" alt="" /><a href="#">나르지오 워킹화만의 특징은 무엇인가요? 3</a>
+										
+											<a class="btn_open" href="#"><img src="/img/common/btn_open.gif" alt="열기" /></a>
+											<a class="btn_close" href="#"><img src="/img/common/btn_close.gif" alt="닫기" /></a>
+										
+									</div>							
+									<div class="answer">
+										<img src="/img/common/answer.gif" alt="" />
+										답변출력	3									
+									</div>								
+								</li>
+								<li>								
+									<div class="question">
+										<img src="/img/common/question.gif" alt="" /><a href="#">나르지오 워킹화만의 특징은 무엇인가요? 4</a>
+										
+											<a class="btn_open" href="#"><img src="/img/common/btn_open.gif" alt="열기" /></a>
+											<a class="btn_close" href="#"><img src="/img/common/btn_close.gif" alt="닫기" /></a>
+										
+									</div>							
+									<div class="answer">
+										<img src="/img/common/answer.gif" alt="" />
+										답변출력	4									
+									</div>								
+								</li>
+								<li>								
+									<div class="question">
+										<img src="/img/common/question.gif" alt="" /><a href="#">나르지오 워킹화만의 특징은 무엇인가요? 5</a>
+										
+											<a class="btn_open" href="#"><img src="/img/common/btn_open.gif" alt="열기" /></a>
+											<a class="btn_close" href="#"><img src="/img/common/btn_close.gif" alt="닫기" /></a>
+										
+									</div>							
+									<div class="answer">
+										<img src="/img/common/answer.gif" alt="" />
+										답변출력	5									
+									</div>								
+								</li>
+								<li>								
+									<div class="question">
+										<img src="/img/common/question.gif" alt="" /><a href="#">나르지오 워킹화만의 특징은 무엇인가요? 6</a>
+										
+											<a class="btn_open" href="#"><img src="/img/common/btn_open.gif" alt="열기" /></a>
+											<a class="btn_close" href="#"><img src="/img/common/btn_close.gif" alt="닫기" /></a>
+										
+									</div>							
+									<div class="answer">
+										<img src="/img/common/answer.gif" alt="" />
+										답변출력	6									
+									</div>								
+								</li>
+								<li>								
+									<div class="question">
+										<img src="/img/common/question.gif" alt="" /><a href="#">나르지오 워킹화만의 특징은 무엇인가요? 7</a>
+										
+											<a class="btn_open" href="#"><img src="/img/common/btn_open.gif" alt="열기" /></a>
+											<a class="btn_close" href="#"><img src="/img/common/btn_close.gif" alt="닫기" /></a>
+										
+									</div>							
+									<div class="answer">
+										<img src="/img/common/answer.gif" alt="" />
+										답변출력	7									
+									</div>								
+								</li>
+								<li>								
+									<div class="question">
+										<img src="/img/common/question.gif" alt="" /><a href="#">나르지오 워킹화만의 특징은 무엇인가요? 8</a>
+										
+											<a class="btn_open" href="#"><img src="/img/common/btn_open.gif" alt="열기" /></a>
+											<a class="btn_close" href="#"><img src="/img/common/btn_close.gif" alt="닫기" /></a>
+										
+									</div>							
+									<div class="answer">
+										<img src="/img/common/answer.gif" alt="" />
+										답변출력	8									
+									</div>								
+								</li>
+								<li>								
+									<div class="question">
+										<img src="/img/common/question.gif" alt="" /><a href="#">나르지오 워킹화만의 특징은 무엇인가요? 9</a>
+										
+											<a class="btn_open" href="#"><img src="/img/common/btn_open.gif" alt="열기" /></a>
+											<a class="btn_close" href="#"><img src="/img/common/btn_close.gif" alt="닫기" /></a>
+										
+									</div>							
+									<div class="answer">
+										<img src="/img/common/answer.gif" alt="" />
+										답변출력	9									
+									</div>								
+								</li>
+								
+							</ul>
+						</div>
+						<div class="admin_btn">
+								<ul>
+									<li><a href="#" class="edit">수정</a></li>
+									<li><a href="#" class="del">삭제</a></li>
+								</ul>
+							</div>
+							<div class="board_btn">
+								<ul>									
+									<li style="background:none;border:0;"><a class="write" href="#" style="padding:0;"><img src="/img/common/btn_write.gif" alt="글쓰기" /></a></li>
+									<!--li><a class="list" href="#">목록</a></li>
+									<li><a href="#">답변</a></li-->
+								</ul>
+							</div>
+					</div>								
+				</div>
+				<!-- //end - FAQ -->				
+			</div>
+            <p class="close" data-action="/"><button type="button" class="mobile">닫기</button></p>
+            <div class="sns">
+                <ul>
+                    <li><a href="#"><img src="/img/common/icon_f.gif" alt="페이스북" /></a></li>
+                    <li><a href="#"><img src="/img/common/icon_t.gif" alt="트위터" /></a></li>
+                    <li><a href="#"><img src="/img/common/icon_p.gif" alt="프린트 하기" /></a></li>
+                    <li><a href="#"><img src="/img/common/icon_u.gif" alt="URL 복사" /></a></li>
+                </ul>
+            </div>
+</div>
+<script>
+	$('.close > button').click(function(){
+		$("#layPop").load('support/support.html');
+	})
+</script>

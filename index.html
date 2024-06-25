@@ -1,0 +1,1180 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>CODE TREE</title>
+	<link href="css/Reset.css" rel="stylesheet" type="text/css">
+	<link href="css/Layout.css" rel="stylesheet" type="text/css">
+	<script src="js/jquery-1.11.3.min.js">
+
+	</script>
+	<script src="js/sPreloader.js"></script>
+	<script src='js/imagesloaded.pkgd.js'>
+
+	</script>
+	<!--<script src="js/masonry.pkgd.min.js"></script>-->
+	<script src="js/isotope.pkgd.min.js">
+
+	</script>
+	<script>
+		$(function () {
+			$('.nav li a').click(function () {
+				$('.nav li a').eq(arg).css({'color': '#3d3d3d', 'font-weight': 'normal'});
+				arg = $('.nav li a').index(this);
+				if (arg == 1) {
+					$container.isotope({filter: '.design'})
+					color = '#0076a3'
+				} else if (arg == 0) {
+					$container.isotope({filter: '.coding'})
+					color = '#007236'
+				} else if (arg == 3) {
+					$container.isotope({filter: '.flash'})
+					color = '#d21119'
+				} else if (arg == 2) {
+					$container.isotope({filter: '.app'})
+					color = '#aba000'
+				}
+				$('.nav li a').eq(arg).css({'color': color, 'font-weight': 'bold'});
+			})
+
+
+			$('.logo a').click(function () {
+				$container.isotope({filter: '*'})
+				$('.nav li a').eq(arg).css({'color': '#3d3d3d', 'font-weight': 'normal'});
+			})
+			var arg = 100;
+			var color;
+			/*var $container = $('#thumb_area')
+			var jQuerygrid = $container.isotope({
+				itemSelector: '.item',
+				masonry: {
+					gutter: 10
+				}
+			})
+
+			imagesLoaded($container, function(){
+				iso.layout();
+			});*/
+
+
+
+			var $container = $('#thumb_area');
+			var jQuerygrid = $container.isotope({
+				itemSelector: '.item',
+				masonry: {
+					gutter: 10
+				}
+			});
+			var iso = jQuerygrid.data('isotope');
+			jQuerygrid.isotope('reveal', iso.items);
+
+			imagesLoaded($container, function () {
+				iso.layout();
+			});
+
+			$('body').jpreLoader({
+				preMainSection: '#main-preloader',
+				prePerText: '.preloader-percentage-text',
+				preBar: '.preloader-bar',
+
+			});
+
+
+		})
+
+
+	</script>
+	<style>
+		.main-preloader {
+			position: fixed;
+			width: 100%;
+			height: 100%;
+			left: 0;
+			top: 0;
+			z-index: 999999999;
+			background-color: rgba(0, 0, 0, .9);
+			text-align: center;
+		}
+
+		.main-preloader .main-preloader-inner {
+			position: absolute;
+			top: 50%;
+			width: 100%;
+		}
+
+		.main-preloader .preloader-percentage {
+			color: #ffffff;
+			margin: 0;
+		}
+
+		.main-preloader .preloader-percentage span {
+			display: inline-block;
+			float: center;
+			font-size: 50px;
+		}
+
+		.blog-header {
+			background-size: cover;
+			text-align: center;
+			margin-bottom: 50px;
+		}
+
+		.blog-overlay {
+			background: rgba(0, 0, 0, 0.42);
+			color: #fff;
+		}
+
+		.header-content {
+			padding: 100px 0;
+		}
+
+		.header-content img {
+			margin-top: 30px;
+		}
+
+		.header-content a {
+			padding: 20px 30px;
+			color: #000;
+			background: #fff;
+			text-decoration: none;
+			margin: 0 10px;
+			font-size: 20px;
+			-webkit-transition: all 0.4s ease-out;
+			-moz-transition: all 0.4s ease-out;
+			-o-transition: all 0.4s ease-out;
+			-ms-transition: all 0.4s ease-out;
+			font-family: "Work Sans", sans-serif;
+			border-radius: 2px;
+
+		}
+
+		.header-content a:hover {
+			color: #5C55FD;
+			box-shadow: 0 10px 65px 0 rgba(248, 247, 255, 0.32);
+			-moz-box-shadow: 0 10px 65px 0 rgba(248, 247, 255, 0.32);
+			-webkit-box-shadow: 0 10px 65px 0 rgba(248, 247, 255, 0.32);
+			-o-box-shadow: 0 10px 65px 0 rgba(248, 247, 255, 0.32);
+		}
+
+		/* .content {
+        margin: 0 auto;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+    .content p {
+        padding: 20px;
+    } */
+		.preview {
+			display: inline-block;
+			padding: 20px;
+			margin-bottom: 20px;
+		}
+
+		.preview img {
+			box-shadow: 0px 5px 20px 0px rgba(51, 73, 94, 0.05);
+			transition: all 400ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+		}
+
+		.preview a:hover img {
+			box-shadow: 0px 20px 65px 0px rgba(51, 73, 94, 0.15);
+		}
+
+		img {
+			vertical-align: top;
+		}
+
+		.main-preloader h1 {
+			text-align: center;
+			font-family: 'GothamPro', sans-serif;
+			font-size: 36px;
+			font-weight: 500;
+			margin-bottom: 5px;
+			color: #FFF;
+			margin-top: 30px;
+			margin-bottom: 60px;
+		}
+	</style>
+</head>
+
+
+<body>
+	<div id="wrap">
+		<!-- S: header-->
+		<header>
+			<div id="header">
+				<div class="area">
+					<h1 class="logo">
+						<a href="#"><img src="img/logo.png" alt="logo"></a>
+					</h1>
+					<!--<a href="index_flash.html" id="flash_link"><img src="img/btn_goflash.gif" alt="플래시포폴 링크"></a>-->
+					<nav>
+						<ul class="nav">
+							<li class="navi2"><a href="javascript:">Coding & jquery</a></li>
+							<li class="navi1"><a href="javascript:">Design</a></li>
+							<li class="navi4"><a href="javascript:">App</a></li>
+							<li class="navi3"><a href="javascript:">Flash</a></li>
+
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</header>
+		<!-- E: header-->
+
+		<!-- S: main-->
+		<div id="main">
+			<div class="area">
+				<ul id="thumb_area">
+					<!--
+                    <li class="item ">
+                    	<a href="" target="_blank">
+                        	<img src="img/.jpg" alt="">
+                            <span class="icon"></span>
+                            <span>
+                            	<strong></strong>
+                                <em></em>
+                            </span>
+                        </a>
+                    </li>
+                    -->
+					<!--<li class="item design">
+                    	<a href="http://mplusplus.cafe24.com/a.html" target="_blank">
+                        	<img src="img/thumb_creamyA.jpg" alt="younicar">
+                            <span class="icon"></span>
+                            <span>
+                            	<strong>피부과 시안</strong>
+                                <em>진행중인 사이트입니다.</em>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="item design">
+                    	<a href="http://mplusplus.cafe24.com/b.html" target="_blank">
+                        	<img src="img/thumb_creamyB.jpg" alt="younicar">
+                            <span class="icon"></span>
+                            <span>
+                            	<strong>피부과 시안</strong>
+                                <em>진행중인 사이트입니다.</em>
+                            </span>
+                        </a>
+                    </li>-->
+					<li class="item coding">
+						<a href="https://airic.serkee5559.repl.co">
+							<img src="img/thumb_inc.png" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>에어인천 홈페이지 구축</strong>
+								<em>반응형 웹퍼블리싱</em>
+							</span>
+						</a>
+					</li>
+					<li class="item coding">
+						<a href="https://play.google.com/store/apps/details?id=sam.myanycar.samsungFire&hl=ko&gl=US">
+							<img src="img/thumb_chac.png" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>삼성화재 다이렉트 착서비스 고도화</strong>
+								<em>웹퍼블리싱</em>
+							</span>
+						</a>
+					</li>
+
+					<li class="item coding">
+						<a href="https://tview.serkee5559.repl.co" target="_blank">
+							<img src="img/thumb_tview.png" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>SK TVIEW</strong>
+								<em>웹퍼블리싱, UI스크립트</em>
+							</span>
+						</a>
+					</li>
+
+					<li class="item coding">
+						<a href="https://kdbbig.serkee5559.repl.co/page/MPMNPB10N10.html" target="_blank">
+							<img src="img/thumb_kdbbig.jpg" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>산업은행 스마트뱅킹 큰글씨</strong>
+								<em>웹퍼블리싱</em>
+							</span>
+						</a>
+					</li>
+					<li class="item coding">
+						<a href="https://crm.serkee5559.repl.co/page/main.html" target="_blank">
+							<img src="img/thumb_skcrm.jpg" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>SK 브로드밴드 심플 CRM</strong>
+								<em>웹퍼블리싱</em>
+							</span>
+						</a>
+					</li>
+					<li class="item coding">
+						<a href="https://skapi.serkee5559.repl.co/page/main.html" target="_blank">
+							<img src="img/thumb_skapi.jpg" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>SK 브로드밴드 API</strong>
+								<em>웹퍼블리싱, 모션</em>
+							</span>
+						</a>
+					</li>
+					<li class="item coding">
+						<a href="http://mega-info.kr/" target="_blank">
+							<img src="img/thumb_mega.png" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>메가인포 반응형</strong>
+								<em>웹퍼블리싱, 모션</em>
+							</span>
+						</a>
+					</li>
+					<li class="item coding">
+						<a href="https://ehs.serkee5559.repl.co/page/main.html" target="_blank">
+							<img src="img/thumb_ehs.jpg" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>EHS기술연구소 반응형</strong>
+								<em>웹퍼블리싱, 모션</em>
+							</span>
+						</a>
+					</li>
+					<li class="item coding">
+						<a href="https://elearningcarpaint.serkee5559.repl.co/" target="_blank">
+							<img src="img/thumb_car.png" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>경기대 이러닝 프론트 개발</strong>
+								<em>웹퍼블리싱</em>
+							</span>
+						</a>
+					</li>
+
+					<li class="item coding none">
+						<a href="javascript:alert('보안 및 내부시스템이라 작업물 공개가 안됩니다. ㅜㅜ')">
+							<img src="img/thumb_pol.JPG" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>디지털 증거관리시스템 CMS</strong>
+								<em>웹스퀘어</em>
+							</span>
+						</a>
+					</li>
+					<li class="item coding">
+						<a href="https://www.fasoo.com/" target="_blank">
+							<img src="img/thumb_fasoo.jpg" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>FASOO CMS 시스템 프론트앤드</strong>
+								<em>react</em>
+							</span>
+						</a>
+					</li>
+
+					<li class="item coding">
+						<a href="https://portfolio01.serkee5559.repl.co/" target="_blank">
+							<img src="img/thumb_type1.jpg" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>인터렉션 샘플 사이트1</strong>
+								<em>none reflash & ajax</em>
+							</span>
+						</a>
+					</li>
+					<li class="item coding">
+						<a href="https://portfolio02.serkee5559.repl.co/" target="_blank">
+							<img src="img/thumb_type2.jpg" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>인터렉션 샘플 사이트2</strong>
+								<em>fullpage & Parallax</em>
+							</span>
+						</a>
+					</li>
+					<li class="item coding none">
+						<a href="javascript:alert('보안 및 내부시스템이라 작업물 공개가 안됩니다. ㅜㅜ')">
+							<img src="img/thumb_elec.jpg" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>한국예탁결제원 전자증권 CMS</strong>
+								<em>웹스퀘어</em>
+							</span>
+						</a>
+					</li>
+					<li class="item coding none">
+						<a href="javascript:alert('보안 및 내부시스템이라 작업물 공개가 안됩니다. ㅜㅜ')">
+							<img src="img/thumb_gumho.jpg" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>금호건설 전사 CMS</strong>
+								<em>웹스퀘어</em>
+							</span>
+						</a>
+					</li>
+					<li class="item coding">
+						<a href="http://skccblog.tistory.com" target="_blank">
+							<img src="img/thumb_skcc.jpg" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>SK C&C 기업블로그</strong>
+								<em>티스토리 반응형 퍼블리싱 & 디자인</em>
+							</span>
+						</a>
+					</li>
+					<li class="item coding">
+						<a href="http://www.kbmagiccardirect.co.kr" target="_blank">
+							<img src="img/thumb_kbmg.jpg" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>KB매직카다이렉트</strong>
+								<em>UI스크립트, 퍼블리싱 5개월</em>
+							</span>
+						</a>
+					</li>
+					<li class="item coding">
+						<a href="http://tangramfactory.com/smartropepure/en/" target="_blank">
+							<img src="img/thumb_tangram1.jpg" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>탱그램 스마트로프</strong>
+								<em>반응형코딩</em>
+							</span>
+						</a>
+					</li>
+					<li class="item coding">
+						<a href="http://tangramfactory.com/" target="_blank">
+							<img src="img/thumb_tangram.jpg" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>탱그램 홈페이지</strong>
+								<em>반응형코딩</em>
+							</span>
+						</a>
+					</li>
+					<li class="item coding">
+						<a href="http://home.codetree.repl.co/sigong/04/01.html" target="_blank">
+							<img src="img/thumb_sigong.jpg" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>시공미디어 교육컨텐츠</strong>
+								<em>html5, 모바일&pc 표준화코딩</em>
+							</span>
+						</a>
+					</li>
+					<li class="item coding">
+						<a href="http://mpsystem.co.kr/page/main.php" target="_blank">
+							<img src="img/thumb_mp.jpg" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>MP SYSTEM</strong>
+								<em>반응형코딩</em>
+							</span>
+						</a>
+					</li>
+					<li class="item coding">
+						<a href="http://jinro.gwe.go.kr/" target="_blank">
+							<img src="img/thumb_jinro.jpg" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>강원진로교육원</strong>
+								<em>반응형/접근성/표준화 코딩</em>
+							</span>
+						</a>
+					</li>
+					<li class="item coding">
+						<a href="http://www.citydfs.com/page/main.php" target="_blank">
+							<img src="img/thumb_city.jpg" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>시티면세면</strong>
+								<em>표준화 코딩</em>
+							</span>
+						</a>
+					</li>
+					<li class="item coding">
+						<a href="posco/coding_list/index.html" target="_blank">
+							<img src="img/thumb_posco.jpg" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>포스코건설 현장관리 하이브리드앱</strong>
+								<em>모바일코딩,jquery</em>
+							</span>
+						</a>
+					</li>
+
+					<!-- <li class="item coding">
+                    	<a href="library/index.html" target="_blank">
+                        	<img src="img/thumb_library.jpg" alt="">
+                            <span class="icon"></span>
+                            <span>
+                            	<strong>뷰티라이브러리</strong>
+                                <em>반응형 코딩</em>
+                            </span>
+                        </a>
+                    </li> -->
+
+					<li class="item design">
+						<a href="remote/index.html" target="_blank">
+							<img src="img/thumb_remote.jpg" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>강원도 원격건강관리 시스템</strong>
+								<em>디자인 시안</em>
+							</span>
+						</a>
+					</li>
+
+					<li class="item design">
+						<a href="http://bassnett.net/" target="_blank">
+							<img src="img/thumb_bas.jpg" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>배스넷</strong>
+								<em>xml, ajax, , php폼메일, 그누보드 사용</em>
+							</span>
+						</a>
+					</li>
+					<li class="item design">
+						<a href="gginiiApp/index.html" target="_blank">
+							<img src="img/thumb_gginii.jpg" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>끼니앱 시안</strong>
+								<em>음식주문앱 시안 디자인 입니다.</em>
+							</span>
+						</a>
+					</li>
+					<li class="item design">
+						<a href="giaretti/b.html" target="_blank">
+							<img src="img/thumb_giarettiB.jpg" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>지아레티 브랜드 사이트</strong>
+								<em>시안작업 B안</em>
+							</span>
+						</a>
+					</li>
+
+					<li class="item design">
+						<a href="giaretti/a.html" target="_blank">
+							<img src="img/thumb_giarettiA.jpg" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>지아레티 브랜드 사이트</strong>
+								<em>시안작업 A안</em>
+							</span>
+						</a>
+					</li>
+
+					<li class="item design">
+						<a href="javascript:safeOpen()">
+							<img src="img/thumb_safe.jpg" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>학교안전관련 이러닝</strong>
+								<em>UI디자인, 프로토/차시 개발, 액션스크립트 3.0</em>
+							</span>
+						</a>
+					</li>
+
+					<li class="item design">
+						<a href="job/index.html" target="_blank">
+							<img src="img/thumb_job.jpg" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>잡담 커뮤니티</strong>
+								<em>디자인, 표준코딩</em>
+							</span>
+						</a>
+					</li>
+
+					<li class="item coding">
+						<a href="http://nettars.co.kr/" target="_blank">
+							<img src="img/thumb_nettars.jpg" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>넷아스 홈페이지</strong>
+								<em>디자인, 표준화 코딩, 그누보드</em>
+							</span>
+						</a>
+					</li>
+
+					<li class="item coding">
+						<a href="http://www.mojosphine.co.kr/" target="_blank">
+							<img src="img/thumb_mojo.jpg" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>모조 에스핀</strong>
+								<em>반응형 사이트 표준화 코딩, 갤러리 Ajax&xml 연동</em>
+							</span>
+						</a>
+					</li>
+
+					<li class="item coding">
+						<a href="http://210.116.70.1:8080/" target="_blank">
+							<img src="img/thumb_type.jpg" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>타입이스트</strong>
+								<em>표준화코딩, 제이쿼리효과, 갤러리 Ajax&xml 연동</em>
+							</span>
+						</a>
+					</li>
+
+					<li class="item coding">
+						<a href="http://www.dewl.co.kr/main.asp" target="_blank">
+							<img src="img/thumb_dewl.jpg" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>듀엘</strong>
+								<em>제이쿼리효과, 갤러리 Ajax&xml 연동</em>
+							</span>
+						</a>
+					</li>
+
+					<!--<li class="item design">
+                    	<a href="creamy_event2/index.html" target="_blank">
+                        	<img src="img/thumb_creamy_event2.jpg" alt="">
+                            <span class="icon"></span>
+                            <span>
+                            	<strong>크리미 피부과</strong>
+                                <em>이벤트 디자인입니다.</em>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li class="item design">
+                    	<a href="creamy_event1/index.html" target="_blank">
+                        	<img src="img/thumb_creamy_event1.jpg" alt="">
+                            <span class="icon"></span>
+                            <span>
+                            	<strong>크리미 피부과</strong>
+                                <em>이벤트 디자인입니다.</em>
+                            </span>
+                        </a>
+                    </li>
+                    
+                    <li class="item design">
+                    	<a href="skin/index.html" target="_blank">
+                        	<img src="img/thumb_skin.jpg" alt="">
+                            <span class="icon"></span>
+                            <span>
+                            	<strong>크리미 피부과</strong>
+                                <em>공식카페 스킨 디자인입니다.</em>
+                            </span>
+                        </a>
+                    </li>-->
+
+					<li class="item flash">
+						<a href="http://me2.do/GkFKLdTW" target="_blank">
+							<img src="img/thumb_wood.jpg" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>퀴즈퀴즈 우드맨</strong>
+								<em>액션스크립트 3.0 작업 진행했습니다.</em>
+							</span>
+						</a>
+					</li>
+
+					<li class="item flash">
+						<a href="game/index.html" target="_blank">
+							<img src="img/thumb_game.jpg" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>유아용 게임</strong>
+								<em>5단계 난이도로 구성된 유아용 게임입니다.액션스크립트 3.0 작업 진행했습니다.</em>
+							</span>
+						</a>
+					</li>
+
+					<li class="item flash">
+						<a href="http://exam.edu2080.co.kr/LMS_sample/1316/01-1/01.php" target="_blank">
+							<img src="img/thumb_we.jpg" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>위더스평생교육원</strong>
+								<em>이러닝 프로토타입 개발. xml, ajax, 실버스트림 기술을 이용해 차시개발 자동화시스템을 구축하여 공수를 획기적으로 줄였습니다.</em>
+							</span>
+						</a>
+					</li>
+
+					<li class="item design">
+						<a href="http://m.yourcreamy.com" target="_blank">
+							<img src="img/thumb_yourcreamym.jpg" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>크리미의원 신사점 모바일</strong>
+								<em>디자인, 코딩, 프로그램전체 작업진행했습니다.</em>
+							</span>
+						</a>
+					</li>
+
+
+
+					<li class="item design">
+						<a href="iaan/main.html" target="_blank">
+							<img src="img/thumb_iaan.jpg" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>이안소프트 시안</strong>
+								<em>시안작업 완료하고 후이즈몰을 이용하여 구축진행중입니다.</em>
+							</span>
+						</a>
+					</li>
+
+					<li class="item coding">
+						<a href="coverflow/index.html" target="_blank">
+							<img src="img/thumb_cover.jpg" alt="커버플로우">
+							<span class="icon"></span>
+							<span>
+								<strong>jquery 커버플로우 효과</strong>
+								<em>제이쿼리 비주얼 효과입니다.</em>
+							</span>
+						</a>
+					</li>
+					<li class="item coding">
+						<a href="visual/index.html" target="_blank">
+							<img src="img/thumb_visual.jpg" alt="비주얼">
+							<span class="icon"></span>
+							<span>
+								<strong>jquery 비주얼</strong>
+								<em>제이쿼리 비주얼 효과입니다.</em>
+							</span>
+						</a>
+					</li>
+					<li class="item coding">
+						<a href="http://nucleo.co.kr/" target="_blank">
+							<img src="img/thumb_nucleo.jpg" alt="누클레오">
+							<span class="icon"></span>
+							<span>
+								<strong>ATO-DAN/HXTRU</strong>
+								<em>카페24 스마트 쇼핑몰 솔루션을 이용한 표준코딩입니다.</em>
+							</span>
+						</a>
+					</li>
+
+					<!--<li class="item design">
+                    	<a href="http://mplusplus.cafe24.com/a.html" target="_blank">
+                        	<img src="img/thumb_creamyA.jpg" alt="younicar">
+                            <span class="icon"></span>
+                            <span>
+                            	<strong>피부과 시안</strong>
+                                <em>진행중인 사이트입니다.</em>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="item design">
+                    	<a href="http://mplusplus.cafe24.com/main.html" target="_blank">
+                        	<img src="img/thumb_creamyB.jpg" alt="younicar">
+                            <span class="icon"></span>
+                            <span>
+                            	<strong>피부과 시안</strong>
+                                <em>진행중인 사이트입니다.</em>
+                            </span>
+                        </a>
+                    </li>-->
+					<li class="item design">
+						<a href="younycar/index.html" target="_blank">
+							<img src="img/thumb_younicar.jpg" alt="younicar">
+							<span class="icon"></span>
+							<span>
+								<strong>유니카 메인디자인</strong>
+								<em>진행중인 사이트입니다.</em>
+							</span>
+						</a>
+					</li>
+					<li class="item app">
+						<a href="https://play.google.com/store/apps/details?id=air.skiGame" target="_blank">
+							<img src="img/thumb_ski.jpg" alt="고고스키">
+							<span class="icon"></span>
+							<span>
+								<strong>고고스키 게임 어플</strong>
+								<em>플래시 air로만든 안드로이드 게임앱입니다. 아이폰용으로도 포팅가능한 멀티 플랫폼용 앱입니다.</em>
+							</span>
+						</a>
+					</li>
+					<li class="item coding">
+						<a href="http://nucleo.co.kr/" target="_blank">
+							<img src="img/thumb_nucleo.jpg" alt="누클레오">
+							<span class="icon"></span>
+							<span>
+								<strong>ATO-DAN/HXTRU</strong>
+								<em>카페24 스마트 쇼핑몰 솔루션을 이용한 표준코딩입니다.</em>
+							</span>
+						</a>
+					</li>
+					<li class="item coding">
+						<a href="narzio/index.html" target="_blank">
+							<img src="img/thumb_narzio.jpg" alt="나르지오">
+							<span class="icon"></span>
+							<span>
+								<strong>나르지오 리뉴얼</strong>
+								<em>반응형웹으로 코딩/제이쿼리를 진행중인 사이트입니다.</em>
+							</span>
+						</a>
+					</li>
+					<li class="item coding">
+						<a href="http://maddesign.co.kr/renewal/" target="_blank">
+							<img src="img/thumb_mad.jpg" alt="매드디자인">
+							<span class="icon"></span>
+							<span>
+								<strong>매드디자인</strong>
+								<em>제이쿼리와 ajax로 작업 진행했습니다.</em>
+							</span>
+						</a>
+					</li>
+
+					<li class="item coding">
+						<a href="jquery/sample/animation/1/index.html" target="_blank">
+							<img src="img/thumb_jqueryani.jpg" alt="">
+							<span class="icon"></span>
+							<span>
+								<strong>제이쿼리 애니메이션</strong>
+								<em>제이쿼리 애니메이션 작업입니다.</em>
+							</span>
+						</a>
+					</li>
+					<li class="item coding">
+						<a href="http://www.dreamiedu.com/" target="_blank">
+							<img src="img/thumb_dreami.jpg" alt="드림아이에듀">
+							<span class="icon"></span>
+							<span>
+								<strong>드림아이에듀</strong>
+								<em>제이쿼리 부분 작업 진행했습니다.</em>
+							</span>
+						</a>
+					</li>
+
+					<li class="item coding">
+						<a href="http://uricpa.com/" target="_blank">
+							<img src="img/thumb_aifa.jpg" alt="우리경영아카데미">
+							<span class="icon"></span>
+							<span>
+								<strong>우리경영아카데미 표준화 작업</strong>
+								<em>기존 사이트에서 크로스브라우징 처리 및 플래시부분을 제이쿼리교체하는 작업을 진행했습니다.</em>
+							</span>
+						</a>
+					</li>
+					<!--<li class="item ">
+                    	<a href="" target="_blank">
+                        	<img src="img/.jpg" alt="">
+                            <span class="icon"></span>
+                            <span>
+                            	<strong></strong>
+                                <em></em>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="item ">
+                    	<a href="" target="_blank">
+                        	<img src="img/.jpg" alt="">
+                            <span class="icon"></span>
+                            <span>
+                            	<strong></strong>
+                                <em></em>
+                            </span>
+                        </a>
+                    </li>
+                    <li class="item ">
+                    	<a href="" target="_blank">
+                        	<img src="img/.jpg" alt="">
+                            <span class="icon"></span>
+                            <span>
+                            	<strong></strong>
+                                <em></em>
+                            </span>
+                        </a>
+                    </li>-->
+
+					<li class="item design">
+						<a target="_blank">
+							<img src="img/thumb_ato.jpg" alt="ato-dna">
+							<span class="icon"></span>
+							<span>
+								<strong>ATO-DAN/HXTRU 시안</strong>
+								<em>아토디엔에이 시안입니다.</em>
+							</span>
+						</a>
+					</li>
+					<li class="item design">
+						<a target="_blank">
+							<img src="img/thumb_senuri.jpg" alt="새누리당 시안">
+							<span class="icon"></span>
+							<span>
+								<strong>선거용 시안</strong>
+								<em>새누리당 시안</em>
+							</span>
+						</a>
+					</li>
+					<li class="item design">
+						<a target="_blank">
+							<img src="img/thumb_minju.jpg" alt="민주당 시안">
+							<span class="icon"></span>
+							<span>
+								<strong>선거용 시안</strong>
+								<em>민주당 시안</em>
+							</span>
+						</a>
+					</li>
+
+					<li class="item design">
+						<a href="dasom/index.html" target="_blank">
+							<img src="img/thumb_dasom.jpg" alt="다솜홀딩스">
+							<span class="icon"></span>
+							<span>
+								<strong>다솜홀딩스 시안</strong>
+								<em>다솜홀딩스 메인 시안입니다.</em>
+							</span>
+						</a>
+					</li>
+					<li class="item design">
+						<a href="event/index.html" target="_blank">
+							<img src="img/thumb_dasom1.jpg" alt="다솜 전단지디자인">
+							<span class="icon"></span>
+							<span>
+								<strong>전단지 디자인</strong>
+								<em>다솜 평생교육원 전단지 디자인 입니다.</em>
+							</span>
+						</a>
+					</li>
+					<li class="item flash">
+						<a href="famz/index.html" target="_blank">
+							<img src="img/thumb_famz.jpg" alt="팜즈커뮤니케이션">
+							<span class="icon"></span>
+							<span>
+								<strong>팜즈커뮤니케이션</strong>
+								<em>xml연동 플래시 홈페이지입니다. 디자인도 같이 진행했습니다.</em>
+							</span>
+						</a>
+					</li>
+					<li class="item design">
+						<a href="http://www.mcalba.co.kr/" target="_blank">
+							<img src="img/thumb_mc.jpg" alt="맥도날드 알바 채용사이트">
+							<span class="icon"></span>
+							<span>
+								<strong>맥도날드 알바 채용사이트</strong>
+								<em>디자인, 코딩, 플래시 작업진행했습니다.</em>
+							</span>
+						</a>
+					</li>
+					<li class="item coding">
+						<a href="http://iplusmore2.cafe24.com/" target="_blank">
+							<img src="img/thumb_iplus.jpg" alt="아이플러스모어">
+							<span class="icon"></span>
+							<span>
+								<strong>아이플러스모어 쇼핑몰</strong>
+								<em>디자인, 코딩(카페24), 플래시 작업진행했습니다.</em>
+							</span>
+						</a>
+					</li>
+					<li class="item flash">
+						<a href="index_flash.html" target="_blank">
+							<img src="img/thumb_home.jpg" alt="ato-dna">
+							<span class="icon"></span>
+							<span>
+								<strong>플래시버전 홈페이지</strong>
+								<em>플래시 버전 포트폴리오 사이트입니다.</em>
+							</span>
+						</a>
+					</li>
+					<li class="item flash">
+						<a href="cyber/index.html" target="_blank">
+							<img src="img/thumb_osangallery.jpg" alt="오산갤러리">
+							<span class="icon"></span>
+							<span>
+								<strong>오산예모습 사이버전시관</strong>
+								<em>xml연동 갤러리입니다.</em>
+							</span>
+						</a>
+					</li>
+
+					<li class="item flash">
+						<a href="beestle/index.html" target="_blank">
+							<img src="img/thumb_beestle.jpg" alt="비슬 검색">
+							<span class="icon"></span>
+							<span>
+								<strong>Beestle 다기능 검색</strong>
+								<em>xml연동방식으로 5종의 검색 화면이 출력됩니다.</em>
+							</span>
+						</a>
+					</li>
+
+					<li class="item flash">
+						<a href="edeun/index.html" target="_blank">
+							<img src="img/thumb_eden.jpg" alt="에든가구">
+							<span class="icon"></span>
+							<span>
+								<strong>에든가구 메뉴/메인비주얼</strong>
+								<em>에든가구 플래시 작업입니다.</em>
+							</span>
+						</a>
+					</li>
+					<li class="item flash">
+						<a href="korearegend/index.html" target="_blank">
+							<img src="img/thumb_legend.jpg" alt="코리아레전드">
+							<span class="icon"></span>
+							<span>
+								<strong>2010년 월드컵 공식티셔츠 프로모션사이트</strong>
+								<em>플래시 작업입니다.</em>
+							</span>
+						</a>
+					</li>
+					<li class="item flash">
+						<a href="daemyung/index.html" target="_blank">
+							<img src="img/thumb_deamyong.jpg" alt="대명콜랙션">
+							<span class="icon"></span>
+							<span>
+								<strong>대명콜랙션</strong>
+								<em>라인모션을 이용한 플래시사이트입니다.</em>
+							</span>
+						</a>
+					</li>
+					<li class="item design">
+						<a href="http://jacob.co.kr/" target="_blank">
+							<img src="img/thumb_jacob.jpg" alt="자콥젠슨">
+							<span class="icon"></span>
+							<span>
+								<strong>자콥젠슨 브랜드사이트</strong>
+								<em>디자인, 플래시, 코딩(카페24쇼핑몰) 단독작업입니다.</em>
+							</span>
+						</a>
+					</li>
+					<li class="item flash">
+						<a href="http://nabix.co.kr/" target="_blank">
+							<img src="img/thumb_nabix.jpg" alt="나빅스">
+							<span class="icon"></span>
+							<span>
+								<strong>나빅스 홈페이지</strong>
+								<em>플래시 사이트입니다.</em>
+							</span>
+						</a>
+					</li>
+					<li class="item flash">
+						<a href="kuf/index.html" target="_blank">
+							<img src="img/thumb_kf.jpg" alt="킹덤언더파이어">
+							<span class="icon"></span>
+							<span>
+								<strong>킹덤언더파이어2 obt</strong>
+								<em>플래시 사이트입니다.</em>
+							</span>
+						</a>
+					</li>
+					<li class="item flash">
+						<a href="fish/index.html" target="_blank">
+							<img src="img/thumb_fish.jpg" alt="낙시왕">
+							<span class="icon"></span>
+							<span>
+								<strong>낚시왕 티저사이트</strong>
+								<em>플래시 티저사이트입니다.</em>
+							</span>
+						</a>
+					</li>
+					<li class="item flash">
+						<a href="http://jd.eduhansol.co.kr/" target="_blank">
+							<img src="img/thumb_dickens.jpg" alt="한솔주니어 디킨스">
+							<span class="icon"></span>
+							<span>
+								<strong>한솔주니어 디킨스</strong>
+								<em>플래시 메인비주얼 작업입니다.</em>
+							</span>
+						</a>
+					</li>
+					<li class="item flash">
+						<a href="http://www.oceanhills.com/new/index_intro.asp" target="_blank">
+							<img src="img/thumb_ocean.jpg" alt="오션힐스">
+							<span class="icon"></span>
+							<span>
+								<strong>오션힐스</strong>
+								<em>메인비주얼/네비게이션 작업입니다.</em>
+							</span>
+						</a>
+					</li>
+					<li class="item flash">
+						<a href="cri1/index.html" target="_blank">
+							<img src="img/thumb_cri1.jpg" alt="크리스피 크림도넛">
+							<span class="icon"></span>
+							<span>
+								<strong>크리스피크림도넛 이벤트 게임</strong>
+								<em>도넛을 레시피대로 만드는 플래시 게임으로 게임후 점수를 프로그램에 넘겨주는 처리가 되었습니다.</em>
+							</span>
+						</a>
+					</li>
+					<li class="item flash">
+						<a href="cri/index.html" target="_blank">
+							<img src="img/thumb_cri2.jpg" alt="크리스피 크림도넛">
+							<span class="icon"></span>
+							<span>
+								<strong>크리스피크림도넛 이벤트 게임</strong>
+								<em>플래시로 제작했으며 게임후 점수를 프로그램에 넘겨주는 처리가 되었습니다.</em>
+							</span>
+						</a>
+					</li>
+					<li class="item flash">
+						<a href="editor/index1.html" target="_blank">
+							<img src="img/thumb_editor.jpg" alt="jpg에디터">
+							<span class="icon"></span>
+							<span>
+								<strong>표지 jpg 에디터</strong>
+								<em>플래시로 만든 에디터로 사용자가 표지를 만들고 jpg로 저장하여 bytearray로 값을 전달하도록 제작 되었습니다.</em>
+							</span>
+						</a>
+					</li>
+					<li class="item flash">
+						<a href="edu/index.html" target="_blank">
+							<img src="img/thumb_learning.jpg" alt="이러닝">
+							<span class="icon"></span>
+							<span>
+								<strong>실버스트림용 플래시 이러닝</strong>
+								<em>실버스트림에 사용되는 화면 플래시로 xml로 화면을 제어하도록 만든 프로토타입작업입니다.</em>
+							</span>
+						</a>
+					</li>
+					<li class="item flash">
+						<a href="mbtv/index.html" target="_blank">
+							<img src="img/thumb_mega.jpg" alt="메가티비">
+							<span class="icon"></span>
+							<span>
+								<strong>메가티비 이용 가이드</strong>
+								<em>플래시 모션작업을 진행했습니다.</em>
+							</span>
+						</a>
+					</li>
+
+
+
+				</ul>
+			</div>
+		</div>
+		<!-- E: main-->
+
+		<!-- S: footer-->
+		<footer>
+			<div id="footer">
+				<div class="area">Copyright(c) serkee. All rights reserved.</div>
+			</div>
+		</footer>
+		<!-- E: footer-->
+	</div>
+
+	<!-- Preloader Start -->
+	<div id="main-preloader" class="main-preloader semi-dark-background">
+		<div class="main-preloader-inner center">
+
+			<h1 class="preloader-percentage center">
+				<span class="preloader-percentage-text">0</span> <!-- Show Percentage Number -->
+				<span class="percentage">%</span>
+			</h1>
+			<div class="preloader-bar-outer">
+				<div class="preloader-bar"></div> <!-- Percentage Precess Bar -->
+			</div>
+
+		</div>
+	</div>
+	<!-- Preloader Start -->
+
+
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<script>
+	<unit name="1차시">
+		<page name="Intro학습목표"><![CDATA[스크립트11]]></page>
+		<page name="강연"><![CDATA[스크립트12]]></page>
+		<page name="퀴즈"><![CDATA[스크립트13]]></page>
+		<page name="정리하기"><![CDATA[스크립트14]]></page>
+		<page name="Outro"><![CDATA[스크립트15]]></page>
+	</unit>
+	
+	<unit name="2차시">
+		<page name="Intro학습목표"><![CDATA[스크립트21]]></page>
+		<page name="강연"><![CDATA[스크립트22]]></page>
+		<page name="퀴즈"><![CDATA[스크립트23]]></page>
+		<page name="정리하기"><![CDATA[스크립트24]]></page>
+		<page name="Outro"><![CDATA[스크립트25]]></page>
+	</unit>
+	
+	<unit name="3차시">
+		<page name="Intro학습목표"><![CDATA[스크립트31]]></page>
+		<page name="강연"><![CDATA[스크립트32]]></page>
+		<page name="퀴즈"><![CDATA[스크립트33]]></page>
+		<page name="정리하기"><![CDATA[스크립트34]]></page>
+		<page name="Outro"><![CDATA[스크립트35]]></page>
+	</unit>
+	
+	<unit name="4차시">
+		<page name="Intro학습목표"><![CDATA[스크립트41]]></page>
+		<page name="강연"><![CDATA[스크립트42]]></page>
+		<page name="퀴즈"><![CDATA[스크립트43]]></page>
+		<page name="정리하기"><![CDATA[스크립트44]]></page>
+		<page name="Outro"><![CDATA[스크립트45]]></page>
+	</unit>
+</script>

@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+/* ACG Global set */
+
+@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=a2283ce1-84c0-4da8-ac41-4f4a608900d4");
+@font-face{
+	font-family:"Kaleko 105 W00 Book";
+	src:url("../fonts3379b604-83a8-4251-a9a7-389c64842844.eot?#iefix");
+	src:url("../fonts3379b604-83a8-4251-a9a7-389c64842844.eot?#iefix") format("eot"),
+		url("../fonts53a39d37-7e69-446f-bb82-01b856f08c72.woff") format("woff"),
+		url("../fontsed1972c1-afe6-4155-a067-6d059fd6e410.ttf") format("truetype"),
+		url("../fonts5c3d50ea-6571-46a4-9cb5-f36ce3dc84de.svg#5c3d50ea-6571-46a4-9cb5-f36ce3dc84de") format("svg");
+}
+
+@font-face {
+  font-family: "NBG";
+  src: url("../fontsNanumBarunGothic.eot?#iefix");
+  src: url("../fontsNanumBarunGothic.eot?#iefix") format("eot"),
+       url("../fontsNanumBarunGothic.woff") format("woff");
+}
+@font-face{
+	font-family:'malgun';
+	font-style:normal;
+	font-weight:normal;
+	src:url("/fonts/malgun.eot");
+	src:local('☺'), url("/fonts/malgun.woff") format('woff'),
+	url("/fonts/malgun.ttf") format('type')}
+
+
+html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, hr, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td { margin:0; padding:0; }
+html, body {width:100%; font-family:"Kaleko 105 W00 Book", "NBG", Arial, "돋움", Dotum, sans-serif; font-size:100%; line-height:1em; background:#fff;}
+body { color:#333; overflow-y:scroll}
+li {list-style:none;}
+img, fieldset {border:none;}
+img {vertical-align:middle;}
+input, select, textarea {font-size:100%; color:#767676; background:#fff;}
+em, address {font-style:normal;}
+ins {text-decoration:none;}
+table {border-spacing:0;}
+caption, hr, legend {display:none;}
+button { font-family:"Kaleko 105 W00 Book","NBG", Arial, "돋움", Dotum, sans-serif; }
+
+a:link,
+a:visited,
+a:hover,
+a:active {text-decoration:none; color:#333;}
+
+/* html5 reset */
+header, nav, section, article, aside, footer {display:block; margin:0; padding:0;}
