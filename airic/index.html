@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title></title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<style>
+	table {
+		border-collapse: collapse;
+		table-layout: fixed;
+		width: 100%
+	}
+
+	table th {
+		background: #F7F8F9;
+	}
+
+	table th,
+	table td {
+		vertical-align: middle;
+		border: 1px solid #D9D9D9;
+		padding: 4px 10px;
+		height: 32px;
+		text-align: center;
+	}
+	table td{text-align: left;}
+	
+	table td:first-child {
+		text-align: center;
+	}
+	table a{color:#000; cursor: default; text-decoration:none; pointer-events: none; }
+	table a.done{text-decoration: underline; color:blue; cursor:pointer; pointer-events:initial; }
+</style>
+
+<script>
+	function openPop(url, w, h) {
+		var popupX = Math.ceil((window.screen.width - w) / 2);
+		// 만들 팝업창 좌우 크기의 1/2 만큼 보정값으로 빼주었음
+
+		var popupY = Math.ceil((window.screen.height - h) / 2);
+		// 만들 팝업창 상하 크기의 1/2 만큼 보정값으로 빼주었음
+		console.log(popupX, popupY)
+		window.open(url, '', 'status=no, height=' + h + ', width=' + w + ', left=' + popupX + ', top=' + popupY);
+	}
+	
+</script>
+
+<body>
+	<table>
+		<colgroup>
+			<col style="width:80px">
+			<col style="width:200px">
+			<col style="width:200px">
+			<col style="width:auto">
+		</colgroup>
+		<thead>
+			<tr>
+				<th>타입</th>
+				<th>화면명</th>
+				<th>경로</th>
+				<th>비고</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>화면</td>
+				<td>
+					메인
+				</td>
+				<td>
+					<a href="page/main.html?pageNum=0101" class="done" target="_blank">/page/main.html</a>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>화면</td>
+				<td>
+					회사소개
+				</td>
+				<td>
+					<a href="page/sub1_1.html?pageNum=0101" class="done" target="_blank">/page/sub1_1.html</a>
+				</td>
+				<td>0704</td>
+			</tr>
+			<tr>
+				<td>화면</td>
+				<td>
+					비전
+				</td>
+				<td>
+					<a href="page/sub1_2.html?pageNum=0102" class="done" target="_blank">/page/sub1_2.html</a>
+				</td>
+				<td>0706</td>
+			</tr>
+			<tr>
+				<td>화면</td>
+				<td>
+					연혁
+				</td>
+				<td>
+					<a href="page/sub1_3.html?pageNum=0103" class="done" target="_blank">/page/sub1_3.html</a>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>화면</td>
+				<td>
+					CI
+				</td>
+				<td>
+					<a href="page/sub1_4.html?pageNum=0104" class="done" target="_blank">/page/sub1_4.html</a>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>화면</td>
+				<td>
+					오시는길
+				</td>
+				<td>
+					<a href="page/sub1_5.html?pageNum=0105" class="done" target="_blank">/page/sub1_5.html</a>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>화면</td>
+				<td>
+					운항스케줄1
+				</td>
+				<td>
+					<a href="page/sub2_1.html?pageNum=0201" class="done" target="_blank">/page/sub2_1.html</a>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>화면</td>
+				<td>
+					운항스케줄2
+				</td>
+				<td>
+					<a href="page/sub2_1a.html?pageNum=0201" class="done" target="_blank">/page/sub2_1a.html</a>
+				</td>
+				<td>0704 테이블 수정</td>
+			</tr>
+			<tr>
+				<td>화면</td>
+				<td>
+					유류할증증료
+				</td>
+				<td>
+					<a href="page/sub2_2.html?pageNum=0202" class="done" target="_blank">/page/sub2_2.html</a>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>화면</td>
+				<td>
+					유류할증료공지
+				</td>
+				<td>
+					<a href="page/sub2_2a.html?pageNum=0202" class="done" target="_blank">/page/sub2_2a.html</a>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>화면</td>
+				<td>
+					지점정보
+				</td>
+				<td>
+					<a href="page/sub2_3.html?pageNum=0203" class="done" target="_blank">/page/sub2_3.html</a>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>화면</td>
+				<td>
+					화물상품정보
+				</td>
+				<td>
+					<a href="page/sub3_1.html?pageNum=0301" class="done" target="_blank">/page/sub3_1.html</a>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>화면</td>
+				<td>
+					항공기정보_01
+				</td>
+				<td>
+					<a href="page/sub3_2.html?pageNum=0302" class="done" target="_blank">/page/sub3_2.html</a>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>화면</td>
+				<td>
+					항공기정보_02
+				</td>
+				<td>
+					<a href="page/sub3_2a.html?pageNum=0302" class="done" target="_blank">/page/sub3_2a.html</a>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>화면</td>
+				<td>
+					항공기정보_03
+				</td>
+				<td>
+					<a href="page/sub3_2b.html?pageNum=0302" class="done" target="_blank">/page/sub3_2b.html</a>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>화면</td>
+				<td>
+					항공기정보_04
+				</td>
+				<td>
+					<a href="page/sub3_2c.html?pageNum=0302" class="done" target="_blank">/page/sub3_2c.html</a>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>화면</td>
+				<td>
+					운송조회
+				</td>
+				<td>
+					<a href="page/sub4_1.html?pageNum=0401" class="done" target="_blank">/page/sub4_1.html</a>
+				</td>
+				<td>0704</td>
+			</tr>
+			<tr>
+				<td>화면</td>
+				<td>
+					게시판_list
+				</td>
+				<td>
+					<a href="page/sub5_1.html?pageNum=0501" class="done" target="_blank">/page/sub5_1.html</a>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>화면</td>
+				<td>
+					게시판_view
+				</td>
+				<td>
+					<a href="page/sub5_2.html?pageNum=0502" class="done" target="_blank">/page/sub5_2.html</a>
+				</td>
+				<td>0704<br>0706</td>
+			</tr>
+			<tr>
+				<td>화면</td>
+				<td>
+					게시판_write
+				</td>
+				<td>
+					<a href="page/sub5_3.html?pageNum=0503" class="done" target="_blank">/page/sub5_3.html</a>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>화면</td>
+				<td>
+					안전한-에어인천
+				</td>
+				<td>
+					<a href="page/sub5_4.html?pageNum=0504" class="done" target="_blank">/page/sub5_4.html</a>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>화면</td>
+				<td>
+					Contact-us
+				</td>
+				<td>
+					<a href="page/sub6_1.html?pageNum=0601" class="done" target="_blank">/page/sub6_1.html</a>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>화면</td>
+				<td>
+					FAQ
+				</td>
+				<td>
+					<a href="page/sub6_2.html?pageNum=0602" class="done" target="_blank">/page/sub6_2.html</a>
+				</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>화면</td>
+				<td>
+					운송이용약관
+				</td>
+				<td>
+					<a href="page/sub6_3.html?pageNum=0603" class="done" target="_blank">/page/sub6_3.html</a>
+				</td>
+				<td></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+
+</html>

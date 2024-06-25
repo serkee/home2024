@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>air incheon</title>
+	<script src="../resource/js/jquery-1.12.4.min.js"></script>
+	<script src="../resource/js/jquery-ui.js"></script>
+	<script src="../resource/js/slick.js"></script>
+	<script src="../resource/js/jquery.fullpage.js"></script>
+	<script src="../resource/js/ui.js"></script>
+	<link href="../resource/css/reset.css" rel="stylesheet" type="text/css">
+	<link href="../resource/css/all.css" rel="stylesheet" type="text/css">
+	<link href="../resource/css/jquery-ui.css" rel="stylesheet" type="text/css">
+	<link href="../resource/css/slick.css" rel="stylesheet" type="text/css">
+	<link href="../resource/css/jquery.fullpage.css" rel="stylesheet" type="text/css">
+	<link href="../resource/css/common.css" rel="stylesheet" type="text/css">
+	<link href="../resource/css/main.css" rel="stylesheet" type="text/css">
+	<script>
+		$(function () {
+			var sectionID;
+			//메인 풀페이지
+			$('#fullpage').fullpage({
+				anchors: ['top', '2', '3', '4', '5', '6',],
+				sectionsColor: ['', '', '', '', '#fff', ''],
+				navigation: true,
+				navigationPosition: 'left',
+				onLeave: function (index, nextIndex, direction) {
+					$(".section").removeClass("loadOn")
+					clearInterval(sectionID)
+					sectionID = setTimeout(function () {$(".section").eq(nextIndex - 1).addClass("loadOn")}, 300)
+					if (nextIndex == 1) $(".header").removeClass("bg");
+					else $(".header").addClass("bg");
+
+					if (nextIndex == 6){
+						$("#fp-nav").addClass("off")
+						$(".quick").addClass("off")
+					}else{
+						$("#fp-nav").removeClass("off")
+						$(".quick").removeClass("off")
+					}
+					
+
+				},
+			});
+
+			//메인 비주얼 롤링
+			var rollIdx = 0;
+			var rollInter;
+			rollFn(0)
+			function rollFn(idx) {
+				$(".mainRolling__img > li").removeClass("active");
+				$(".mainRolling__img > li").eq(idx).addClass("active");
+
+				$(".mainRolling__txt-unit > li").removeClass("active");
+				$(".mainRolling__txt-unit > li").eq(idx).addClass("active");
+
+				$(".mainRolling__dot > li").removeClass("active");
+				$(".mainRolling__dot > li").eq(idx).addClass("active");
+			};
+
+			$(".mainRolling__dot > li > button").click(function () {
+				var idx = $(this).parent().index();
+				rollFn(idx);
+				rollIdx = idx;
+				clearInterval(rollInter)
+				rollInter = setInterval(rollInterval, 6000);
+			});
+
+			rollInter = setInterval(rollInterval, 6000);
+
+			function rollInterval() {
+				rollIdx++;
+				if (rollIdx == 3) rollIdx = 0;
+				rollFn(rollIdx);
+			};
+
+			
+
+
+
+		});
+	</script>
+</head>
+
+<body class="main">
+	<div class="wrap">
+		<div class="header">
+			<div class="inner">
+				<a href="javascript:void(0)" class="btn_home"><span class="hide">메인으로 가기</span></a>
+				<div class="nav">
+					<ul class="nav__list">
+						<li><a href="javascript:void(0)">회사소개</a>
+							<div class="nav__list-sub">
+								<ul class="nav__list-depth_1">
+									<li><a href="javascript:void(0)">회사소개</a></li>
+									<li><a href="javascript:void(0)">비전</a></li>
+									<li><a href="javascript:void(0)">연혁</a></li>
+									<li><a href="javascript:void(0)">CI</a></li>
+									<li><a href="javascript:void(0)">오시는 길</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="javascript:void(0)">운항서비스</a>
+							<div class="nav__list-sub">
+								<ul class="nav__list-depth_1">
+									<li><a href="javascript:void(0)">운항스케줄</a></li>
+									<li><a href="javascript:void(0)">유류할증료</a></li>
+									<li><a href="javascript:void(0)">지점정보</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="javascript:void(0)">화물운송서비스</a>
+							<div class="nav__list-sub">
+								<ul class="nav__list-depth_1">
+									<li><a href="javascript:void(0)">화물상품정보</a></li>
+									<li><a href="javascript:void(0)">항공기정보</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="javascript:void(0)">운송조회</a>
+						</li>
+						<li><a href="javascript:void(0)">NEWS</a>
+							<div class="nav__list-sub">
+								<ul class="nav__list-depth_1">
+									<li><a href="javascript:void(0)">공지사항</a></li>
+									<li><a href="javascript:void(0)">뉴스/보도자료</a></li>
+									<li><a href="javascript:void(0)">안전한에어인천</a></li>
+								</ul>
+							</div>
+						</li>
+						<li><a href="javascript:void(0)">Contact us</a>
+							<div class="nav__list-sub">
+								<ul class="nav__list-depth_1">
+									<li><a href="javascript:void(0)">Contact us</a></li>
+									<li><a href="javascript:void(0)">FAQ</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- //nav -->
+				<div class="nside">
+					<div class="lang">
+						<button class="lang__btn">
+							Language
+						</button>
+						<div class="lang__list">
+							<ul>
+								<li class="active"><a href="javascript:void(0)">KOR</a></li>
+								<li><a href="javascript:void(0)">ENG</a></li>
+								<li><a href="javascript:void(0)">CHN</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="ham">
+						<button class="ham__btn">
+							<span class="ham__btn-line"></span>
+							<span class="hide">메뉴 버튼</span>
+						</button>
+					</div>
+				</div>
+				<!-- //nside -->
+
+			</div>
+
+			<div class="mega_wrap">
+				<div class="inner">
+					<div class="mega">
+						<!-- <button class="btn_close"><span class="hide">메가메뉴 닫기</span></button> -->
+						<ul class="nav__list">
+							<li><a href="http://naver.com">회사소개</a>
+								<div class="nav__list-sub">
+									<ul class="nav__list-depth_1">
+										<li><a href="javascript:void(0)">회사소개</a></li>
+										<li><a href="javascript:void(0)">비전</a></li>
+										<li><a href="javascript:void(0)">연혁</a></li>
+										<li><a href="javascript:void(0)">CI</a></li>
+										<li><a href="javascript:void(0)">오시는 길</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="javascript:void(0)">운항서비스</a>
+								<div class="nav__list-sub">
+									<ul class="nav__list-depth_1">
+										<li><a href="javascript:void(0)">운항스케줄</a></li>
+										<li><a href="javascript:void(0)">유류할증료</a></li>
+										<li><a href="javascript:void(0)">지점정보</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="javascript:void(0)">화물운송서비스</a>
+								<div class="nav__list-sub">
+									<ul class="nav__list-depth_1">
+										<li><a href="javascript:void(0)">화물상품정보</a></li>
+										<li><a href="javascript:void(0)">항공기정보</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="javascript:void(0)">운송조회</a>
+							</li>
+							<li><a href="javascript:void(0)">NEWS</a>
+								<div class="nav__list-sub">
+									<ul class="nav__list-depth_1">
+										<li><a href="javascript:void(0)">공지사항</a></li>
+										<li><a href="javascript:void(0)">뉴스/보도자료</a></li>
+										<li><a href="javascript:void(0)">안전한에어인천</a></li>
+									</ul>
+								</div>
+							</li>
+							<li><a href="javascript:void(0)">Contact us</a>
+								<div class="nav__list-sub">
+									<ul class="nav__list-depth_1">
+										<li><a href="javascript:void(0)">Contact us</a></li>
+										<li><a href="javascript:void(0)">FAQ</a></li>
+									</ul>
+								</div>
+							</li>
+						</ul>
+						<ul class="nav__etc">
+							<li><a href="javascript:void(0)">운송이용약관</a></li>
+							<li><a href="javascript:void(0)">개인정보처리방침</a></li>
+							<li><a href="javascript:void(0)">항공안전투자공사</a></li>
+						</ul>
+
+					</div>
+				</div>
+			</div>
+			<!-- //mega_wrap -->
+
+		</div>
+		<!-- 	//header	 -->
+
+		<div class="container" id="fullpage">
+			<div class="section section_1">
+
+				<div class="mainRolling">
+					<ul class="mainRolling__img">
+						<li>
+							<div class="mainRolling__img-unit"><span></span></div>
+						</li>
+						<li>
+							<div class="mainRolling__img-unit"><span></span></div>
+						</li>
+						<li>
+							<div class="mainRolling__img-unit"><span></span></div>
+						</li>
+					</ul>
+
+					<div class="mainRolling__txt">
+						<ul class="mainRolling__txt-unit">
+							<li>
+								<div class="mainRolling__txt-tit">
+									<p><span class="delay-1">We deliver</span></p>
+									<p><span class="delay-2">the best value to you</span></p>
+								</div>
+								<div class="mainRolling__txt-sub">
+									<p><span class="delay-4">대한민국 최초 화물전용 글로벌 항공사</span></p>
+									<p><span class="delay-5">에어인천만의 안전하고 차별화된 서비스를 제공합니다.</span></p>
+								</div>
+								<a href="javascript:void(0)" class="mainRolling__txt-more delay-7">VIEW MORE</a>
+							</li>
+							<li>
+								<div class="mainRolling__txt-tit">
+									<p><span class="delay-1">Air Incheon</span></p>
+									<p><span class="delay-2">Special/Project cargo</span></p>
+								</div>
+								<div class="mainRolling__txt-sub">
+									<p><span class="delay-4">프로젝트 화물에 특화되어 서비스가 부족한 시장에 집중하고 </span></p>
+									<p><span class="delay-5">지역 항공화물 운송의 선두주자가 되는 것을 목표로 합니다</span></p>
+								</div>
+								<a href="javascript:void(0)" class="mainRolling__txt-more delay-7">VIEW MORE</a>
+							</li>
+							<li>
+								<div class="mainRolling__txt-tit">
+									<p><span class="delay-1">Challenge & </span></p>
+									<p><span class="delay-2">Harmony</span></p>
+								</div>
+								<div class="mainRolling__txt-sub">
+									<p><span class="delay-4">신노선 개발 및 특수 지역 운항 중심</span></p>
+								</div>
+								<a href="javascript:void(0)" class="mainRolling__txt-more delay-6">VIEW MORE</a>
+							</li>
+						</ul>
+						<ul class="mainRolling__dot">
+							<li><button></button></li>
+							<li><button></button></li>
+							<li><button></button></li>
+						</ul>
+					</div>
+				</div>
+				<!-- //mainRolling -->
+
+				<span class="scroll"></span>
+			</div>
+			<!-- //section_1 -->
+
+
+			<div class="section section_2">
+				<div class="flex">
+					<div class="flex-item">
+						<div class="section_2__txt">
+							<p class="section_2__txt-subtit">
+								<span>화물운송서비스</span>
+							</p>
+							<p class="section_2__txt-tit">
+								고객의 화물을<br>
+								최종 목적지까지<br>
+								안전하게 운송하는<br>
+								<span>글로벌 항공 서비스</span>
+							</p>
+							<p class="section_2__txt-subs">
+								<span>
+									고객이 만족할 수 있는 합리적 운임과 연중 안정적인<br>
+									화물 운송 스페이스 확보로 최적의 서비스를<br>
+									제공합니다.
+								</span>
+							</p>
+							<a href="javascript:void(0)" class="section_2__txt-more">VIEW MORE</a>
+						</div>
+					</div>
+					<div class="flex-item">
+						<div class="section_2__bg"><span class="hide">배경이미지</span></div>
+					</div>
+				</div>
+				<!-- <div class="inner">
+					
+				</div> -->
+			</div>
+			<!-- //section_2 -->
+
+			<div class="section section_3">
+				<div class="inner">
+					<div class="flex">
+						<div class="flex-item">
+							<div class="txt">
+								<span class="icon"></span>
+								대물동 기반 One-Stop<br>항공 솔루션
+							</div>
+						</div>
+						<div class="flex-item">
+							<div class="txt">
+								<span class="icon"></span>
+								글로벌 운영<br>노하우
+							</div>
+						</div>
+						<div class="flex-item">
+							<div class="txt">
+								<span class="icon"></span>
+								항공 파트너십 및<br>협력 체계
+							</div>
+						</div>
+					</div>
+
+					<div class="section_3__txt">
+						<p class="section_3__txt-tit">
+							<span>에어인천 항공운송</span>
+						</p>
+						<p class="section_3__txt-subs">
+							<span>전세계적으로 신뢰할 수 있는 에어인천 네크워크를 통해<br>
+							진행 특이사항을 신속하게 수집하고 대응하여 믿을 수 있는 항공서비스를 제공합니다.</span>
+						</p>
+						<a href="javascript:void(0)" class="section_3__txt-more">VIEW MORE</a>
+					</div>
+				</div>
+			</div>
+			<!-- //section_3 -->
+
+			<div class="section section_4">
+				<div class="inner">
+					<div class="section_4__txt">
+						<p class="section_4__txt-tit">
+							<span>Airincheon Network
+						</p>
+						<p class="section_4__txt-subs">
+							<span>세계 주요 항공사들과의 전략적 제휴 및 전용 항공기 운영 등을 통해<br>
+							급변하는 항공시장에 유연하게 대처합니다.</span>
+						</p>
+						<a href="javascript:void(0)" class="section_4__txt-more">VIEW MORE</a>
+					</div>
+				</div>
+			</div>
+			<!-- //section_4 -->
+
+			<div class="section section_5">
+				<div class="inner">
+					<div class="section_5__txt">
+						<p class="section_5__txt-tit">
+							<span>NEWS</span>
+						</p>
+						<p class="section_5__txt-subs">
+							<span>에어인천의 새로운 소식을 알려드립니다.</span>
+						</p>
+					</div>
+					<div class="tar">
+						<a href="javascript:void(0)" class="section_5__txt-more">VIEW MORE</a>
+					</div>
+					<div class="section_5__list">
+						<ul>
+							<li>
+								<a href="javascript:void(0)" class="section_5__list-link">
+									<div class="section_5__list-link-date">
+										<span>23.03</span>
+										<strong>31</strong>
+									</div>
+									<div class="section_5__list-link-title">
+										2022년 대차대조표 공시 2022년 대차대조표 공시 2022년 대차대조표 공시 2022년 대차대조표 공시 2022년 대차대조표 공시 2022년 대차대조표 공시
+									</div>
+									<div class="section_5__list-link-arrow"><span class="hide">이동 아이콘</span></div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)" class="section_5__list-link">
+									<div class="section_5__list-link-date">
+										<span>23.03</span>
+										<strong>31</strong>
+									</div>
+									<div class="section_5__list-link-title">
+										2022년 대차대조표 공시 2022년 대차대조표 공시 2022년 대차대조표 공시 2022년 대차대조표 공시 2022년 대차대조표 공시 2022년 대차대조표 공시
+									</div>
+									<div class="section_5__list-link-arrow"><span class="hide">이동 아이콘</span></div>
+								</a>
+							</li>
+							<li>
+								<a href="javascript:void(0)" class="section_5__list-link">
+									<div class="section_5__list-link-date">
+										<span>23.03</span>
+										<strong>31</strong>
+									</div>
+									<div class="section_5__list-link-title">
+										2022년 대차대조표 공시 2022년 대차대조표 공시 2022년 대차대조표 공시 2022년 대차대조표 공시 2022년 대차대조표 공시 2022년 대차대조표 공시
+									</div>
+									<div class="section_5__list-link-arrow"><span class="hide">이동 아이콘</span></div>
+								</a>
+							</li>
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- //section_5 -->
+
+			<div class="section section_footer">
+				<div class="footer">
+					<div class="recruit flex">
+						<a href="javascript:void(0)" class="flex-item">
+							<span class="recruit__bg"></span>
+							<div class="recruit__txt">
+								<p class="recruit__txt-subs">
+									Recrult
+								</p>
+								<p class="recruit__txt-tit">
+									인재채용
+								</p>
+								<span class="recruit__txt-more">MORE</span>
+							</div>
+						</a>
+						<a href="javascript:void(0)" class="flex-item">
+							<span class="recruit__bg"></span>
+							<div class="recruit__txt">
+								<p class="recruit__txt-subs">
+									Location
+								</p>
+								<p class="recruit__txt-tit">
+									오시는 길
+								</p>
+								<span class="recruit__txt-more">MORE</span>
+							</div>
+						</a>
+					</div>
+					<!--// recruit -->
+					<div class="upper">
+						<div class="inner">
+							<ul class="nav__list">
+								<li><a href="javascript:void(0)">회사소개</a>
+									<div class="nav__list-sub">
+										<ul class="nav__list-depth_1">
+											<li><a href="javascript:void(0)">회사소개</a></li>
+											<li><a href="javascript:void(0)">비전</a></li>
+											<li><a href="javascript:void(0)">연혁</a></li>
+											<li><a href="javascript:void(0)">CI</a></li>
+											<li><a href="javascript:void(0)">오시는 길</a></li>
+										</ul>
+									</div>
+								</li>
+								<li><a href="javascript:void(0)">운항서비스</a>
+									<div class="nav__list-sub">
+										<ul class="nav__list-depth_1">
+											<li><a href="javascript:void(0)">운항스케줄</a></li>
+											<li><a href="javascript:void(0)">유류할증료</a></li>
+											<li><a href="javascript:void(0)">지점정보</a></li>
+										</ul>
+									</div>
+								</li>
+								<li><a href="javascript:void(0)">화물운송서비스</a>
+									<div class="nav__list-sub">
+										<ul class="nav__list-depth_1">
+											<li><a href="javascript:void(0)">화물상품정보</a></li>
+											<li><a href="javascript:void(0)">항공기정보</a></li>
+										</ul>
+									</div>
+								</li>
+								<li><a href="javascript:void(0)">운송조회</a>
+								</li>
+								<li><a href="javascript:void(0)">NEWS</a>
+									<div class="nav__list-sub">
+										<ul class="nav__list-depth_1">
+											<li><a href="javascript:void(0)">공지사항</a></li>
+											<li><a href="javascript:void(0)">뉴스/보도자료</a></li>
+											<li><a href="javascript:void(0)">안전한에어인천</a></li>
+										</ul>
+									</div>
+								</li>
+								<li><a href="javascript:void(0)">Contact us</a>
+									<div class="nav__list-sub">
+										<ul class="nav__list-depth_1">
+											<li><a href="javascript:void(0)">Contact us</a></li>
+											<li><a href="javascript:void(0)">FAQ</a></li>
+										</ul>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!-- //upper -->
+
+					<div class="lower">
+						<a href="#top" class="lower__top"><span class="hide">최상단으로 이동</span></a>
+						<div class="inner">
+							<div class="r">
+								<ul class="lower__link">
+									<li><a href="javascript:void(0)">운송이용약관</a></li>
+									<li><a href="javascript:void(0)">개인정보처리방침</a></li>
+									<li><a href="javascript:void(0)">FAQ</a></li>
+									<li><a href="javascript:void(0)">채용현황</a></li>
+									<li><a href="javascript:void(0)">항공안전투자공사</a></li>
+								</ul>
+								<ul class="lower__icon">
+									<li><a href="javascript:void(0)"><span class="hide">페이스북 이동하기</span></a></li>
+									<li><a href="javascript:void(0)"><span class="hide">인스타그램 이동하기</span></a></li>
+									<li><a href="javascript:void(0)"><span class="hide">링크드인 이동하기</span></a></li>
+								</ul>
+							</div>
+							<div class="l">
+								<div class="lower__address">
+									<p>[본점] 인천광역시 중구 공항동로 295번길 124, 201호</p>
+									<p>[서울사무소] 서울시 강서구 양천로 357, 려산빌딩 5층</p>
+								</div>
+								<div class="lower__tel">
+									<a href='tel:032-719-7890'>Tel : 032-719-7890</a>
+									<a href='tel:032-719-7813'>Fax : 032-719-7813</a>
+								</div>
+								<div class="lower__copy">COPYRIGHT (C) 2013 AIR INCHEON CO. LTD ALL RIGHTS RESERVED.</div>
+							</div>
+						</div>
+					</div>
+					<!-- //lower -->
+				</div>
+				<!-- 	//footer	 -->
+			</div>
+			<!-- //section_6 -->
+		</div>
+		<!-- 	//container	 -->
+
+		<div class="quick">
+			<ul>
+				<li><button><span class="quick__sub">에어인천</span><span class="quick__txt">운송조회</span></button></li>
+				<li><button><span class="quick__txt">유류할증료</span></button></li>
+				<li><button><span class="quick__txt">스케줄조회</span></button></li>
+			</ul>
+		</div>
+
+
+
+	</div>
+	<!-- 	//wrap -->
+</body>
+
+</html>
