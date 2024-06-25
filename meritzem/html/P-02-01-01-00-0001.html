@@ -1,0 +1,287 @@
+ <!DOCTYPE html>
+<html lang="kr">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>replit</title>
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="../css/aos.css">
+	<link rel="stylesheet" type="text/css" href="../css/slick.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+	<script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.ui.monthpicker.js"></script>
+	<script type="text/javascript" src="../js/scrollSpeed.js"></script>
+	<script type="text/javascript" src="../js/aos.js"></script>
+	<script type="text/javascript" src="../js/slick.js"></script>
+	<script type="text/javascript" src="../js/lottie.min.js"></script>
+	<script type="text/javascript" src="../js/ui.js"></script>
+	<style>
+
+	</style>
+</head>
+
+<body>
+	<div class="wrap">
+		<div class="header">
+			<div class="inner">
+				<div class="">
+					<a href="/" class="logo"></a>
+				</div>
+				<nav class="gnb">
+					<ul class="depth-1">
+						<!-- 2024-06-25 수정 -->
+						<li><a href="javascript:void">Company</a></li>
+						<li><a href="javascript:void">Jobs</a></li>
+						<li><a href="javascript:void">People</a></li>
+						<li><a href="javascript:void">Culture</a></li>
+						<!-- //2024-06-25 수정 -->
+					</ul>
+					<div class="depth-2">
+						<ul>
+							<li>
+								<span>Company</span>
+								<ul class="gnb__sub">
+									<li><a href="javascript:void">성장스토리</a></li>
+									<li><a href="javascript:void">복리후생</a></li>
+									<li><a href="javascript:void">오피스</a></li>
+								</ul>
+							</li>
+							<li>
+								<span>Jobs</span>
+								<ul class="gnb__sub">
+									<li><a href="javascript:void">채용공고</a></li>
+									<li><a href="javascript:void">인재풀등록</a></li>
+									<li><a href="javascript:void">채용절차</a></li>
+									<li><a href="javascript:void">FAQ</a></li>
+								</ul>
+							</li>
+							<li>
+								<span>People</span>
+								<ul class="gnb__sub">
+									<li><a href="javascript:void">인터뷰</a></li>
+								</ul>
+							</li>
+							<li>
+								<span>Culture</span>
+								<ul class="gnb__sub">
+									<li><a href="javascript:void">기업문화</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<div>
+					<a href="#" class="btn-login">로그인</a>
+				</div>
+			</div>
+		</div>
+		<!-- //header -->
+		<div class="container">
+			<div class="notice">
+				<div class="notice__unit">
+					<ul>
+						<!-- 2024-06-14 수정 -->
+						<li class="type-1">
+							<a href="javascript:void(0)">
+								<span>D-40</span>
+								개인영업교육파트에서 경력직을 모집합니다.
+								<div class="notice__paging">01/04</div>
+							</a>
+						</li>
+						<li class="type-2">
+							<a href="javascript:void(0)">
+								<span>D-40</span>
+								개인영업교육파트에서 경력직을 모집합니다.
+								<div class="notice__paging">02/04</div>
+							</a>
+						</li>
+						<li class="type-1">
+							<a href="javascript:void(0)">
+								<span>D-40</span>
+								개인영업교육파트에서 경력직을 모집합니다.
+								<div class="notice__paging">03/04</div>
+							</a>
+						</li>
+						<li class="type-2">
+							<a href="javascript:void(0)">
+								<span>D-40</span>
+								개인영업교육파트에서 경력직을 모집합니다.
+								<div class="notice__paging">04/04</div>
+							</a>
+						</li>
+						<!-- 2024-06-14 수정 -->
+					</ul>
+				</div>
+			</div>
+			<!-- //notice -->
+			<div class="subTitle hauto">
+				<div class="inner">
+					<h2 class="subTitle-txt">지원자 등록</h2>
+					<p class="subTitle-subs">지원자를 등록하여, 채용 T/O 발생 시에<br>지원서 검토를 하여 채용공고에 입사지원 요청할 수 있습니다.</p>
+				</div>
+			</div>
+			<!-- //content__tit -->
+			<div class="content">
+				<div class="section">
+					<div class="inner">
+						<button class="btn" onclick="openPop($('#dialog'), 'popupL', options)">우편번호 검색</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //container -->
+		<div class="footer">
+			<div class="inner">
+				<span class="logo"></span>
+				<ul class="copy">
+					<li>사업자 등록번호 : 116-81-03752 | 대표 : 김중현</li>
+					<li>06232 서울시 강남구 강남대로 382 (역삼동)</li>
+					<li>
+						<p class="mail">E-MAIL. <a href="mailto:meritz_recruit@meritz.co.kr">meritz_recruit@meritz.co.kr</a><!-- 2024-06-17 수정 -->
+						</p>
+						<p class="tel">TEL. 02-3786-1341</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- //footer -->
+	</div>
+
+	
+	<div id="dialog" class="popup" title="<div class='tac'>우편번호 검색</div>">
+		<div class="searchPop">
+			<div class="searchPop__header">
+				<div class="searchPop__header-check">
+					<input class="type-curcle" type="radio" id="ra-1" name="ra">
+					<label for="ra-1">도로명</label>
+					<input class="type-curcle" type="radio" id="ra-2" name="ra">
+					<label for="ra-2">지번</label>
+				</div>
+				<div class="searchPop__header-search">
+					<label for="sch">검색명</label>
+					<input id="sch" type="text" placeholder="검색어를 입력해 주세요.">
+					<button>검색</button>
+				</div>
+			</div>
+			<!-- //searchPop__header -->
+			<div class="searchPop__tip">
+				검색명을 입력 시 자동으로 검색되어 출력됩니다. 검색 결과 표시가 40개로 제한되어 있으니 ‘복수 검색어’로 검색을 권장하여 드립니다.<br> (예: 강남 메리츠, 도곡 타워팰리스)
+			</div>
+			<div class="searchPop__body">
+				<div class="searchPop__body-tit">
+					주소 검색
+				</div>
+				<div class="searchPop__body-list">
+					<div class="searchPop__body-list-head">
+						<div class="searchPop__body-list-row">
+							<div>우편 번호</div>
+							<div>도로명 주소</div>
+							<div>지번 주소</div>
+						</div>
+					</div>
+					<div class="searchPop__body-list-body">
+						<button class="searchPop__body-list-row">
+							<div>06294</div>
+							<div>서울특별시 강남구 언주로30길 26 (도곡동, 타워팰리스)</div>
+							<div>서울특별시 강남구 도곡동 467-29 타워팰리스</div>
+						</button>
+						<button class="searchPop__body-list-row">
+							<div>06294</div>
+							<div>서울특별시 강남구 언주로30길 26 (도곡동, 타워팰리스)</div>
+							<div>서울특별시 강남구 도곡동 467-29 타워팰리스</div>
+						</button>
+						<button class="searchPop__body-list-row">
+							<div>06294</div>
+							<div>서울특별시 강남구 언주로30길 26 (도곡동, 타워팰리스)</div>
+							<div>서울특별시 강남구 도곡동 467-29 타워팰리스</div>
+						</button>
+						<button class="searchPop__body-list-row">
+							<div>06294</div>
+							<div>서울특별시 강남구 언주로30길 26 (도곡동, 타워팰리스)</div>
+							<div>서울특별시 강남구 도곡동 467-29 타워팰리스</div>
+						</button>
+						<button class="searchPop__body-list-row">
+							<div>06294</div>
+							<div>서울특별시 강남구 언주로30길 26 (도곡동, 타워팰리스) 서울특별시 강남구 언주로30길 26 (도곡동, 타워팰리스)</div>
+							<div>서울특별시 강남구 도곡동 467-29 타워팰리스 서울특별시 강남구 도곡동 467-29 타워팰리스</div>
+						</button>
+						<button class="searchPop__body-list-row">
+							<div>06294</div>
+							<div>서울특별시 강남구 언주로30길 26 (도곡동, 타워팰리스)</div>
+							<div>서울특별시 강남구 도곡동 467-29 타워팰리스</div>
+						</button>
+						<button class="searchPop__body-list-row">
+							<div>06294</div>
+							<div>서울특별시 강남구 언주로30길 26 (도곡동, 타워팰리스)</div>
+							<div>서울특별시 강남구 도곡동 467-29 타워팰리스</div>
+						</button>
+					</div>
+				</div>
+				<div class="searchPop__body-tit">
+					입력 주소
+				</div>
+				<div class="employForm__tbl">
+					<div class="employForm__tbl-row">
+						<div class="employForm__tbl-col">
+							<div class="form__input-txt">
+								<label class="form__label">기본 주소</label>
+								<input type="text" class="w-100" title="기본 주소 입력" placeholder="입력해 주세요." value="06294" disabled>
+								<input type="text" title="기본 주소 입력" placeholder="입력해 주세요." value="서울특별시 강남구 언주로30길 26 (도곡동, 타워팰리스)" disabled>
+								<span class="error-txt">기본 주소을 입력해 주세요.</span>
+							</div>
+						</div>
+						<!-- //employForm__tbl-col -->
+					</div>
+					<!-- //employForm__tbl-row -->
+					<div class="employForm__tbl-row">
+						<div class="employForm__tbl-col">
+							<div class="form__input-txt">
+								<label class="form__label">상세주소</label>
+								<input type="text" title="상세주소 입력" placeholder="입력해 주세요." value="">
+								<input type="text" title="상세주소 입력" placeholder="입력해 주세요." value="(도곡동, 타워팰리스)" disabled>
+								<span class="error-txt">직위 / 직책을 선택해 주세요.</span>
+							</div>
+						</div>
+						<!-- //employForm__tbl-col -->
+					</div>
+					<!-- //employForm__tbl-row -->
+
+				</div>
+				<!-- //employForm__tbl -->
+			</div>
+			<!-- //searchPop__body -->
+		</div>
+		<!-- //searchPop -->
+
+
+		
+	</div>
+	<!-- //dialog -->
+
+	<script>
+		var options ={
+			buttons: [
+				{
+				text: "취소",
+				  click: function() {
+					$( this ).dialog( "close" );
+				  }
+				},
+				{
+				text: "확인",
+				  click: function() {
+					$( this ).dialog( "close" );
+				  }
+				}
+			]
+		}
+		openPop($('#dialog'), "popupL", options);
+	</script>
+</body>
+
+</html>

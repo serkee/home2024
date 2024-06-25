@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>replit</title>
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="../css/aos.css">
+	<link rel="stylesheet" type="text/css" href="../css/slick.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+	<script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.ui.monthpicker.js"></script>
+	<script type="text/javascript" src="../js/scrollSpeed.js"></script>
+	<script type="text/javascript" src="../js/aos.js"></script>
+	<script type="text/javascript" src="../js/slick.js"></script>
+	<script type="text/javascript" src="../js/lottie.min.js"></script>
+	<script type="text/javascript" src="../js/ui.js"></script>
+	<style>
+
+	</style>
+</head>
+
+<body>
+	<div class="wrap">
+		<div class="header">
+			<div class="inner">
+				<div class="">
+					<a href="/" class="logo"></a>
+				</div>
+				<nav class="gnb">
+					<ul class="depth-1">
+						<!-- 2024-06-25 수정 -->
+						<li><a href="javascript:void">Company</a></li>
+						<li><a href="javascript:void">Jobs</a></li>
+						<li><a href="javascript:void">People</a></li>
+						<li><a href="javascript:void">Culture</a></li>
+						<!-- //2024-06-25 수정 -->
+					</ul>
+					<div class="depth-2">
+						<ul>
+							<li>
+								<span>Company</span>
+								<ul class="gnb__sub">
+									<li><a href="javascript:void">성장스토리</a></li>
+									<li><a href="javascript:void">복리후생</a></li>
+									<li><a href="javascript:void">오피스</a></li>
+								</ul>
+							</li>
+							<li>
+								<span>Jobs</span>
+								<ul class="gnb__sub">
+									<li><a href="javascript:void">채용공고</a></li>
+									<li><a href="javascript:void">인재풀등록</a></li>
+									<li><a href="javascript:void">채용절차</a></li>
+									<li><a href="javascript:void">FAQ</a></li>
+								</ul>
+							</li>
+							<li>
+								<span>People</span>
+								<ul class="gnb__sub">
+									<li><a href="javascript:void">인터뷰</a></li>
+								</ul>
+							</li>
+							<li>
+								<span>Culture</span>
+								<ul class="gnb__sub">
+									<li><a href="javascript:void">기업문화</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<div>
+					<a href="#" class="btn-login">로그인</a>
+				</div>
+			</div>
+		</div>
+		<!-- //header -->
+		<div class="container">
+			<div class="notice">
+				<div class="notice__unit">
+					<ul>
+						<!-- 2024-06-14 수정 -->
+						<li class="type-1">
+							<a href="javascript:void(0)">
+								<span>D-40</span>
+								개인영업교육파트에서 경력직을 모집합니다.
+								<div class="notice__paging">01/04</div>
+							</a>
+						</li>
+						<li class="type-2">
+							<a href="javascript:void(0)">
+								<span>D-40</span>
+								개인영업교육파트에서 경력직을 모집합니다.
+								<div class="notice__paging">02/04</div>
+							</a>
+						</li>
+						<li class="type-1">
+							<a href="javascript:void(0)">
+								<span>D-40</span>
+								개인영업교육파트에서 경력직을 모집합니다.
+								<div class="notice__paging">03/04</div>
+							</a>
+						</li>
+						<li class="type-2">
+							<a href="javascript:void(0)">
+								<span>D-40</span>
+								개인영업교육파트에서 경력직을 모집합니다.
+								<div class="notice__paging">04/04</div>
+							</a>
+						</li>
+						<!-- 2024-06-14 수정 -->
+					</ul>
+				</div>
+			</div>
+			<!-- //notice -->
+			<div class="subTitle hauto">
+				<div class="inner">
+					<h2 class="subTitle-txt">지원자 등록</h2>
+					<p class="subTitle-subs">지원자를 등록하여, 채용 T/O 발생 시에<br>지원서 검토를 하여 채용공고에 입사지원 요청할 수 있습니다.</p>
+				</div>
+			</div>
+			<!-- //content__tit -->
+			<div class="content">
+				<div class="section">
+					<div class="inner">
+						<button class="btn" onclick="openPop($('#dialog'), 'alert', options)">팝업 열기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //container -->
+		<div class="footer">
+			<div class="inner">
+				<span class="logo"></span>
+				<ul class="copy">
+					<li>사업자 등록번호 : 116-81-03752 | 대표 : 김중현</li>
+					<li>06232 서울시 강남구 강남대로 382 (역삼동)</li>
+					<li>
+						<p class="mail">E-MAIL. <a href="mailto:meritz_recruit@meritz.co.kr">meritz_recruit@meritz.co.kr</a><!-- 2024-06-17 수정 -->
+						</p>
+						<p class="tel">TEL. 02-3786-1341</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- //footer -->
+	</div>
+
+	
+	<div id="dialog" class="popup" title="아이디 찾기">
+	  <div>본인인증이 완료되었습니다.</div>
+	</div>
+
+	<script>
+		var options ={
+			buttons: [
+				{
+				text: "확인",
+				  click: function() {
+					$( this ).dialog( "close" );
+				  }
+				}
+			]
+		}
+		openPop($('#dialog'), "alert", options);
+	</script>
+</body>
+
+</html>

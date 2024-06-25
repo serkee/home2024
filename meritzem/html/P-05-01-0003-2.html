@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>replit</title>
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="../css/aos.css">
+	<link rel="stylesheet" type="text/css" href="../css/slick.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+	<script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.ui.monthpicker.js"></script>
+	<script type="text/javascript" src="../js/scrollSpeed.js"></script>
+	<script type="text/javascript" src="../js/aos.js"></script>
+	<script type="text/javascript" src="../js/slick.js"></script>
+	<script type="text/javascript" src="../js/lottie.min.js"></script>
+	<script type="text/javascript" src="../js/ui.js"></script>
+	<style>
+
+	</style>
+</head>
+
+<body>
+	<div class="wrap">
+		<div class="header">
+			<div class="inner">
+				<div class="">
+					<a href="/" class="logo"></a>
+				</div>
+				<nav class="gnb">
+					<ul class="depth-1">
+						<!-- 2024-06-25 수정 -->
+						<li><a href="javascript:void">Company</a></li>
+						<li><a href="javascript:void">Jobs</a></li>
+						<li><a href="javascript:void">People</a></li>
+						<li><a href="javascript:void">Culture</a></li>
+						<!-- //2024-06-25 수정 -->
+					</ul>
+					<div class="depth-2">
+						<ul>
+							<li>
+								<span>Company</span>
+								<ul class="gnb__sub">
+									<li><a href="javascript:void">성장스토리</a></li>
+									<li><a href="javascript:void">복리후생</a></li>
+									<li><a href="javascript:void">오피스</a></li>
+								</ul>
+							</li>
+							<li>
+								<span>Jobs</span>
+								<ul class="gnb__sub">
+									<li><a href="javascript:void">채용공고</a></li>
+									<li><a href="javascript:void">인재풀등록</a></li>
+									<li><a href="javascript:void">채용절차</a></li>
+									<li><a href="javascript:void">FAQ</a></li>
+								</ul>
+							</li>
+							<li>
+								<span>People</span>
+								<ul class="gnb__sub">
+									<li><a href="javascript:void">인터뷰</a></li>
+								</ul>
+							</li>
+							<li>
+								<span>Culture</span>
+								<ul class="gnb__sub">
+									<li><a href="javascript:void">기업문화</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<div>
+					<a href="#" class="btn-login">로그인</a>
+				</div>
+			</div>
+		</div>
+		<!-- //header -->
+		<div class="container">
+			<div class="notice">
+				<div class="notice__unit">
+					<ul>
+						<!-- 2024-06-14 수정 -->
+						<li class="type-1">
+							<a href="javascript:void(0)">
+								<span>D-40</span>
+								개인영업교육파트에서 경력직을 모집합니다.
+								<div class="notice__paging">01/04</div>
+							</a>
+						</li>
+						<li class="type-2">
+							<a href="javascript:void(0)">
+								<span>D-40</span>
+								개인영업교육파트에서 경력직을 모집합니다.
+								<div class="notice__paging">02/04</div>
+							</a>
+						</li>
+						<li class="type-1">
+							<a href="javascript:void(0)">
+								<span>D-40</span>
+								개인영업교육파트에서 경력직을 모집합니다.
+								<div class="notice__paging">03/04</div>
+							</a>
+						</li>
+						<li class="type-2">
+							<a href="javascript:void(0)">
+								<span>D-40</span>
+								개인영업교육파트에서 경력직을 모집합니다.
+								<div class="notice__paging">04/04</div>
+							</a>
+						</li>
+						<!-- 2024-06-14 수정 -->
+					</ul>
+				</div>
+			</div>
+			<!-- //notice -->
+			<div class="subTitle hauto">
+				<div class="inner">
+					<h2 class="subTitle-txt">지원자 등록</h2>
+					<p class="subTitle-subs">지원자를 등록하여, 채용 T/O 발생 시에<br>지원서 검토를 하여 채용공고에 입사지원 요청할 수 있습니다.</p>
+				</div>
+			</div>
+			<!-- //content__tit -->
+			<div class="content">
+				<div class="section">
+					<div class="inner">
+						<button class="btn" onclick="openPop($('#dialog1'), 'popupL', options)">[필수] 개인(신용)정보의 수집·이용에 관한 사항</button><br><br>
+						<button class="btn" onclick="openPop($('#dialog2'), 'popupL', options)">[필수] 개인(신용)정보의 제공에 관한 사항</button><br><br>
+						<button class="btn" onclick="openPop($('#dialog3'), 'popupL', options)">[필수] 민감정보 및 고유식별정보의 처리에 관한 사항</button><br><br>
+						<button class="btn" onclick="openPop($('#dialog4'), 'popupL', options)">[필수] 입사지원자의 채용서류 반환청구에 관한 사항</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //container -->
+		<div class="footer">
+			<div class="inner">
+				<span class="logo"></span>
+				<ul class="copy">
+					<li>사업자 등록번호 : 116-81-03752 | 대표 : 김중현</li>
+					<li>06232 서울시 강남구 강남대로 382 (역삼동)</li>
+					<li>
+						<p class="mail">E-MAIL. <a href="mailto:meritz_recruit@meritz.co.kr">meritz_recruit@meritz.co.kr</a><!-- 2024-06-17 수정 -->
+						</p>
+						<p class="tel">TEL. 02-3786-1341</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- //footer -->
+	</div>
+
+	
+	<div id="dialog1" class="popup" title="<span>[필수]</span> 개인(신용)정보의 수집·이용에 관한 사항">
+		<div class="terms">
+			<div class="terms__tit">
+				<strong>1.개인(신용)정보의 수집·이용에 관한 사항</strong>
+				<p class="terms__sub">「개인정보보호법」및 「신용정보의 이용 및 보호에 관한 법률」에 따라 회사가 아래와 같은 내용으로 본인의 개인(신용)정보를 수집·이용하는 것에 동의합니다.</p>
+			</div>
+			<ul class="terms__list">
+				<li>
+					<strong>수집․이용 목적</strong>
+					<ul class="terms__list-1">
+						<li>입사지원, 채용절차상 업무 처리 및 채용 후 인사관리</li>
+						<li>민원처리, 분쟁해결, 법령상 의무이행 등</li>
+					</ul>
+				</li>
+				<li>
+					<strong>수집 내용</strong>
+					<ul class="terms__list-1">
+						<li>개인식별정보 (증명사진, 성명, 성별, 생년월일, 현주소, 전화번호, 휴대전화번호, 전자우편주소)</li>
+						<li>민감정보 {장애인사항(장애인 여부, 장애유형, 장애등록번호, 장애등급)}</li>
+						<li>병역사항 (군필구분, 군별, 병과, 계급, 입영일자, 전역일자, 제대여부, 미필사유)</li>
+						<li>보훈대상 사항 (보훈여부, 보훈번호)</li>
+						<li>학력사항 (입학시기, 졸업시기, 학교명, 소재지, 졸업구분, 전공, 주간/야간, 본교/분교, 학점)</li>
+						<li>자격사항 (자격명, 기관명, 자격번호, 점수, 등급, 취득일, 유효일)</li>
+						<li>경력사항 {근무기간, 근무처, 근무부서, 직위/책, 급여사항, 담당업무, 퇴직사유}</li>
+						<li>기타 사항 (외국어시험명/점수, 특기, 취미, 수상내역, 봉사/서클활동 내역)</li>
+					</ul>
+				</li>
+				<li>
+					<strong>보유·이용 기간</strong>
+					<ul class="terms__list-1">
+						<li>수집된 개인정보는 동의일부터 채용절차 종료일까지 위 수집, 이용 목적 달성을 위하여 보유, 이용됨</li>
+						<li>단, 수집된 개인정보는 인재의 수시선발 등을 위해, 입사지원서 제출 후 만 3년까지 보유, 이용됨</li>
+					</ul>
+				</li>
+			</ul>
+			<div class="terms__help">
+				귀하는 상기 동의를 거부할 수 있습니다. 다만, 이에 대한 동의를 하시지 않을 경우에는 입사자 채용업무 과정에서 불이익을 받을 수 있음을 알려 드립니다.
+			</div>
+		</div>
+	</div>
+	<!-- //dialog -->
+
+	<div id="dialog2" class="popup" title="<span>[필수]</span> 개인(신용)정보의 제공에 관한 사항">
+		<div class="terms">
+			<div class="terms__tit">
+				<strong>2. 개인(신용)정보의 제공에 관한 사항</strong>
+				<p class="terms__sub">「개인정보보호법」및 「신용정보의 이용 및 보호에 관한 법률」에 따라 회사가 본인의 개인(신용)정보를 아래와 같이 제3자에게 제공하는 것에 동의합니다.</p>
+			</div>
+			<ul class="terms__list">
+				<li>
+					<strong>개인(신용)정보를 제공받는 자</strong>
+					<ul class="terms__list-1">
+						<li>건강검진 관련 의료기관(한신메디피아 등)</li>
+						<li>온라인 인·적성검사 위탁기관(한국사회교육개발원 등)</li>
+					</ul>
+				</li>
+				<li>
+					<strong>개인(신용)정보를 제공받는 자의 이용목적</strong>
+					<ul class="terms__list-1">
+						<li>입사지원신청자에 대한 건강검진실시</li>
+						<li>입사지원신청자에 대한 온라인 인·적성검사 실시</li>
+					</ul>
+				</li>
+				<li>
+					<strong>제공할 개인(신용)정보의 내용</strong>
+					<ul class="terms__list-1">
+						<li>개인식별정보 (성명, 주소, 성별, 생년월일, 전화번호, 휴대전화번호, 전자우편주소)</li>
+					</ul>
+				</li>
+				<li>
+					<strong>제공받는 자의 개인(신용)정보 보유·이용 기간</strong>
+					<ul class="terms__list-1">
+						<li>최종 입사자에 대하여는 수집·이용 동의일로부터 개인(신용)정보의 수집·이용 목적을 달성할 때까지</li>
+						<li>입사지원자 중 최종 입사자를 제외한 나머지 입사 미대상자에 대하여는 채용여부 결정시까지</li>
+					</ul>
+				</li>
+			</ul>
+			<div class="terms__help">‘제공할 개인(신용)정보의 내용’ 중 상기 제공대상기관의 법령상 업무수행 목적 및 계약목적 달성에 부합하는 최소한의 정보만 제공됩니다.</div>
+			<div class="terms__help">각 제공대상기관 및 이용목적의 정보 및 그 변동내용은 당사 홈페이지[http://www.meritzfire.com] 에서 확인할 수 있습니다.</div>
+			<div class="terms__help">귀하는 상기 동의를 거부할 수 있습니다. 다만, 이에 대한 동의를 하시지 않을 경우에는 입사자 채용업무과정에서 불이익을 받을 수 있음을 알려 드립니다.</div>
+		</div>
+	</div>
+	<!-- //dialog -->
+
+	<div id="dialog3" class="popup" title="<span>[필수]</span> 민감정보 및 고유식별정보의 처리에 관한 사항">
+		<div class="terms">
+			<div class="terms__tit">
+				<strong>3. 민감정보 및 고유식별정보의 처리에 관한 사항</strong>
+				<p class="terms__sub">
+				당사는 「개인정보보호법」및 「신용정보의 이용 및 보호에 관한 법률」에 따라 회사가 본 동의와 관련하여 상기의 개인(신용)정보에 대한 개별동의 사항에 대하여 다음과 같이 귀하의 민감정보 {장애인 사항(장애여부, 장애유형, 장애등록번호, 장애인정일자, 장애등급)}을 처리(수집·이용, 제공 등)하고자 합니다. 이에 동의하십니까?</p>
+			</div>
+		</div>
+	</div>
+	<!-- //dialog -->
+
+	<div id="dialog4" class="popup" title="<span>[필수]</span> 입사지원자의 채용서류 반환청구에 관한 사항">
+		<div class="terms">
+			<div class="terms__tit">
+				<strong>4. 입사지원자의 채용서류 반환청구에 관한 사항</strong>
+			</div>
+			<ol class="terms__numlist">
+				<li>회사의 채용 여부가 확정된 이후 불합격한 입사지원자는 채용절차법 제11조 제1항에 따라 채용서류의 반환을 요청할 수 있습니다. 채용서류의 반환 청구기간은 입사지원자의 채용여부가 확정된 날 이후부터 14일까지 가능하며, 이 경우 회사는 채용서류의 반환 청구자가 본인임을 확인하고 반환 청구를 받은 날부터 14일 이내에 반환 청구자에게 해당 채용서류를 특수우편취급우편물로 발송하거나 반환 청구자와 합의하는 방법으로 전달하여야 합니다. 채용서류를 특수취급우편물로 발송하는 경우 채용서류의 반환 장소는 채용서류에 기재된 반환 청구자의 주소지로 합니다. 다만 홈페이지 또는 전자우편으로 채용서류가 제출된 경우나 입사지원자가 회사의 요구 없이 자발적으로 제출한 경우에는 채용서류의 반환을 요청할 수 없습니다.</li>
+				<li>입사지원자가 채용서류의 반환을 요청하려면, ‘채용절차의 공정화에 관한 법률 시행규칙’ 별지 제3호 서식의 채용서류 반환청구서를 작성하여 회사의 채용담당자에게 전자우편 또는 팩스 등으로 제출하시면 됩니다.</li>
+				<li>반환청구의 대상 채용서류는 입사지원자의 응시원서, 이력서 및 자기소개서, 이력서에 기재한 사항을 증명하기 위해 제출한 모든 자료(학위증명서, 경력증명서, 자격증명서 등) 그리고 작품집, 연구실적물 등 입사지원자의 실력을 알아볼 수 있는 모든 물건 및 자료가 해당됩니다.</li>
+				<li>반환청구의 대상 채용서류는 회사에 반환 요청이 없을 경우 입사지원자의 채용 여부가 확정된 날 이후부터 14일까지 보관하며, 반환을 요청한 경우 회사가 채용서류를 특수취급우편물을 발송하거나 전달한 시점까지 보관합니다.</li>
+				<li>채용서류 반환에 발생하는 비용은 회사가 부담합니다.</li>
+			</ul>
+		</div>
+	</div>
+	<!-- //dialog -->
+
+	<script>
+		var options ={
+			buttons: [
+				{
+				text: "확인",
+				  click: function() {
+					$( this ).dialog( "close" );
+				  }
+				}
+			]
+		}
+		openPop($('#dialog3'), "popupL", options);
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="kr">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>replit</title>
+	<link rel="stylesheet" type="text/css" href="../css/reset.css">
+	<link rel="stylesheet" type="text/css" href="../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../css/jquery-ui.min.css" />
+	<link rel="stylesheet" type="text/css" href="../css/aos.css">
+	<link rel="stylesheet" type="text/css" href="../css/slick.css">
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+	<script type="text/javascript" src="../js/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript" src="../js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="../js/jquery.ui.monthpicker.js"></script>
+	<script type="text/javascript" src="../js/scrollSpeed.js"></script>
+	<script type="text/javascript" src="../js/aos.js"></script>
+	<script type="text/javascript" src="../js/slick.js"></script>
+	<script type="text/javascript" src="../js/lottie.min.js"></script>
+	<script type="text/javascript" src="../js/ui.js"></script>
+	<style>
+
+	</style>
+</head>
+
+<body>
+	<div class="wrap">
+		<div class="header">
+			<div class="inner">
+				<div class="">
+					<a href="/" class="logo"></a>
+				</div>
+				<nav class="gnb">
+					<ul class="depth-1">
+						<!-- 2024-06-25 수정 -->
+						<li><a href="javascript:void">Company</a></li>
+						<li><a href="javascript:void">Jobs</a></li>
+						<li><a href="javascript:void">People</a></li>
+						<li><a href="javascript:void">Culture</a></li>
+						<!-- //2024-06-25 수정 -->
+					</ul>
+					<div class="depth-2">
+						<ul>
+							<li>
+								<span>Company</span>
+								<ul class="gnb__sub">
+									<li><a href="javascript:void">성장스토리</a></li>
+									<li><a href="javascript:void">복리후생</a></li>
+									<li><a href="javascript:void">오피스</a></li>
+								</ul>
+							</li>
+							<li>
+								<span>Jobs</span>
+								<ul class="gnb__sub">
+									<li><a href="javascript:void">채용공고</a></li>
+									<li><a href="javascript:void">인재풀등록</a></li>
+									<li><a href="javascript:void">채용절차</a></li>
+									<li><a href="javascript:void">FAQ</a></li>
+								</ul>
+							</li>
+							<li>
+								<span>People</span>
+								<ul class="gnb__sub">
+									<li><a href="javascript:void">인터뷰</a></li>
+								</ul>
+							</li>
+							<li>
+								<span>Culture</span>
+								<ul class="gnb__sub">
+									<li><a href="javascript:void">기업문화</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</nav>
+				<div>
+					<a href="#" class="btn-login">로그인</a>
+				</div>
+			</div>
+		</div>
+		<!-- //header -->
+		<div class="container">
+			<div class="notice">
+				<div class="notice__unit">
+					<ul>
+						<!-- 2024-06-14 수정 -->
+						<li class="type-1">
+							<a href="javascript:void(0)">
+								<span>D-40</span>
+								개인영업교육파트에서 경력직을 모집합니다.
+								<div class="notice__paging">01/04</div>
+							</a>
+						</li>
+						<li class="type-2">
+							<a href="javascript:void(0)">
+								<span>D-40</span>
+								개인영업교육파트에서 경력직을 모집합니다.
+								<div class="notice__paging">02/04</div>
+							</a>
+						</li>
+						<li class="type-1">
+							<a href="javascript:void(0)">
+								<span>D-40</span>
+								개인영업교육파트에서 경력직을 모집합니다.
+								<div class="notice__paging">03/04</div>
+							</a>
+						</li>
+						<li class="type-2">
+							<a href="javascript:void(0)">
+								<span>D-40</span>
+								개인영업교육파트에서 경력직을 모집합니다.
+								<div class="notice__paging">04/04</div>
+							</a>
+						</li>
+						<!-- 2024-06-14 수정 -->
+					</ul>
+				</div>
+			</div>
+			<!-- //notice -->
+			<div class="subTitle hauto">
+				<div class="inner">
+					<h2 class="subTitle-txt">지원자 등록</h2>
+					<p class="subTitle-subs">지원자를 등록하여, 채용 T/O 발생 시에<br>지원서 검토를 하여 채용공고에 입사지원 요청할 수 있습니다.</p>
+				</div>
+			</div>
+			<!-- //content__tit -->
+			<div class="content">
+				<div class="section">
+					<div class="inner">
+						<div class="form">
+							<div class="form__section">
+								<div class="form__tit">
+									<h3>회원가입</h3>
+								</div>
+								<div class="form__row">
+									<div class="form__col"><!-- error : validation 메시지 -->
+										<label class="form__label">이름</label>
+										<div class="form__input-txt">
+											<input type="text" title="이름 입력" placeholder="이름을 입력해 주세요.">
+											<span class="error-txt">이름을 입력해 주세요.</span>
+										</div>
+									</div>
+								</div>
+								<div class="form__row">
+									<div class="form__col rrn-1"><!-- error : validation 메시지 -->
+										<label class="form__label">주민등록번호</label>
+										<div class="form__input-txt">
+											<input type="number" class="" title="주민등록번호 앞자리 입력" placeholder="앞 6자리">
+											<span class="error-txt">주민등록번호 앞자리을 입력해 주세요.</span>
+										</div>
+									</div>
+									-
+									<div class="form__col rrn-2"><!-- error : validation 메시지 -->
+										<div class="form__input-txt">
+											<input type="number" class="" title="주민등록번호 뒤자리 입력" placeholder="뒤1자리">
+											<span class="error-txt">주민등록번호 뒤자리을 입력해 주세요.</span>
+										</div>
+									</div>
+									<div class="form__col">
+										<div class="rrn-3">
+											<span></span><span></span><span></span><span></span><span></span>
+										</div>
+									</div>
+								</div>
+								<div class="form__row">
+									<div class="form__col flex-none"><!-- error : validation 메시지 -->
+										<label class="form__label">휴대폰 번호</label>
+										<div class="form__select">
+											<select class="ui-select type-normal" title="통신사 선택">
+												<option>SKT</option>
+												<option>KT</option>
+												<option>LG U+</option>
+											</select>
+											<span class="error-txt">통신사를 선택해 주세요.</span>
+										</div>
+									</div>
+									<div class="form__col"><!-- error : validation 메시지 -->
+										<div class="form__inputWrap-btn">
+											<input type="number" class="" title="휴대폰번호 입력" placeholder="-없이 입력해 주세요.">
+											<button class="form__input-btn">인증번호 요청</button>
+											<span class="error-txt">휴대폰번호를 입력해 주세요.</span>
+										</div>
+									</div>
+								</div>
+								<div class="form__row">
+									<div class="form__col"><!-- error : validation 메시지 -->
+										<label class="form__label">인증번호 입력</label>
+										<div class="form__inputWrap-btn">
+											<span class="form__input-time">02:48</span>
+											<input type="text" class="form__input-txt" maxlength='6' title="인증번호 입력"
+												placeholder="6자리 입력해 주세요.">
+											<button class="form__input-btn active">인증번호 확인</button>
+											<span class="error-txt">인증번호를 입력해 주세요.</span>
+										</div>
+									</div>
+								</div>
+								<div class="form__row">
+									<div class="form__col"><!-- error : validation 메시지 -->
+										<label class="form__label">이메일</label>
+										<div class="form__input-txt">
+											<input type="text" class="" title="이메일 입력" placeholder="이메일을 입력해 주세요.">
+											<span class="error-txt">이메일을 입력해 주세요.</span>
+										</div>
+									</div>
+								</div>
+								<div class="form__row">
+									<div class="form__col"><!-- error : validation 메시지 -->
+										<label class="form__label">비밀번호</label>
+										<div class="form__input-txt">
+											<input type="password" class="" title="비밀번호 입력" placeholder="숫자, 영문, 특수문자 조합 8~16자리"><!-- 2024-06-18 수정 -->
+											<span class="error-txt">비밀번호를 입력해 주세요.</span>
+										</div>
+									</div>
+								</div>
+								<div class="form__row">
+									<div class="form__col error"><!-- error : validation 메시지 -->
+										<label class="form__label">비밀번호 확인</label>
+										<div class="form__input-txt">
+											<input type="password" class="" title="비밀번호 입력" placeholder="비밀번호를 한번 더 입력해 주세요.">
+											<span class="help-txt">숫자, 영문, 특수문자 조합 8~16자리</span>
+											<span class="error-txt">비밀번호가 일치하지 않습니다</span><!-- 2024-06-18 수정 -->
+										</div>
+									</div>
+								</div>
+								<div class="form__row">
+									<div class="form__col"><!-- error : validation 메시지 -->
+										<label class="form__label">채용등록 알림</label>
+										<div class="form__input-radio">
+											<!-- 2024-06-14 수정 -->
+											<input type="radio" id="ra-1" name="ra" title="채용등록 알림 허용" value="true">
+											<label class="" for="ra-1">예</label>
+											<input type="radio" id="ra-2" name="ra" title="채용등록 알림 미허용" value="false" checked>
+											<label class="" for="ra-2">아니오</label>
+											<!-- //2024-06-14 수정 -->
+											<span class="error-txt">채용등록 알림을 선택해 주세요.</span>
+										</div>
+									</div>
+								</div>
+
+								<!-- 2024-06-12 수정 -->
+								<div class="form__checkWrap">
+									<div class="form__checkWrap-tit">신입 / 경력 (중복선택 가능)</div>
+									<div class="form__checkWrap-row">
+										<input class="type-s col-2" type="checkbox" id="check-a-1">
+										<label for="check-a-1">신입</label>
+										<input class="type-s col-2" type="checkbox" id="check-a-2">
+										<label for="check-a-2">경력</label>
+									</div>
+
+									<div class="form__checkWrap-tit">직군과 동일 (중복선택 가능)</div>
+									<div class="form__checkWrap-row">
+										<input class="type-s" type="checkbox" id="check-b-1">
+										<label for="check-b-1">법무(감사,준법,소비자보호,송무 등)</label>
+									</div>
+									<div class="form__checkWrap-row">
+										<input class="type-s" type="checkbox" id="check-b-2">
+										<label for="check-b-2">계리,수리,리스크관리</label>
+									</div>
+									<div class="form__checkWrap-row">
+										<input class="type-s" type="checkbox" id="check-b-3">
+										<label for="check-b-3">경영지원(인사,경영관리,부동산,홍보 등)</label>
+									</div>
+									<div class="form__checkWrap-row">
+										<input class="type-s" type="checkbox" id="check-b-4">
+										<label for="check-b-4">회계,자금</label>
+									</div>
+									<div class="form__checkWrap-row">
+										<input class="type-s" type="checkbox" id="check-b-5">
+										<label for="check-b-5">IT(기획,디자인,개발,서버,정보보안 등)</label>
+									</div>
+									<div class="form__checkWrap-row">
+										<input class="type-s" type="checkbox" id="check-b-6">
+										<label for="check-b-6">자산운용(심사, 운용)</label>
+									</div>
+									<div class="form__checkWrap-row">
+										<input class="type-s" type="checkbox" id="check-b-7">
+										<label for="check-b-7">상품개발 및 운영(장기,자동차,일반 등)</label>
+									</div>
+									<div class="form__checkWrap-row">
+										<input class="type-s" type="checkbox" id="check-b-8">
+										<label for="check-b-8">심사(장기,자동차,일반 등)</label>
+									</div>
+									<div class="form__checkWrap-row">
+										<input class="type-s" type="checkbox" id="check-b-9">
+										<label for="check-b-9">보상(장기,자동차,일반 등)</label>
+									</div>
+									<div class="form__checkWrap-row">
+										<input class="type-s" type="checkbox" id="check-b-10">
+										<label for="check-b-10">영업관리자(TA,GA,기업,TM 등)</label>
+									</div>
+									<div class="form__checkWrap-row">
+										<input class="type-s" type="checkbox" id="check-b-11">
+										<label for="check-b-11">영업지원(TA,GA,기업,TM 등)</label>
+									</div>
+									<div class="form__checkWrap-row">
+										<input class="type-s" type="checkbox" id="check-b-12">
+										<label for="check-b-12">사무지원직군(총무,고객창구 등)</label>
+									</div>
+									<div class="form__checkWrap-row">
+										<input class="type-s" type="checkbox" id="check-b-13">
+										<label for="check-b-13">기타</label>
+									</div>
+								</div>
+
+								<!-- 2024-06-24 수정 -->
+								<div class="agree">
+									<input type="checkbox" id="check-all" class="agree__check-all" title="동의">
+									<label class="agree__label-all" for="check-all">모든 약관에 동의합니다.</label>
+									<ul>
+										<li>
+											<input type="checkbox" id="check-1" class="agree__check" title="동의">
+											<label class="agree__label" for="check-1"><span>[필수]</span> 채용 홈페이지 이용약관 동의</label>
+											<button class="agree__btn"><span class="hide">팝업 열기</span></button>
+										</li>
+										<li>
+											<input type="checkbox" id="check-2" class="agree__check" title="동의">
+											<label class="agree__label" for="check-2"><span>[필수]</span> 개인정보 제공 동의</label>
+											<button class="agree__btn"><span class="hide">팝업 열기</span></button>
+										</li>
+									</ul>
+								</div>
+								<!-- //2024-06-24 수정 -->
+							</div>
+							<!-- //form__section -->
+							
+							
+							<!-- 2024-06-17 수정 -->
+							<div class="form__desc">
+								<p>상기 개인정보는 인재풀 간편등록 서비스 제공을 위해 필수적으로 필요한 정보이며, 개인정보보호법 제15조 제1항 제4호에 근거하여 별도의 동의없이 수집·이용할 수 있습니다. 수집·이용된 개인정보는 등록일로부터 5년까지 보관/이용되며, 회원탈퇴 또는 지원서 삭제시 자동으로 즉시  파기됩니다. 문의사항은 채용담당자(meritz_recruit@meritz.co.kr)에게 연락주시기 바랍니다.</p>
+							</div>
+							<!-- //2024-06-17 수정 -->
+							<div class="form__btnArea">
+								<button class="btn l black">회원가입</button>
+							</div>
+							<!-- //form__btnArea -->
+						</div>
+						<!-- //form -->
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- //container -->
+		<div class="footer">
+			<div class="inner">
+				<span class="logo"></span>
+				<ul class="copy">
+					<li>사업자 등록번호 : 116-81-03752 | 대표 : 김중현</li>
+					<li>06232 서울시 강남구 강남대로 382 (역삼동)</li>
+					<li>
+						<p class="mail">E-MAIL. <a href="mailto:meritz_recruit@meritz.co.kr">meritz_recruit@meritz.co.kr</a><!-- 2024-06-17 수정 -->
+						</p>
+						<p class="tel">TEL. 02-3786-1341</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- //footer -->
+	</div>
+
+	<script>
+		// 2024-06-12 수정
+		$("input[name='ra']").change(function () {
+			var val = $("input[name='ra']:checked").val();
+			console.log(val)
+			$(".form__checkWrap").slideToggle(val == 'true');
+		});
+	</script>
+</body>
+
+</html>
